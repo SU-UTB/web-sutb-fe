@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Layout from "./components/Layout/Layout";
-import Home from "./components/pages/HomePage";
-import About from "./components/pages/AboutPage";
-import News from "./components/pages/NewsPage";
-import Contact from "./components/pages/ContactPage";
-import Projects from "./components/pages/ProjectsPage";
+// import Home from "./components/pages/HomePage";
+// import About from "./components/pages/AboutPage";
+// import News from "./components/pages/NewsPage";
+// import Contact from "./components/pages/ContactPage";
+// import Projects from "./components/pages/ProjectsPage";
 
 function App(): JSX.Element {
 
