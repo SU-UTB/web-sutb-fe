@@ -1,6 +1,6 @@
-import Link from "../../../atoms/footer/link";
-import Login from "../../../atoms/footer/login";
-import { Wrapper, LinksWrapper } from "./style";
+import Link from '../../../atoms/footer/Link';
+import Login from '../../../atoms/footer/Login';
+import { Wrapper, LinksWrapper } from './style';
 
 const Links = () => {
     //TODO

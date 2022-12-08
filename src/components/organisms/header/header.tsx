@@ -1,15 +1,23 @@
-import Title from "../../atoms/header/title";
-import Logo from "../../atoms/header/logo";
-import User from "../../atoms/header/user";
+import Title from '../../atoms/header/Title';
+import Logo from '../../atoms/header/Logo';
+import User from '../../atoms/header/User';
 
-import { Wrapper } from "../../organisms/header/style";
+import { Wrapper } from './style';
 
-const Header = () => {
+interface HeaderProps {
+    title: string;
+}
+
+const Header = ({ title }: HeaderProps) => {
     return (
         <Wrapper>
-            <Logo src="/suLogo.svg" alt="Logo" />
-            <Title>Domů</Title>
-            <User src="/person.svg" alt="User" />
+            <a href="/">
+                <Logo src="/suLogo.svg" alt="Logo" />
+            </a>
+            <Title>{title}</Title>
+            <a href="/login">
+                <User src="/person.svg" alt="User" />
+            </a>
         </Wrapper>
     );
 };
