@@ -1,33 +1,21 @@
-import { useEffect } from 'react';
+import Template from '../components/templates/HomeTemplate';
 
 function HomePage(): JSX.Element {
 
-    const title = "Domů - " + document.title;
+    document.title = "Domů - Studentská unie UTB";
 
-    useEffect(() => {
-        document.title = title;
-    }, [title]);
+    const comingSoon = "https://pruvodcestudenta.utb.cz/";
 
+    const partners: string[][] =
+        [
+            ["./assets/utb.svg", "Univerzita Tomáše Bati", "https://www.utb.cz/"],
+            ["./assets/kmz-cs.svg", "Koleje a Menza", "https://kmz.utb.cz/"],
+        ]
     return (
-        <div>
-            <div>
-                <h1>Ahoj!</h1>
-                <div>
-                    <p>
-                        Jsme Studentská unie UTB.
-                        Děláme ty největší a nejlepší mejdany ve Zlíně,
-                        informujeme studenty o všem důležitém a
-                        dlouhodobě spolupracujeme s univerzitou.
-                        <a href="/">Ukaž, co se chystá</a>
-                    </p>
-                    <div>
-                        <img />
-                        <h2>Průvodce prváka</h2>
-                    </div>
-                </div>
-
-            </div>
-        </div >
+        <Template
+            comingSoon={comingSoon}
+            partners={partners}
+        />
     );
 }
 
