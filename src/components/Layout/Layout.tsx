@@ -20,6 +20,7 @@ const Layout = () => {
     return (
         <Wrapper>
             <Header title={title} />
+
             <Main>
                 <Outlet />
             </Main>

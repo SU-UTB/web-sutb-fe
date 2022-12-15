@@ -18,6 +18,7 @@ const Header = ({ title }: HeaderProps) => {
             <a href="/login">
                 <User src="/person.svg" alt="User" />
             </a>
+
         </Wrapper>
     );
 };

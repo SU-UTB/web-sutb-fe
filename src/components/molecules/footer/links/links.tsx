@@ -2,6 +2,7 @@ import Link from '../../../atoms/footer/Link';
 import Login from '../../../atoms/footer/Login';
 import { Wrapper, LinksWrapper } from './style';
 
+
 const Links = () => {
     //TODO
     const links = [

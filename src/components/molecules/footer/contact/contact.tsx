@@ -5,10 +5,12 @@ import Phone from '../../../atoms/footer/contact/Phone';
 import { Wrapper, ContactsWrapper, SocialIconWrapper } from './style';
 import Icon from '../../../atoms/footer/contact/Icon';
 
+
 const ContactWrapper = () => {
     return (
         <Wrapper>
             <Title>Kontakty</Title>
+
 
             <ContactsWrapper>
                 <Mail href="mailto:su@sutb.cz">su@sutb.cz</Mail>
