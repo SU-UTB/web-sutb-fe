@@ -1,5 +1,8 @@
-
 export default interface IHomeTemplateProps {
     comingSoon: string;
-    partners: string[][];
+    partners: {
+        src: string;
+        alt: string;
+        href: string;
+    }[];
 }
