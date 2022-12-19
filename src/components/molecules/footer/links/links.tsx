@@ -1,14 +1,14 @@
-import Link from '../../../atoms/footer/Link';
+import FooterLink from '../../../atoms/footer/FooterLink';
 import Login from '../../../atoms/footer/Login';
 import { Wrapper, LinksWrapper } from './style';
 
 const Links = () => {
 
-    type Link = {
+    type FooterLink = {
         name: string;
         href: string;
     }
-    const links: Link[] = [
+    const links: FooterLink[] = [
         {
             name: "Domů",
             href: "/",
@@ -24,7 +24,7 @@ const Links = () => {
 
             <LinksWrapper>
                 {links.map((link) => (
-                    <Link href={link.href}>{link.name}</Link>
+                    <FooterLink href={link.href}>{link.name}</FooterLink>
                 ))}
             </LinksWrapper>
 
