@@ -7,7 +7,7 @@ const HeroText = styled.h1`
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: #fff;
     font-size: 3em;
 `;
 
