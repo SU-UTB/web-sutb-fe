@@ -6,10 +6,10 @@ import { Main, Wrapper } from './style';
 import { useEffect, useState } from 'react';
 
 const Layout = () => {
-    const [title, setTitle] = useState("");
+    const [title, setTitle] = useState('');
     useEffect(() => {
         setTitle(() => {
-            const parts = document.title.split("-");
+            const parts = document.title.split('-');
             return parts[0].trim();
         })
     }, []);
