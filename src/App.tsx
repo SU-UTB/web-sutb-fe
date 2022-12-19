@@ -7,7 +7,6 @@ import Home from './pages/HomePage';
 // import Projects from './components/pages/ProjectsPage';
 
 function App(): JSX.Element {
-
   return (
     <Router>
       <Routes>

@@ -11,13 +11,11 @@ const HomeTemplate = ({ comingSoon, partners }: IHomeTemplateProps) => {
                 titleSize={"4"}
                 paragraph={"Jsme Studentská unie UTB. Děláme ty největší a nejlepší mejdany ve Zlíně, informujeme studenty o všem důležitém a dlouhodobě spolupracujeme s univerzitou."}
             />
-
             <Hero
                 href={comingSoon}
                 src={"https://sunovy.utb.cz/assets/event-section-img.jpg"}
                 text={"Průvodce studenta UTB"}
             />
-
             <Section
                 title={"Naši partneři"}
                 titleSize={"2.5"}

@@ -1,7 +1,6 @@
-import Title from '../../atoms/header/Title';
 import Logo from '../../atoms/header/Logo';
+import Title from '../../atoms/header/Title';
 import User from '../../atoms/header/User';
-
 import SULogoSVG from '../../../assets/images/SULogo.svg';
 import PersonSVG from '../../../assets/images/person.svg';
 import { Wrapper } from './style';
@@ -17,7 +16,6 @@ const Header = ({ title }: IHeaderProps) => {
             <a href="/login">
                 <User src={PersonSVG} alt="User" />
             </a>
-
         </Wrapper>
     );
 };

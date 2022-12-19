@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 const HeroText = styled.h1`
     width:100%;
@@ -6,11 +6,9 @@ const HeroText = styled.h1`
     display: flex;
     justify-content: center;
     align-items: center;
-    
     text-align: center;
     color: white;
     font-size: 3em;
-
 `;
 
 export default HeroText;
