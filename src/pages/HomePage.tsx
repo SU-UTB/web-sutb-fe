@@ -1,12 +1,12 @@
 import Template from '../components/templates/HomeTemplate';
 
-function HomePage(): JSX.Element {
-
+const HomePage = () => {
     document.title = "Domů - Studentská unie UTB";
 
-    const comingSoon = "https://pruvodcestudenta.utb.cz/";
+    const comingSoon: string = "https://pruvodcestudenta.utb.cz/";
 
-    const partners: string[][] =
+    type Partner = [string, string, string];
+    const partners: Partner[] =
         [
             ["./assets/utb.svg", "Univerzita Tomáše Bati", "https://www.utb.cz/"],
             ["./assets/kmz-cs.svg", "Koleje a Menza", "https://kmz.utb.cz/"],
