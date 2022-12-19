@@ -1,14 +1,11 @@
 import Template from '../components/templates/HomeTemplate';
+import TImageLink from '../lib/types/TImageLinkTypes';
 
 const HomePage = () => {
-    document.title = "Domů - Studentská unie UTB";
+    document.title = 'Domů - Studentská unie UTB';
     const comingSoon: string = "https://pruvodcestudenta.utb.cz/";
-    type Partner = {
-        src: string;
-        alt: string;
-        href: string;
-    };
-    const partners: Partner[] = [
+
+    const partners: TImageLink[] = [
         {
             src: "./assets/images/utb.svg",
             alt: "Univerzita Tomáše Bati",
