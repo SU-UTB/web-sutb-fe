@@ -2,15 +2,9 @@ import Title from '../../atoms/section/Title';
 import Paragraph from '../../atoms/section/Paragraph';
 import List from '../../atoms/List';
 import { Wrapper } from './style';
+import ISectionProps from '../../../lib/interfaces/ISectionProps';
 
-interface SectionProps {
-    title: string;
-    titleSize: string;
-    paragraph?: string;
-    list?: string[][];
-}
-
-const Section = ({ title, titleSize, paragraph, list }: SectionProps) => {
+const Section = ({ title, titleSize, paragraph, list }: ISectionProps) => {
     return (
         <Wrapper>
             <Title titleSize={titleSize}>{title}</Title>

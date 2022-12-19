@@ -1,12 +1,8 @@
 import Section from '../molecules/section/Section';
 import Hero from '../molecules/hero/Hero';
+import IHomeTemplateProps from '../../lib/interfaces/IHomeTemplateProps';
 
-interface HomeTemplateProps {
-    comingSoon: string;
-    partners: string[][];
-}
-
-const HomeTemplate = ({ comingSoon, partners }: HomeTemplateProps) => {
+const HomeTemplate = ({ comingSoon, partners }: IHomeTemplateProps) => {
 
     return (
         <>
