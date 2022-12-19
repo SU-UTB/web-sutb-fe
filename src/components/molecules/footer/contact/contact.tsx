@@ -1,14 +1,13 @@
-import Title from "../../../atoms/footer/contact/title";
-import Mail from "../../../atoms/footer/contact/mail";
-import Phone from "../../../atoms/footer/contact/phone";
-
-import { Wrapper, ContactsWrapper, SocialIconWrapper } from "./style";
-import Icon from "../../../atoms/footer/contact/icon";
+import Icon from '../../../atoms/footer/contact/Icon';
+import Mail from '../../../atoms/footer/contact/Mail';
+import Phone from '../../../atoms/footer/contact/Phone';
+import Title from '../../../atoms/footer/contact/Title';
+import { Wrapper, ContactsWrapper, SocialIconWrapper } from './style';
 
 const ContactWrapper = () => {
     return (
         <Wrapper>
-            <Title>Kontakt</Title>
+            <Title>Kontakty</Title>
 
             <ContactsWrapper>
                 <Mail href="mailto:su@sutb.cz">su@sutb.cz</Mail>
