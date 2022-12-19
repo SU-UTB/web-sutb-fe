@@ -4,17 +4,17 @@ import List from '../../atoms/List';
 import { Wrapper } from './style';
 import ISectionProps from '../../../lib/interfaces/ISectionProps';
 
-const Section = ({ title, titleSize, paragraph, list }: ISectionProps) => {
+const Section = ({ title, titleSize, paragraph, listOfImageLinks }: ISectionProps) => {
     return (
         <Wrapper>
             <Title titleSize={titleSize}>{title}</Title>
             {paragraph ? <Paragraph>{paragraph}</Paragraph> : null}
-            {list ?
+            {listOfImageLinks ?
                 <List>
-                    {list?.map((item, index) => (
+                    {listOfImageLinks?.map((item, index) => (
                         <li key={index}>
-                            <a href={item[2]} target="_blank" rel="noreferrer">
-                                <img src={item[0]} alt={item[1]} width="auto" height="70" />
+                            <a href={item.href} target="_blank" rel="noreferrer">
+                                <img src={item.src} alt={item.alt} width="auto" height="70" />
                             </a>
                         </li>
                     ))}

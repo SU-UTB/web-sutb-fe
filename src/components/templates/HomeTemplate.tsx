@@ -19,7 +19,7 @@ const HomeTemplate = ({ comingSoon, partners }: IHomeTemplateProps) => {
             <Section
                 title={"Naši partneři"}
                 titleSize={"2.5"}
-                list={partners}
+                listOfImageLinks={partners}
             />
         </>
     );
