@@ -6,6 +6,14 @@ const Icon = styled.a`
     height: 50px;
     border: 1px solid #000;
     border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        
+    :not(:first-child){
+        margin-inline: 1rem;
+    };
 `;
 
 export default Icon;

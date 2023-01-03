@@ -8,18 +8,16 @@ const ContactWrapper = () => {
     return (
         <Wrapper>
             <Title>Kontakty</Title>
-
             <ContactsWrapper>
                 <Mail href="mailto:su@sutb.cz">su@sutb.cz</Mail>
                 <Phone href="tel:+420 773 392 020">773 392 020</Phone>
             </ContactsWrapper>
-
             <SocialIconWrapper>
                 <Icon>
-                    <img alt="Fb" />
+                    Fb
                 </Icon>
                 <Icon>
-                    <img alt="Ig" />
+                    Ig
                 </Icon>
             </SocialIconWrapper>
         </Wrapper>
