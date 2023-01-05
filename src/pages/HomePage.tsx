@@ -24,22 +24,22 @@ const HomePage = () => {
         <>
             <Article primary>
                 <Section
-                    title={"Ahoj!"}
-                    titleSize={"4"}
-                    paragraph={"Jsme Studentská unie UTB. Děláme ty největší a nejlepší mejdany ve Zlíně, informujeme studenty o všem důležitém a dlouhodobě spolupracujeme s univerzitou."}
+                    title="Ahoj!"
+                    titleSize="4"
+                    paragraph="Jsme Studentská unie UTB. Děláme ty největší a nejlepší mejdany ve Zlíně, informujeme studenty o všem důležitém a dlouhodobě spolupracujeme s univerzitou."
                 />
             </Article>
             <Article>
                 <Hero
                     href={comingSoon}
-                    src={"https://sunovy.utb.cz/assets/event-section-img.jpg"}
-                    text={"Průvodce studenta UTB"}
+                    src="https://sunovy.utb.cz/assets/event-section-img.jpg"
+                    text="Průvodce studenta UTB"
                 />
             </Article>
             <Article primary>
                 <Section
-                    title={"Naši partneři"}
-                    titleSize={"2.5"}
+                    title="Naši partneři"
+                    titleSize="2.5"
                     listOfImageLinks={partners}
                 />
             </Article>
