@@ -1,4 +1,6 @@
-import Template from '../components/templates/HomeTemplate';
+import Article from '../components/articles/Article';
+import Hero from '../components/articles/hero/Hero';
+import Section from '../components/articles/section/Section';
 import TImageLink from '../lib/types/TImageLinkTypes';
 
 const HomePage = () => {
@@ -17,11 +19,31 @@ const HomePage = () => {
             href: "https://kmz.utb.cz/",
         },
     ];
+
     return (
-        <Template
-            comingSoon={comingSoon}
-            partners={partners}
-        />
+        <>
+            <Article primary>
+                <Section
+                    title={"Ahoj!"}
+                    titleSize={"4"}
+                    paragraph={"Jsme Studentská unie UTB. Děláme ty největší a nejlepší mejdany ve Zlíně, informujeme studenty o všem důležitém a dlouhodobě spolupracujeme s univerzitou."}
+                />
+            </Article>
+            <Article>
+                <Hero
+                    href={comingSoon}
+                    src={"https://sunovy.utb.cz/assets/event-section-img.jpg"}
+                    text={"Průvodce studenta UTB"}
+                />
+            </Article>
+            <Article primary>
+                <Section
+                    title={"Naši partneři"}
+                    titleSize={"2.5"}
+                    listOfImageLinks={partners}
+                />
+            </Article>
+        </>
     );
 }
 

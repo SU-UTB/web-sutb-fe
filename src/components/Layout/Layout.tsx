@@ -1,9 +1,10 @@
-import Header from '../organisms/header/Header';
-import Footer from '../organisms/footer/Footer';
-
-import { Outlet } from 'react-router-dom';
-import { Main, Wrapper } from './style';
 import { useEffect, useState } from 'react';
+
+import Footer from './footer/Footer';
+import Header from './header/Header';
+import { Main } from './Layout.styled';
+import { Outlet } from 'react-router-dom';
+import { Wrapper } from './wrapper/Wrapper.styled';
 
 const Layout = () => {
     const [title, setTitle] = useState('');
