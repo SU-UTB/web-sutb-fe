@@ -6,7 +6,6 @@ import TImageLink from '../lib/types/TImageLinkTypes';
 const HomePage = () => {
     document.title = 'Domů - Studentská unie UTB';
     const comingSoon: string = "https://pruvodcestudenta.utb.cz/";
-
     const partners: TImageLink[] = [
         {
             src: "./assets/images/utb.svg",
@@ -19,10 +18,9 @@ const HomePage = () => {
             href: "https://kmz.utb.cz/",
         },
     ];
-
     return (
         <>
-            <Article primary>
+            <Article margin>
                 <Section
                     title="Ahoj!"
                     titleSize="4"
@@ -36,7 +34,7 @@ const HomePage = () => {
                     text="Průvodce studenta UTB"
                 />
             </Article>
-            <Article primary>
+            <Article margin>
                 <Section
                     title="Naši partneři"
                     titleSize="2.5"
