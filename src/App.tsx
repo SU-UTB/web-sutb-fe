@@ -1,10 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout/Layout';
+import Layout from './components/layout/Layout';
 import Home from './pages/HomePage';
-// import About from './pages/AboutPage';
-// import News from './components/pages/NewsPage';
-// import Contact from './components/pages/ContactPage';
-// import Projects from './components/pages/ProjectsPage';
 
 function App(): JSX.Element {
   return (
@@ -12,12 +8,6 @@ function App(): JSX.Element {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          {/* <Route path="about" element={<About />} /> */}
-          {/* <Route path="news" element={<News />} />
-
-          <Route path="projects" element={<Projects />} />
-          <Route path="contacts" element={<Contact />} /> */}
-          {/* <Route path="*" element={<h1>404 - <span>Tato stránka neexistuje</span></h1>} /> */}
         </Route>
       </Routes>
     </Router>
