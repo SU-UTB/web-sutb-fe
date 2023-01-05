@@ -16,6 +16,10 @@ const Links = () => {
             name: "O unii",
             href: "/about",
         },
+        {
+            name: "Kontakty",
+            href: "/contacts",
+        },
     ];
     return (
         <LinksWrapper>
