@@ -1,27 +1,11 @@
-import Article from "../components/articles/Article";
-import Section from "../components/articles/section/Section";
-import TContactTypes from "../lib/types/TContactTypes";
+import { leadership, managers } from '../data/Contacts';
+
+import Article from '../components/articles/Article';
+import Section from '../components/articles/section/Section';
 
 const ContactPage = () => {
     document.title = 'Kontakty - Studentská unie UTB';
-    const leadership: TContactTypes[] = [
-        {
-            name: "Petra Němcová",
-            degree: "Bc.",
-            position: "HR",
-            email: "nemcova@sutb.cz",
-            image: "./assets/images/managers/pet_nem.jpg"
-        },
-    ];
-    const managers: TContactTypes[] = [
-        {
-            name: "Petra Němcová",
-            degree: "Bc.",
-            project: "Reprezentační ples UTB 2023",
-            email: "nemcova@sutb.cz",
-            image: "./assets/images/managers/pet_nem.jpg"
-        },
-    ];
+
     return (
         <>
             <Article margin>
@@ -34,7 +18,12 @@ const ContactPage = () => {
                         <div key={index}>
                             <img src={leader.image} alt={"Picture of " + leader.name} />
                             <h2>{leader.position}</h2>
-                            <h3>{leader.degree + " " + leader.name}</h3>
+                            <h3>
+                                {leader.degree ?
+                                    leader.degree + " " + leader.name :
+                                    leader.name
+                                }
+                            </h3>
                             <p>{leader.email}</p>
                         </div>
                     ))}
@@ -42,12 +31,18 @@ const ContactPage = () => {
                 <Section
                     title="Manažeři projektů"
                     titleSize="2"
+                    paragraph="Pokud se chcete na cokoliv zeptat nebo s námi spolupracovat, můžete nás zkontaktovat."
                 />
                 <div>
                     {managers.map((manager, index) => (
                         <div key={index}>
                             <img src={manager.image} alt={"Picture of " + manager.name} />
-                            <h3>{manager.degree + " " + manager.name}</h3>
+                            <h3>
+                                {manager.degree ?
+                                    manager.degree + " " + manager.name :
+                                    manager.name
+                                }
+                            </h3>
                             <p>{manager.project}</p>
                             <p>{manager.email}</p>
                         </div>
