@@ -50,3 +50,10 @@ export const SU_CONTACTS: TImageLink[] = [
     }
 ];
 
+export const SU_ADDRESS = {
+    fullName: "Studentská unie UTB, z.s.",
+    street: "Růmy 4046, budova U3 UTB",
+    city: "Zlín",
+    zip: "760 01",
+    ico: "26996286",
+}
