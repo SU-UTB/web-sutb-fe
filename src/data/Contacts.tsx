@@ -1,4 +1,5 @@
-import TContactTypes from "../lib/types/TContactTypes";
+import PetraNemcovaImg from '/assets/images/managers/pet_nem.jpg';
+import TContactTypes from '../lib/types/TContactTypes';
 
 export const leadership: TContactTypes[] = [
     {
@@ -6,42 +7,42 @@ export const leadership: TContactTypes[] = [
         degree: "",
         position: "Prezident",
         email: "gerza@sutb.cz",
-        image: "",
+        image: PetraNemcovaImg,
     },
     {
         name: "Simona Hazuchová",
         degree: "",
         position: "Viceprezident",
         email: "",
-        image: "",
+        image: PetraNemcovaImg,
     },
     {
         name: "Veronika Pavelková",
         degree: "",
         position: "Viceprezident",
         email: "",
-        image: "",
+        image: PetraNemcovaImg,
     },
     {
         name: "Alena Skařupová",
         degree: "",
         position: "Tajemník",
         email: "",
-        image: "",
+        image: PetraNemcovaImg,
     },
     {
         name: "Petra Němcová",
         degree: "Bc.",
         position: "HR",
         email: "nemcova@sutb.cz",
-        image: "./assets/images/managers/pet_nem.jpg"
+        image: PetraNemcovaImg
     },
     {
         name: "Vendula Procházková",
         degree: "",
         position: "HR",
         email: "",
-        image: ""
+        image: PetraNemcovaImg
     },
 
 ];
@@ -51,12 +52,12 @@ export const managers: TContactTypes[] = [
         degree: "Bc.",
         project: "Reprezentační ples UTB 2023",
         email: "nemcova@sutb.cz",
-        image: "./assets/images/managers/pet_nem.jpg"
+        image: PetraNemcovaImg
     },
     {
         name: "Martin Šálek",
         project: "Majáles 2023",
         email: "martin.salek@sutb.cz",
-        image: ""
+        image: PetraNemcovaImg
     }
 ];
