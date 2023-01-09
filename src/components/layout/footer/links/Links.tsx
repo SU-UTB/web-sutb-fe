@@ -1,30 +1,27 @@
 import { FooterLink, Login } from './Links.styled';
 
 import { LinksWrapper } from '../wrapper/Wrapper.styled';
+import TImageLinkTypes from '../../../../lib/types/TImageLinkTypes';
 
 const Links = () => {
-    type FooterLink = {
-        name: string;
-        href: string;
-    }
-    const links: FooterLink[] = [
+    const links: TImageLinkTypes[] = [
         {
-            name: "Domů",
-            href: "/",
+            text: "Domů",
+            linkTo: "/",
         },
         {
-            name: "O unii",
-            href: "/about",
+            text: "O unii",
+            linkTo: "/about",
         },
         {
-            name: "Kontakty",
-            href: "/contacts",
+            text: "Kontakty",
+            linkTo: "/contacts",
         },
     ];
     return (
         <LinksWrapper>
             {links.map((link) => (
-                <FooterLink href={link.href}>{link.name}</FooterLink>
+                <FooterLink href={link.linkTo}>{link.text}</FooterLink>
             ))}
             <Login href="/login">SU Login</Login>
         </LinksWrapper>
