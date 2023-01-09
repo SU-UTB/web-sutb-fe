@@ -1,6 +1,7 @@
 import { leadership, managers } from '../data/Contacts';
 
 import Article from '../components/articles/Article';
+import ContactCard from '../components/contactCard/ContactCard';
 import Section from '../components/articles/section/Section';
 
 const ContactPage = () => {
@@ -15,17 +16,7 @@ const ContactPage = () => {
                 />
                 <div>
                     {leadership.map((leader, index) => (
-                        <div key={index}>
-                            <img src={leader.image} alt={"Picture of " + leader.name} />
-                            <h2>{leader.position}</h2>
-                            <h3>
-                                {leader.degree ?
-                                    leader.degree + " " + leader.name :
-                                    leader.name
-                                }
-                            </h3>
-                            <p>{leader.email}</p>
-                        </div>
+                        <ContactCard contact={leader} key={index} />
                     ))}
                 </div>
                 <Section
@@ -35,17 +26,7 @@ const ContactPage = () => {
                 />
                 <div>
                     {managers.map((manager, index) => (
-                        <div key={index}>
-                            <img src={manager.image} alt={"Picture of " + manager.name} />
-                            <h3>
-                                {manager.degree ?
-                                    manager.degree + " " + manager.name :
-                                    manager.name
-                                }
-                            </h3>
-                            <p>{manager.project}</p>
-                            <p>{manager.email}</p>
-                        </div>
+                        <ContactCard contact={manager} key={index} />
                     ))}
                 </div>
             </Article>
