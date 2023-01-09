@@ -1,18 +1,9 @@
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-
-import Contacts from './pages/ContactPage';
-import Home from './pages/HomePage';
-import Layout from './components/layout/Layout';
-
-function App(): JSX.Element {
+import { BrowserRouter as Router } from 'react-router-dom';
+import Routes from './Routes';
+const App = (): JSX.Element => {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="contacts" element={<Contacts />} />
-        </Route>
-      </Routes>
+      <Routes />
     </Router>
   )
 }
