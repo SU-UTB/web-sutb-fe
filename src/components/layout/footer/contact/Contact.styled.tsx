@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Icon = styled.a`
     font-size: 1.5em;
@@ -15,19 +15,6 @@ export const Icon = styled.a`
         margin-inline: 1rem;
     };
 `;
-
-export const Mail = styled.a`
-    font-size: 1.3em;
-    font-weight: lighter;
-    color: #000;
-`;
-
-export const Phone = styled.a`
-    font-size: 1.3em;
-    font-weight: lighter;
-    color: #000;
-`;
-
 export const Title = styled.h1`
     font-size: 1.6em;
     font-weight: bolder;

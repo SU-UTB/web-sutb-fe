@@ -1,5 +1,6 @@
 import { Paragraph, Title } from './Section.styled';
 
+import BaseLink from '../../shared/LinkTo';
 import BaseList from '../../shared/BaseList';
 import ISectionProps from '../../../lib/interfaces/ISectionProps';
 
@@ -12,9 +13,9 @@ const Section = ({ title, titleSize, paragraph, listOfImageLinks }: ISectionProp
                 <BaseList>
                     {listOfImageLinks?.map((item, index) => (
                         <li key={index}>
-                            <a href={item.href} target="_blank" rel="noreferrer">
-                                <img src={item.src} alt={item.alt} width="auto" height="70" />
-                            </a>
+                            <BaseLink href={item.linkTo} target="_blank" rel="noreferrer">
+                                <img src={item.imgSrc} alt={item.imgAlt} width="auto" height="70" />
+                            </BaseLink>
                         </li>
                     ))}
                 </BaseList>

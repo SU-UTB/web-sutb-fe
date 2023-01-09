@@ -1,23 +1,28 @@
 import { ContactWrapper, ContactsWrapper, SocialIconWrapper } from '../wrapper/Wrapper.styled';
-import { Icon, Mail, Phone, Title } from './Contact.styled';
+import { Icon, Title } from './Contact.styled';
+import { SU_CONTACTS, SU_SOC } from '../../../../lib/constants/ContactsSocials';
+
+import LinkTo from '../../../shared/LinkTo';
 
 const Contact = () => {
     return (
         <ContactWrapper>
             <Title>Kontakty</Title>
             <ContactsWrapper>
-                <Mail href="mailto:su@sutb.cz">su@sutb.cz</Mail>
-                <Phone href="tel:+420 773 392 020">773 392 020</Phone>
+                {SU_CONTACTS.map((item, index) => (
+                    <LinkTo underline key={index} href={item.linkTo} target="_blank" rel="noreferrer">
+                        {item.text}
+                    </LinkTo>
+                ))}
             </ContactsWrapper>
             <SocialIconWrapper>
-                <Icon>
-                    Fb
-                </Icon>
-                <Icon>
-                    Ig
-                </Icon>
+                {SU_SOC.map((item, index) => (
+                    <Icon key={index}>
+                        <LinkTo href={item.linkTo} target="_blank" rel="noreferrer">{item.text}</LinkTo>
+                    </Icon>
+                ))}
             </SocialIconWrapper>
-        </ContactWrapper>
+        </ContactWrapper >
     );
 };
 
