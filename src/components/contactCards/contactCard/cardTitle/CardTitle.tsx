@@ -1,13 +1,14 @@
 import Title from "./CardTitle.styled";
 interface Props {
     title?: string;
+    titleSize?: number;
 }
-const CardTitle = ({ title }: Props) => {
+const CardTitle = ({ title, titleSize }: Props) => {
     if (title)
         return (
-            <Title>
+            <Title titleSize={titleSize}>
                 {title}
-            </Title>
+            </Title >
         )
     return null;
 };

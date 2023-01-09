@@ -7,7 +7,7 @@ import LinkTo from '../../shared/LinkTo';
 const ContactCard = ({ contact }: IContactProps) => {
     return (
         <Wrapper>
-            <CardTitle title={contact.position} />
+            <CardTitle title={contact.position} titleSize={1.8} />
             <ImgTop src={contact.image} alt={contact.name} />
             <Body>
                 <Name>
@@ -16,7 +16,7 @@ const ContactCard = ({ contact }: IContactProps) => {
                         contact.name
                     }
                 </Name>
-                <CardTitle title={contact.project} />
+                <CardTitle title={contact.project} titleSize={1.2} />
                 <LinkTo href={"mailto:" + contact.email}>
                     {contact.email}
                 </LinkTo>
