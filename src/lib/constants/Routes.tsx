@@ -1,6 +1,6 @@
-import AboutPage from "../../pages/AboutPage";
-import ContactPage from "../../pages/ContactPage";
-import IRoutesProps from "../interfaces/IRoutesProps";
+import AboutPage from '../../pages/AboutPage';
+import ContactPage from '../../pages/ContactPage';
+import IRoutesProps from '../interfaces/IRoutesProps';
 
 export const ROUTE_PATHS = {
     ABOUT: {
@@ -22,5 +22,4 @@ export const ROUTES: IRoutesProps[] = [
         route: ROUTE_PATHS.CONTACT,
         component: <ContactPage />,
     },
-
 ];

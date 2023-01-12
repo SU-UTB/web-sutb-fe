@@ -15,6 +15,5 @@ const Routes = () => {
             </Route>
         </MainRoutes>
     )
-}
-
+};
 export default Routes
