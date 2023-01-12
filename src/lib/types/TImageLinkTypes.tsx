@@ -3,4 +3,5 @@ export default interface TImageLink {
     imgAlt?: string;
     imgSrc?: string;
     linkTo?: string;
+    imgIcon?: any;
 }

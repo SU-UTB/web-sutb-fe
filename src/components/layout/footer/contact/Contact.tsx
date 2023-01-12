@@ -1,9 +1,10 @@
-import { Icon, Title } from './Contact.styled';
 import { SU_CONTACTS, SU_SOC } from '../../../../lib/constants/ContactsSocials';
 
+import BaseIcon from '../../../shared/BaseIcon';
 import BaseList from '../../../shared/BaseList';
 import { ContactsWrapper, } from '../wrapper/Wrapper.styled';
 import LinkTo from '../../../shared/LinkTo';
+import { Title } from './Contact.styled';
 
 const Contact = () => {
     return (
@@ -22,9 +23,9 @@ const Contact = () => {
                 {SU_SOC.map((item, index) => (
                     <li key={index}>
                         <LinkTo href={item.linkTo} target="_blank" rel="noreferrer">
-                            <Icon>
-                                {item.text}
-                            </Icon>
+                            <BaseIcon size={2} color="var(--clr-primary)">
+                                {item.imgIcon}
+                            </BaseIcon>
                         </LinkTo>
                     </li>
                 ))}

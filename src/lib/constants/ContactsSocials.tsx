@@ -1,3 +1,5 @@
+import { SiFacebook, SiInstagram } from 'react-icons/si';
+
 import TImageLink from '../types/TImageLinkTypes';
 
 export const SOCIALS_LINKS = {
@@ -5,15 +7,13 @@ export const SOCIALS_LINKS = {
         name: "Facebook",
         shortName: "Fb",
         linkTo: "https://www.facebook.com/studentskaunieutb",
-        imgSrc: "",
-        imgAlt: "Studentská Unie facebook",
+        imgIcon: <SiFacebook />
     },
     INSTAGRAM: {
         name: "Instagram",
         shortName: "Ig",
         linkTo: "https://www.instagram.com/studentskaunieutb/",
-        imgSrc: "",
-        imgAlt: "Studentská Unie instagram"
+        imgIcon: <SiInstagram />,
     },
 };
 
@@ -31,11 +31,14 @@ export const CONTACTS_LINKS = {
 export const SU_SOC: TImageLink[] = [
     {
         text: SOCIALS_LINKS.FACEBOOK.shortName,
-        linkTo: SOCIALS_LINKS.FACEBOOK.linkTo
+        linkTo: SOCIALS_LINKS.FACEBOOK.linkTo,
+        imgIcon: SOCIALS_LINKS.FACEBOOK.imgIcon
+
     },
     {
         text: SOCIALS_LINKS.INSTAGRAM.shortName,
-        linkTo: SOCIALS_LINKS.INSTAGRAM.linkTo
+        linkTo: SOCIALS_LINKS.INSTAGRAM.linkTo,
+        imgIcon: SOCIALS_LINKS.INSTAGRAM.imgIcon
     }
 ];
 
