@@ -20,8 +20,8 @@ const Links = () => {
     ];
     return (
         <LinksWrapper>
-            {links.map((link) => (
-                <FooterLink href={link.linkTo}>{link.text}</FooterLink>
+            {links.map((link, index) => (
+                <FooterLink key={index} href={link.linkTo}>{link.text}</FooterLink>
             ))}
             <Login href="/login">SU Login</Login>
         </LinksWrapper>

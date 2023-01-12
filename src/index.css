@@ -1,5 +1,7 @@
 :root {
   font-family: "Source Sans Pro", sans-serif;
+  --clr-primary:rgb(238, 119, 17);
+
 }
 * {
   margin: 0;
