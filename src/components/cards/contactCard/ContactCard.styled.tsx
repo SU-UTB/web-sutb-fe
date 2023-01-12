@@ -3,7 +3,8 @@ import styled from 'styled-components'
 export const Wrapper = styled.li`
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 250px;
+    height: 250px;
     font-size: small;
     overflow-wrap: break-word;
 `;
