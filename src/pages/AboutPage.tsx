@@ -11,7 +11,7 @@ const AboutPage = () => {
     };
     return (
         <>
-            <BaseList row gap={1.5} marginInline={2} marginBlock={1}>
+            <BaseList row gap={1.5} marginInline={2} marginBlock={1} fontSize={1.1}>
                 {SECTIONS.map((section, index) => (
                     <BaseButton key={index} onClick={() => { handleName(section.name) }} active={index === pos}>{section.name}</BaseButton>
                 ))}
