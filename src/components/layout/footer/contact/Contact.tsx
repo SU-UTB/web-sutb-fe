@@ -1,29 +1,35 @@
-import { ContactWrapper, ContactsWrapper, SocialIconWrapper } from '../wrapper/Wrapper.styled';
 import { Icon, Title } from './Contact.styled';
 import { SU_CONTACTS, SU_SOC } from '../../../../lib/constants/ContactsSocials';
 
+import BaseList from '../../../shared/BaseList';
+import { ContactsWrapper, } from '../wrapper/Wrapper.styled';
 import LinkTo from '../../../shared/LinkTo';
 
 const Contact = () => {
     return (
-        <ContactWrapper>
+        <ContactsWrapper>
             <Title>Kontakty</Title>
-            <ContactsWrapper>
+            <BaseList marginBlock={1} fontSize={.9}>
                 {SU_CONTACTS.map((item, index) => (
-                    <LinkTo underline key={index} href={item.linkTo} target="_blank" rel="noreferrer">
-                        {item.text}
-                    </LinkTo>
+                    <li key={index}>
+                        <LinkTo underline href={item.linkTo} target="_blank" rel="noreferrer">
+                            {item.text}
+                        </LinkTo>
+                    </li>
                 ))}
-            </ContactsWrapper>
-            <SocialIconWrapper>
+            </BaseList>
+            <BaseList row gap={1.5} fontSize={1}>
                 {SU_SOC.map((item, index) => (
-                    <Icon key={index}>
-                        <LinkTo href={item.linkTo} target="_blank" rel="noreferrer">{item.text}</LinkTo>
-                    </Icon>
+                    <li key={index}>
+                        <LinkTo href={item.linkTo} target="_blank" rel="noreferrer">
+                            <Icon>
+                                {item.text}
+                            </Icon>
+                        </LinkTo>
+                    </li>
                 ))}
-            </SocialIconWrapper>
-        </ContactWrapper >
+            </BaseList>
+        </ContactsWrapper >
     );
 };
-
 export default Contact;

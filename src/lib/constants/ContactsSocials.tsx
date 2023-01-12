@@ -1,4 +1,4 @@
-import TImageLink from "../types/TImageLinkTypes";
+import TImageLink from '../types/TImageLinkTypes';
 
 export const SOCIALS_LINKS = {
     FACEBOOK: {
@@ -55,5 +55,5 @@ export const SU_ADDRESS = {
     street: "Růmy 4046, budova U3 UTB",
     city: "Zlín",
     zip: "760 01",
-    ico: "26996286",
+    ico: "26996286"
 }

@@ -1,4 +1,4 @@
-import PetraNemcovaImg from '/assets/images/managers/pet_nem.jpg';
+import PetraNemcovaImg from '/assets/images/contacts/pet_nem.jpg';
 import TContactTypes from '../lib/types/TContactTypes';
 
 export const leadership: TContactTypes[] = [
@@ -7,28 +7,28 @@ export const leadership: TContactTypes[] = [
         degree: "",
         position: "Prezident",
         email: "gerza@sutb.cz",
-        image: PetraNemcovaImg,
+        image: "",
     },
     {
         name: "Simona Hazuchová",
         degree: "",
-        position: "Viceprezident",
-        email: "",
-        image: PetraNemcovaImg,
+        position: "Víceprezident",
+        email: "hazuchova@sutb.cz",
+        image: "",
     },
     {
         name: "Veronika Pavelková",
         degree: "",
-        position: "Viceprezident",
-        email: "",
-        image: PetraNemcovaImg,
+        position: "Víceprezident",
+        email: "pavelkova@sutb.cz",
+        image: "",
     },
     {
         name: "Alena Skařupová",
         degree: "",
         position: "Tajemník",
-        email: "",
-        image: PetraNemcovaImg,
+        email: "skarupova@sutb.cz",
+        image: "",
     },
     {
         name: "Petra Němcová",
@@ -41,8 +41,8 @@ export const leadership: TContactTypes[] = [
         name: "Vendula Procházková",
         degree: "",
         position: "HR",
-        email: "",
-        image: PetraNemcovaImg
+        email: "vendula.prochazkova@sutb.cz",
+        image: ""
     },
 
 ];
@@ -56,8 +56,31 @@ export const managers: TContactTypes[] = [
     },
     {
         name: "Martin Šálek",
+        degree: "",
         project: "Majáles 2023",
         email: "martin.salek@sutb.cz",
-        image: PetraNemcovaImg
-    }
+        image: ""
+    },
+    {
+        name: "Marek Hujo",
+        degree: "",
+        project: "Majáles 2023",
+        email: "hujo@sutb.cz",
+        image: ""
+    },
+    {
+        name: "Leona Vyhnálková",
+        degree: "",
+        project: "Největší polštářová bitva",
+        email: "vyhnalkova@sutb.cz",
+        image: ""
+    },
+    {
+        name: "David Sedlář",
+        degree: "",
+        project: "Největší polštářová bitva",
+        email: "sedlar@sutb.cz",
+        image: ""
+    },
+
 ];
