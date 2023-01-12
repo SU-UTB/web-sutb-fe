@@ -9,6 +9,10 @@ import { Wrapper } from './wrapper/Wrapper.styled';
 
 const Layout = () => {
     const [title, setTitle] = useState('');
+    const [cookies, setCookies] = useState(false);
+    const handleAccept = () => {
+        return setCookies(true);
+    };
     useEffect(() => {
         setTitle(() => {
             const parts = document.title.split('-');
@@ -22,7 +26,10 @@ const Layout = () => {
                 <Outlet />
             </Main>
             <Footer />
-            {/* <Cookies /> */}
+            {!cookies
+                ? <Cookies handleAccept={handleAccept} />
+                : null
+            }
         </Wrapper>
     );
 };
