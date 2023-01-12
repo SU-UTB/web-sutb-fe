@@ -6,10 +6,9 @@ export const LinkTo = styled.a<{
 }>(
     ({ underline, hero }) => css`
         text-decoration: none;
-        color: #000;
-        font-size: 1.3em;
         font-weight: lighter;
-        
+        font-size: 1.4em;
+        color: #000;
         ${underline && css`
             text-decoration: underline;
         `}
@@ -19,7 +18,5 @@ export const LinkTo = styled.a<{
             font-size: 1em;
             font-weight: normal;
         `}
-
 `);
-
 export default LinkTo;

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 
+import Cookies from './cookies/Cookies';
 import Footer from './footer/Footer';
 import Header from './header/Header';
 import { Main } from './Layout.styled';
@@ -21,6 +22,7 @@ const Layout = () => {
                 <Outlet />
             </Main>
             <Footer />
+            {/* <Cookies /> */}
         </Wrapper>
     );
 };
