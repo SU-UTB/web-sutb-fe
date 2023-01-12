@@ -1,20 +1,23 @@
-import Article from "../components/articles/Article";
-import Section from "../components/articles/section/Section";
+import BaseButton from '../components/shared/BaseButton';
+import BaseList from '../components/shared/BaseList';
+import { SECTIONS } from '../lib/constants/AboutUs';
+import { useState } from 'react';
 
 const AboutPage = () => {
     document.title = 'O nás - Studentská unie UTB';
-
+    const [pos, setPos] = useState<number>(0);
+    const handleName = (name: string) => {
+        setPos(SECTIONS.findIndex((section) => section.name === name));
+    };
     return (
         <>
-            <Article margin>
-                <Section
-                    title="O nás"
-                    titleSize="3"
-                    paragraph="Studentská unie UTB je nezávislá organizace, která se snaží zlepšovat život studentů na Univerzitě Tomáše Bati ve Zlíně. Jsme zastoupeni v každém oboru a v každém ročníku. Naše činnost se rozprostírá od organizace akcí, přes podporu studentů v jejich studiu, až po zastupování studentů v různých orgánech univerzity."
-                />
-            </Article>
+            <BaseList row gap={1.5} marginInline={2} marginBlock={1}>
+                {SECTIONS.map((section, index) => (
+                    <BaseButton key={index} onClick={() => { handleName(section.name) }} active={index === pos}>{section.name}</BaseButton>
+                ))}
+            </BaseList>
+            {SECTIONS[pos].content}
         </>
     );
-}
-
+};
 export default AboutPage;
