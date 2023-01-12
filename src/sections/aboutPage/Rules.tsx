@@ -20,7 +20,7 @@ const Rules = () => {
         <>
             <Article margin>
                 <Section title="Naše základní hodnoty jsou:" titleSize={1.5} id="rules">
-                    <BaseList gap={1} decoration="auto" marginInline={.5} marginBlock={1}>
+                    <BaseList gap={1} decoration="auto" marginInline={.5} marginBlock={1} fontSize={1.2}>
                         {rules.map((rule, index) => (
                             <li key={index}>{rule}</li>
                         ))}
