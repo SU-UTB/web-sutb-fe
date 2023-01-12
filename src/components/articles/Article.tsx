@@ -8,5 +8,4 @@ const Article = ({ children, margin }: IArticleProps) => {
         </Wrapper>
     );
 };
-
 export default Article;
