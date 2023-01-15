@@ -9,8 +9,8 @@ const Routes = () => {
         <MainRoutes>
             <Route path="/" element={<Layout />}>
                 <Route index element={<Home />} />
-                {ROUTES.map((route) => (
-                    <Route key={route.route.linkTo} path={route.route.linkTo} element={route.component} />
+                {ROUTES.map(({ route, component }) => (
+                    <Route key={route.linkTo} path={route.linkTo} element={component} />
                 ))}
             </Route>
         </MainRoutes>

@@ -5,11 +5,11 @@ import IRoutesProps from '../interfaces/IRoutesProps';
 export const ROUTE_PATHS = {
     ABOUT: {
         text: "O unii",
-        linkTo: "/about",
+        linkTo: "/o-nas",
     },
     CONTACT: {
         text: "Kontakty",
-        linkTo: "/contacts",
+        linkTo: "/kontakty",
     },
 };
 
