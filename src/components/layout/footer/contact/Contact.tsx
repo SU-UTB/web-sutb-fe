@@ -13,7 +13,7 @@ const Contact = () => {
             <BaseList marginBlock={1} fontSize={.9}>
                 {SU_CONTACTS.map((item, index) => (
                     <li key={index}>
-                        <LinkTo underline href={item.linkTo} target="_blank" rel="noreferrer">
+                        <LinkTo underline href={item.linkTo}>
                             {item.text}
                         </LinkTo>
                     </li>
@@ -22,8 +22,8 @@ const Contact = () => {
             <BaseList row gap={1.5} fontSize={1}>
                 {SU_SOC.map((item, index) => (
                     <li key={index}>
-                        <LinkTo href={item.linkTo} target="_blank" rel="noreferrer">
-                            <BaseIcon size={2} color="var(--clr-primary)">
+                        <LinkTo href={item.linkTo}>
+                            <BaseIcon size={2.5} color="var(--clr-primary)">
                                 {item.imgIcon}
                             </BaseIcon>
                         </LinkTo>

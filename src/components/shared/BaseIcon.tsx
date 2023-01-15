@@ -14,7 +14,7 @@ const BaseIcon = styled.div<{
         color: #000;
 
         ${size && css`
-            font-size: ${size}em;
+            font-size: ${size}rem;
         `}
         ${circle && css`
             border-radius: 50%;

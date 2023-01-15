@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
     bottom: 0;
     left: 0;
     padding:0 1rem 2rem;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: #fff;
     backdrop-filter: blur(10px);
     border-top: 1px solid #000;
 `;

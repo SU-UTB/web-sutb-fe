@@ -15,7 +15,7 @@ const Header = ({ title }: IHeaderProps) => {
             </LinkTo>
             <Title>{title}</Title>
             <LinkTo href="/login">
-                <BaseIcon size={1.5} circle>
+                <BaseIcon size={2} circle>
                     <IoPerson />
                 </BaseIcon>
             </LinkTo>
