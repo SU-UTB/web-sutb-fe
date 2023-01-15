@@ -1,7 +1,7 @@
 import { Body, Header, Img, Name, Wrapper } from './ContactCard.styled';
 
 import CardTitle from './cardTitle/CardTitle';
-import ContactPng from '/assets/images/contacts/contact.png'
+import ContactPng from '../../../assets/images/contacts/contact.png'
 import IContactProps from '../../../lib/interfaces/IContactProps';
 import LinkTo from '../../shared/LinkTo';
 

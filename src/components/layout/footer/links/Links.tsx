@@ -1,23 +1,18 @@
 import { FooterLink, Login } from './Links.styled';
 
 import { LinksWrapper } from '../wrapper/Wrapper.styled';
-import TImageLinkTypes from '../../../../lib/types/TImageLinkTypes';
+import { ROUTES } from '../../../../lib/constants/Routes';
 
 const Links = () => {
-    const links: TImageLinkTypes[] = [
-        {
-            text: "Domů",
-            linkTo: "/",
-        },
-        {
-            text: "O unii",
-            linkTo: "/about",
-        },
-        {
-            text: "Kontakty",
-            linkTo: "/contacts",
-        },
-    ];
+    const home = {
+        text: "Domů",
+        linkTo: "/",
+    };
+    const links = ROUTES.map(({ route }) => ({
+        text: route.text,
+        linkTo: route.linkTo,
+    }));
+    links.unshift(home);
     return (
         <LinksWrapper>
             {links.map((link, index) => (
