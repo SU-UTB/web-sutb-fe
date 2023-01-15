@@ -1,8 +1,8 @@
-import ImgAlenaSkarupova from '/assets/images/contacts/alena_skarupova.jpg';
-import ImgLeonaVyhnalkova from '/assets/images/contacts/leona_vyhnalkova.jpg';
-import ImgMarekHujo from '/assets/images/contacts/marek_hujo.jpg';
-import ImgPetraNemcova from '/assets/images/contacts/petra_nemcova.jpg';
-import ImgVeronikaPavelkova from '/assets/images/contacts/veronika_pavelkova.jpg';
+import ImgAlenaSkarupova from '../assets/images/contacts/alena_skarupova.jpg';
+import ImgLeonaVyhnalkova from '../assets/images/contacts/leona_vyhnalkova.jpg';
+import ImgMarekHujo from '../assets/images/contacts/marek_hujo.jpg';
+import ImgPetraNemcova from '../assets/images/contacts/petra_nemcova.jpg';
+import ImgVeronikaPavelkova from '../assets/images/contacts/veronika_pavelkova.jpg';
 import TContactTypes from '../lib/types/TContactTypes';
 
 export const leadership: TContactTypes[] = [

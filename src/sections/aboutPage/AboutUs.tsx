@@ -1,14 +1,11 @@
-import Article from '../../components/articles/Article'
-import BaseList from '../../components/shared/BaseList'
-import BaseParagraph from '../../components/shared/BaseParagraph'
-import Hero from '../../components/articles/hero/Hero'
-import Section from '../../components/articles/section/Section'
-import TImageLink from '../../lib/types/TImageLinkTypes'
+import Article from '../../components/articles/Article';
+import BaseList from '../../components/shared/BaseList';
+import BaseParagraph from '../../components/shared/BaseParagraph';
+import Hero from '../../components/articles/hero/Hero';
+import HeroUnieImg from '../../assets/images/hero/unie-img.jpg';
+import Section from '../../components/articles/section/Section';
 
 const AboutUs = () => {
-    const hero: TImageLink = {
-        imgSrc: "/assets/images/hero/unie-img.jpg",
-    };
     return (
         <>
             <Article margin>
@@ -29,7 +26,7 @@ const AboutUs = () => {
                 </Section>
             </Article>
             <Article>
-                <Hero imageLink={hero} />
+                <Hero imageLink={{ imgSrc: HeroUnieImg }} />
             </Article>
             <Article margin>
                 <Section>

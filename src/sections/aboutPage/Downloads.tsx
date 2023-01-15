@@ -1,8 +1,8 @@
-import Article from "../../components/articles/Article";
-import BaseList from "../../components/shared/BaseList";
-import { DOWNLOADS } from "../../lib/constants/AboutUs";
-import LinkTo from "../../components/shared/LinkTo";
-import Section from "../../components/articles/section/Section";
+import Article from '../../components/articles/Article';
+import BaseList from '../../components/shared/BaseList';
+import { DOWNLOADS } from '../../lib/constants/AboutUs';
+import LinkTo from '../../components/shared/LinkTo';
+import Section from '../../components/articles/section/Section';
 
 const Downloads = () => {
     return (

@@ -2,6 +2,7 @@ import Article from '../components/articles/Article';
 import BaseList from '../components/shared/BaseList';
 import BaseParagraph from '../components/shared/BaseParagraph';
 import Hero from '../components/articles/hero/Hero';
+import HeroRektoratImg from '../assets/images/hero/rektorat-img.jpg';
 import LinkTo from '../components/shared/LinkTo';
 import Section from '../components/articles/section/Section';
 import TImageLink from '../lib/types/TImageLinkTypes';
@@ -10,9 +11,9 @@ import { partners } from '../data/Partners';
 const HomePage = () => {
     document.title = 'Domů - Studentská unie UTB';
     const comingSoon: string = "https://pruvodcestudenta.utb.cz/";
-    const hero: TImageLink = {
+    const heroCommingSoon: TImageLink = {
         text: "Průvodce studenta UTB",
-        imgSrc: "/assets/images/hero/rektorat-img.jpg",
+        imgSrc: HeroRektoratImg,
         linkTo: comingSoon
     };
     return (
@@ -23,7 +24,7 @@ const HomePage = () => {
                 </Section>
             </Article>
             <Article>
-                <Hero imageLink={hero} />
+                <Hero imageLink={heroCommingSoon} />
             </Article>
             <Article margin>
                 <Section title="Naši partneři" titleSize={2.5}>
