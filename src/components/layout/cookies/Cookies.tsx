@@ -1,29 +1,29 @@
 import BaseButton from '../../shared/BaseButton';
 import BaseList from '../../shared/BaseList';
 import BaseParagraph from '../../shared/BaseParagraph';
-import ICookiesProps from '../../../lib/interfaces/ICookiesProps';
+import CookiesContext from '../../../context/cookies/CookiesContext';
 import LinkTo from '../../shared/LinkTo';
-import Section from '../../articles/section/Section';
-import { Wrapper } from './wrapper/Wrapper.styled'
+import { Wrapper } from './wrapper/Wrapper.styled';
+import { useContext } from 'react';
 
-const Cookies = ({ handleAccept }: ICookiesProps) => {
+const Cookies = () => {
+    const { handleCookies } = useContext(CookiesContext);
     return (
         <Wrapper>
-            <Section>
-                <BaseParagraph fontSize={1}>
-                    Tyto webové stránky používají k poskytování svých služeb soubory Cookies. Používáním těchto webových stránek souhlasíte s použitím souborů Cookies.                </BaseParagraph>
-                <LinkTo underline href="https://www.cookie-lista.cz/co-je-cookies.html" >
+            <BaseParagraph fontSize={.9}>
+                Tyto webové stránky používají k poskytování svých služeb soubory Cookies. Používáním těchto webových stránek souhlasíte s použitím souborů Cookies.
+            </BaseParagraph>
+            <BaseList row gap={2} marginBlock={.5}>
+                <LinkTo underline href="https://www.cookie-lista.cz/co-je-cookies.html" target="_blank" rel="noreferrer">
                     Více o cookies
                 </LinkTo>
-                <BaseList row gap={2} marginBlock={.5}>
-                    <li>
-                        <BaseButton style>Odmítnout</BaseButton>
-                    </li>
-                    <li>
-                        <BaseButton style onClick={() => { handleAccept() }}>Přijmout cookies</BaseButton>
-                    </li>
-                </BaseList>
-            </Section>
+                <BaseButton style onClick={() => handleCookies("hide")}>
+                    Odmítnout
+                </BaseButton>
+                <BaseButton style onClick={() => handleCookies("accept")}>
+                    Souhlasím s cookies
+                </BaseButton>
+            </BaseList>
         </Wrapper>
     )
 };

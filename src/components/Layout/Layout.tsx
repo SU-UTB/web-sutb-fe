@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import Cookies from './cookies/Cookies';
+import { CookiesProvider } from '../../context/cookies/CookiesContext';
 import Footer from './footer/Footer';
 import Header from './header/Header';
 import { Main } from './Layout.styled';
@@ -9,10 +9,6 @@ import { Wrapper } from './wrapper/Wrapper.styled';
 
 const Layout = () => {
     const [title, setTitle] = useState('');
-    const [cookies, setCookies] = useState(false);
-    const handleAccept = () => {
-        return setCookies(true);
-    };
     useEffect(() => {
         setTitle(() => {
             const parts = document.title.split('-');
@@ -20,18 +16,15 @@ const Layout = () => {
         })
     }, []);
     return (
-        <Wrapper>
-            <Header title={title} />
-            <Main>
-                <Outlet />
-            </Main>
-            <Footer />
-            {!cookies
-                ? <Cookies handleAccept={handleAccept} />
-                : null
-            }
-        </Wrapper>
-    );
+        <CookiesProvider>
+            <Wrapper>
+                <Header title={title} />
+                <Main>
+                    <Outlet />
+                </Main>
+                <Footer />
+            </Wrapper >
+        </CookiesProvider>
+    )
 };
-
 export default Layout;

@@ -1,3 +1,4 @@
-export default interface ICookiesProps {
-    handleAccept: () => void;
-}
+export interface ICookiesContextProps {
+    cookies: string;
+    handleCookies: (value: string) => void;
+};
