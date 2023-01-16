@@ -1,16 +1,15 @@
 import { HeroImage, HeroText } from './Hero.styled';
 
-import BaseLink from '../../shared/BaseLink';
 import IHeroProps from '../../../lib/interfaces/IHeroProps';
+import LinkTo from '../../shared/LinkTo';
 
-const Hero = ({ href, src, text }: IHeroProps) => {
+const Hero = ({ imageLink }: IHeroProps) => {
     return (
-        <HeroImage src={src}>
-            <BaseLink href={href} target="_blank" rel="noreferrer">
-                <HeroText>{text}</HeroText>
-            </BaseLink>
+        <HeroImage src={imageLink.imgSrc} dark={imageLink.text ? true : false}>
+            <LinkTo hero href={imageLink.linkTo} target="_blank" rel="noreferrer">
+                <HeroText>{imageLink.text}</HeroText>
+            </LinkTo>
         </HeroImage>
     );
 };
-
 export default Hero;

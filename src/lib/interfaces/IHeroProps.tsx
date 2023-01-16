@@ -1,5 +1,5 @@
+import TImageLink from "../types/TImageLinkTypes";
+
 export default interface IHeroProps {
-    href: string;
-    src: string;
-    text: string;
+    imageLink: TImageLink,
 }

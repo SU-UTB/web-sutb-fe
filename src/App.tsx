@@ -1,17 +1,11 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './components/layout/Layout';
-import Home from './pages/HomePage';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Routes from './Routes';
 
-function App(): JSX.Element {
+const App = (): JSX.Element => {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-        </Route>
-      </Routes>
+      <Routes />
     </Router>
   )
-}
-
+};
 export default App

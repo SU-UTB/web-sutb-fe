@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 
+import { CookiesProvider } from '../../context/cookies/CookiesContext';
 import Footer from './footer/Footer';
 import Header from './header/Header';
 import { Main } from './Layout.styled';
@@ -15,14 +16,15 @@ const Layout = () => {
         })
     }, []);
     return (
-        <Wrapper>
-            <Header title={title} />
-            <Main>
-                <Outlet />
-            </Main>
-            <Footer />
-        </Wrapper>
-    );
+        <CookiesProvider>
+            <Wrapper>
+                <Header title={title} />
+                <Main>
+                    <Outlet />
+                </Main>
+                <Footer />
+            </Wrapper>
+        </CookiesProvider>
+    )
 };
-
 export default Layout;

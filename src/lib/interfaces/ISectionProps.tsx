@@ -1,8 +1,6 @@
-import TImageLink from "../types/TImageLinkTypes";
-
 export default interface ISectionProps {
-    title: string;
-    titleSize: string;
-    paragraph?: string;
-    listOfImageLinks?: TImageLink[];
+    title?: string;
+    titleSize?: number;
+    id?: string;
+    children?: React.ReactNode;
 }

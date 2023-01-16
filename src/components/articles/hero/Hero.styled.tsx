@@ -1,24 +1,29 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const HeroImage = styled.div`
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${(props: { src: string }) => props.src});
-    width: 100%;
-    height: 20vh;   
-    margin-block: 2rem;
-    background-position: center;
-    background-repeat: no -repeat;
-    background-size: cover;
-    position: relative;
-    @media screen and (min-width: 768px)
-    {
-        height: 40vh;
-    }
-    @media screen and (min-width: 1024px)
-    {
-        height: 60vh;
-    }
-`;
-
+export const HeroImage = styled.div<{
+    src?: string;
+    dark?: boolean;
+}>(
+    ({ src, dark }) => css`
+        background-image: url(${src});
+        width: 100%;
+        height: 20vh;   
+        background-position: center;
+        background-repeat: no -repeat;
+        background-size: cover;
+        position: relative;
+        @media screen and (min-width: 768px)
+        {
+            height: 40vh;
+        }
+        @media screen and (min-width: 1024px)
+        {
+            height: 60vh;
+        }     
+        ${dark && css`
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${src});
+        `}   
+`);
 export const HeroText = styled.h1`
     width:100%;
     height: 100%;

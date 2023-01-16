@@ -1,26 +1,12 @@
-import { Paragraph, Title } from './Section.styled';
-
-import BaseList from '../../shared/BaseList';
 import ISectionProps from '../../../lib/interfaces/ISectionProps';
+import { Title } from './Section.styled';
 
-const Section = ({ title, titleSize, paragraph, listOfImageLinks }: ISectionProps) => {
+const Section = ({ title, titleSize, id, children }: ISectionProps) => {
     return (
-        <>
+        <section id={id}>
             <Title titleSize={titleSize}>{title}</Title>
-            {paragraph ? <Paragraph>{paragraph}</Paragraph> : null}
-            {listOfImageLinks ?
-                <BaseList>
-                    {listOfImageLinks?.map((item, index) => (
-                        <li key={index}>
-                            <a href={item.href} target="_blank" rel="noreferrer">
-                                <img src={item.src} alt={item.alt} width="auto" height="70" />
-                            </a>
-                        </li>
-                    ))}
-                </BaseList>
-                : null
-            }
-        </>
+            {children}
+        </section>
     );
 };
 

@@ -1,15 +1,13 @@
 :root {
   font-family: "Source Sans Pro", sans-serif;
+  --clr-primary:rgb(238, 119, 17);
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
-
   min-width: 320px;
   max-width: 100vw;
   min-height: 100vh;

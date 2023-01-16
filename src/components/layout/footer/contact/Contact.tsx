@@ -1,24 +1,36 @@
-import { ContactWrapper, ContactsWrapper, SocialIconWrapper } from '../wrapper/Wrapper.styled';
-import { Icon, Mail, Phone, Title } from './Contact.styled';
+import { SU_CONTACTS, SU_SOC } from '../../../../lib/constants/ContactsSocials';
+
+import BaseIcon from '../../../shared/BaseIcon';
+import BaseList from '../../../shared/BaseList';
+import { ContactsWrapper, } from '../wrapper/Wrapper.styled';
+import LinkTo from '../../../shared/LinkTo';
+import { Title } from './Contact.styled';
 
 const Contact = () => {
     return (
-        <ContactWrapper>
+        <ContactsWrapper>
             <Title>Kontakty</Title>
-            <ContactsWrapper>
-                <Mail href="mailto:su@sutb.cz">su@sutb.cz</Mail>
-                <Phone href="tel:+420 773 392 020">773 392 020</Phone>
-            </ContactsWrapper>
-            <SocialIconWrapper>
-                <Icon>
-                    Fb
-                </Icon>
-                <Icon>
-                    Ig
-                </Icon>
-            </SocialIconWrapper>
-        </ContactWrapper>
+            <BaseList marginBlock={1} fontSize={.9}>
+                {SU_CONTACTS.map((item, index) => (
+                    <li key={index}>
+                        <LinkTo underline href={item.linkTo}>
+                            {item.text}
+                        </LinkTo>
+                    </li>
+                ))}
+            </BaseList>
+            <BaseList row gap={1.5} fontSize={1}>
+                {SU_SOC.map((item, index) => (
+                    <li key={index}>
+                        <LinkTo href={item.linkTo}>
+                            <BaseIcon size={2.5} color="var(--clr-primary)">
+                                {item.imgIcon}
+                            </BaseIcon>
+                        </LinkTo>
+                    </li>
+                ))}
+            </BaseList>
+        </ContactsWrapper >
     );
 };
-
 export default Contact;

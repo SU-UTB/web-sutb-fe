@@ -1,12 +1,11 @@
 import IArticleProps from '../../lib/interfaces/IArticleProps';
 import { Wrapper } from './Article.styled';
 
-const Article = ({ children, primary }: IArticleProps) => {
+const Article = ({ children, margin }: IArticleProps) => {
     return (
-        <Wrapper primary={primary}>
+        <Wrapper primary={margin}>
             {children}
         </Wrapper>
     );
 };
-
 export default Article;
