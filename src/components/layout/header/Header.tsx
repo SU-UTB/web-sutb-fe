@@ -4,7 +4,7 @@ import BaseIcon from '../../shared/BaseIcon';
 import IHeaderProps from '../../../lib/interfaces/IHeaderProps';
 import { IoPerson } from 'react-icons/io5'
 import LinkTo from '../../shared/LinkTo';
-import SULogoSVG from '../../../assets/images/SULogo.svg';
+import SULogoSVG from '../../../assets/images/suLogo.svg';
 import { Wrapper } from './wrapper/Wrapper.styled';
 
 const Header = ({ title }: IHeaderProps) => {
