@@ -1,9 +1,9 @@
 import { Body, Header, Img, Name, Wrapper } from './ContactCard.styled';
 
+import BaseLink from '../../shared/BaseLink';
 import CardTitle from './cardTitle/CardTitle';
 import ContactPng from '../../../assets/images/contacts/contact.png'
 import IContactProps from '../../../lib/interfaces/IContactProps';
-import LinkTo from '../../shared/LinkTo';
 
 const ContactCard = ({ contact }: IContactProps) => {
     return (
@@ -20,9 +20,9 @@ const ContactCard = ({ contact }: IContactProps) => {
                     }
                 </Name>
                 <CardTitle title={contact.project} />
-                <LinkTo href={"mailto:" + contact.email} >
+                <BaseLink href={"mailto:" + contact.email} >
                     {contact.email}
-                </LinkTo>
+                </BaseLink>
             </Body>
         </Wrapper>
     );

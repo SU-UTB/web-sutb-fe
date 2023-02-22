@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const LinkTo = styled.a<{
+export const BaseLink = styled.a<{
     underline?: boolean;
     hero?: boolean;
 }>(
@@ -19,4 +19,4 @@ export const LinkTo = styled.a<{
             font-weight: normal;
         `}
 `);
-export default LinkTo;
+export default BaseLink;

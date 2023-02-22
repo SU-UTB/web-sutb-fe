@@ -1,24 +1,24 @@
 import { Logo, Title } from './Header.styled';
 
 import BaseIcon from '../../shared/BaseIcon';
+import BaseLink from '../../shared/BaseLink';
 import IHeaderProps from '../../../lib/interfaces/IHeaderProps';
 import { IoPerson } from 'react-icons/io5'
-import LinkTo from '../../shared/LinkTo';
 import SULogoSVG from '../../../assets/images/suLogo.svg';
 import { Wrapper } from './wrapper/Wrapper.styled';
 
 const Header = ({ title }: IHeaderProps) => {
     return (
         <Wrapper>
-            <LinkTo href="/">
+            <BaseLink href="/">
                 <Logo src={SULogoSVG} alt="Logo" />
-            </LinkTo>
+            </BaseLink>
             <Title>{title}</Title>
-            <LinkTo href="/login">
+            <BaseLink href="/login">
                 <BaseIcon size={2} circle>
                     <IoPerson />
                 </BaseIcon>
-            </LinkTo>
+            </BaseLink>
         </Wrapper>
     );
 };

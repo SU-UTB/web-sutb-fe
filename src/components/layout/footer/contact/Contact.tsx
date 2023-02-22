@@ -1,9 +1,9 @@
 import { SU_CONTACTS, SU_SOC } from '../../../../lib/constants/ContactsSocials';
 
 import BaseIcon from '../../../shared/BaseIcon';
+import BaseLink from '../../../shared/BaseLink';
 import BaseList from '../../../shared/BaseList';
 import { ContactsWrapper, } from '../wrapper/Wrapper.styled';
-import LinkTo from '../../../shared/LinkTo';
 import { Title } from './Contact.styled';
 
 const Contact = () => {
@@ -13,20 +13,20 @@ const Contact = () => {
             <BaseList marginBlock={1} fontSize={.9}>
                 {SU_CONTACTS.map((item, index) => (
                     <li key={index}>
-                        <LinkTo underline href={item.linkTo}>
+                        <BaseLink underline href={item.linkTo}>
                             {item.text}
-                        </LinkTo>
+                        </BaseLink>
                     </li>
                 ))}
             </BaseList>
             <BaseList row gap={1.5} fontSize={1}>
                 {SU_SOC.map((item, index) => (
                     <li key={index}>
-                        <LinkTo href={item.linkTo}>
+                        <BaseLink href={item.linkTo}>
                             <BaseIcon size={2.5} color="var(--clr-primary)">
                                 {item.imgIcon}
                             </BaseIcon>
-                        </LinkTo>
+                        </BaseLink>
                     </li>
                 ))}
             </BaseList>
