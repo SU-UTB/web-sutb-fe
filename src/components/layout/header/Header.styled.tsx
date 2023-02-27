@@ -35,5 +35,6 @@ export const MenuButton = styled.button`
     height: 40px;
     border: none;
     background-color: transparent;
+    color: #000;
     font-size: 40px;
 `;
