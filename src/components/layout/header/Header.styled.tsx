@@ -23,7 +23,7 @@ export const Title = styled.h1<{
 }>(
     ({ color }) => css`
         font-size: 1.5em;
-        font-weight: normal;
+        font-weight: 400;
         color: #000;
         
         ${color && css`

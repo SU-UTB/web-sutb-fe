@@ -11,7 +11,7 @@ export const Wrapper = styled.footer`
 `;
 export const Title = styled.h1`
     font-size: 1.6em;
-    font-weight: bolder;
+    font-weight: 700;
     color: #000;
     text-align: top;
 `;
