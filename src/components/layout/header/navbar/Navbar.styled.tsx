@@ -1,23 +1,19 @@
 import styled, { css } from 'styled-components';
 
+import BaseLink from '../../../shared/BaseLink';
 import BaseList from '../../../shared/BaseList';
 
 export const Wrapper = styled(BaseList)<{
-    isMobile: boolean;
     isOpen: boolean;
 }>(
-    ({ isMobile, isOpen }) => css`
+    ({ isOpen }) => css`
         font-weight: bold;
         text-align: center;
-        ${!isMobile && css`
-            display: flex;
-            flex-direction: row;
-            gap: 1rem;
-        `}
-        ${isMobile && css`
-            visibility: hidden;
+        display: none;
+        visibility: hidden;
+        ${isOpen && css`
+            visibility: visible;
             position: absolute;
-
             display: flex;
             flex-direction: column;
             top: 59px;
@@ -26,10 +22,24 @@ export const Wrapper = styled(BaseList)<{
             z-index: 100;
             width: 100%;
             border-bottom: 1px solid black;
-            
-            ${isOpen && css`
-                visibility: visible;
-                transition: all 0.5s ease;
-            `}
+            transition: all 0.5s ease;
+        `}
+        @media only screen and (min-width: 768px) {
+            visibility: visible;
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+        }
+`);
+
+export const NavLink = styled(BaseLink)<{
+    active: boolean;
+}>(
+    ({ active }) => css`
+        :hover {
+            text-decoration: underline;
+        }
+        ${active && css`
+            color: var(--clr-primary);
         `}
 `);
