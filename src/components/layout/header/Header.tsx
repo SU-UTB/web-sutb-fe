@@ -1,25 +1,32 @@
-import { Logo, Title } from './Header.styled';
+import { IoClose, IoMenu } from 'react-icons/io5';
+import { Logo, MenuButton, Title, Wrapper } from './Header.styled';
 
-import BaseIcon from '../../shared/BaseIcon';
 import BaseLink from '../../shared/BaseLink';
 import IHeaderProps from '../../../lib/interfaces/IHeaderProps';
-import { IoPerson } from 'react-icons/io5'
-import SULogoSVG from '../../../assets/images/suLogo.svg';
-import { Wrapper } from './wrapper/Wrapper.styled';
+import Navbar from './navbar/Navbar';
+import SULogoSymbol from '../../../assets/images/SU_logo_symbol_05_RGB.png';
+import SULogoText from '../../../assets/images/SU_logo_sirka_05_RGB.png';
+import { isMobile } from 'react-device-detect';
+import { useState } from 'react';
 
 const Header = ({ title }: IHeaderProps) => {
+    const [isOpen, setIsOpen] = useState(false);
+    const toggle = () => setIsOpen(!isOpen);
+
     return (
         <Wrapper>
             <BaseLink href="/">
-                <Logo src={SULogoSVG} alt="Logo" />
+                {!isMobile && <Logo src={SULogoText} alt="Logo s textem" size={200} />}
+                {isMobile && <Logo src={SULogoSymbol} alt="Logo symbol" size={50} />}
             </BaseLink>
-            <Title>{title}</Title>
-            <BaseLink href="/login">
-                <BaseIcon size={2} circle>
-                    <IoPerson />
-                </BaseIcon>
-            </BaseLink>
-        </Wrapper>
+            {isMobile && <Title>{title}</Title>}
+            {isMobile &&
+                <MenuButton onClick={toggle}>
+                    {isOpen ? <IoClose /> : <IoMenu />}
+                </MenuButton>
+            }
+            <Navbar isOpen={isOpen} />
+        </Wrapper >
     );
 };
 export default Header;
