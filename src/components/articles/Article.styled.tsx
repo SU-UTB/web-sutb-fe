@@ -1,24 +1,18 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.article<{
     primary?: boolean;
+    isMobile: boolean;
 }>(
-    ({ primary }) => css`
+    ({ primary, isMobile }) => css`
         display: flex;
         flex-direction: column;
+        
         ${primary && css`
-            margin: 1rem 2rem;
+            margin: 0 20px;
         `}
         
-        @media screen and (min-width: 768px) {
-            ${primary && css`
-                margin: 1rem 5rem;
-            `}
-        }
-
-        @media screen and (min-width: 1024px) {
-            ${primary && css`
-                margin: 1rem 15rem;
-            `}
-        }
+        ${!isMobile && css`
+            margin: 0 12%;
+        `}
 `);
