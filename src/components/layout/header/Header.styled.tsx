@@ -10,13 +10,27 @@ export const Wrapper = styled.header`
     padding: 1rem;
     position: relative;
 `;
-export const Logo = styled.img<{
+export const LogoText = styled.img<{
     size: number
 }>(
     ({ size }) => css`
         width: ${size}px;
         height: auto;
-        border-radius: 50 %;
+        display: none;  
+        @media only screen and (min-width: 768px) {
+            display:block;
+        }
+`);
+export const LogoSVG = styled.img<{
+    size: number
+}>(
+    ({ size }) => css`
+        width: ${size}px;
+        height: auto;
+        border-radius: 50%;
+        @media only screen and (min-width: 768px) {
+            display: none;
+        }
 `);
 export const Title = styled.h1<{
     color?: string;
@@ -29,6 +43,9 @@ export const Title = styled.h1<{
         ${color && css`
             color: ${color};
         `}
+        @media only screen and (min-width: 768px) {
+            display: none;
+        }
 `);
 export const MenuButton = styled.button`
     width: 40px;
@@ -37,4 +54,8 @@ export const MenuButton = styled.button`
     background-color: transparent;
     color: #000;
     font-size: 40px;
+
+    @media only screen and (min-width: 768px) {
+        display: none;
+    }
 `;
