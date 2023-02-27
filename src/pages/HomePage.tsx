@@ -28,7 +28,7 @@ const HomePage = () => {
             </Article>
             <Article margin>
                 <Section title="Naši partneři" titleSize={2.5}>
-                    <BaseList row gap={2} marginInline={2}>
+                    <BaseList row gap={2}>
                         {partners?.map((item, index) => (
                             <li key={index}>
                                 <BaseLink href={item.linkTo} target="_blank" rel="noreferrer">
