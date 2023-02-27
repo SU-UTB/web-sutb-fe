@@ -8,11 +8,10 @@ export const BaseLink = styled.a<{
     ({ underline, hero, active }) => css`
         text-decoration: none;
         font-weight: lighter;
-        font-size: 1.4rem;
-        
+        font-size: 1.4em;
         color: #000;
         ${underline && css`
-            text-decoration: underline;
+            text-decoration: underline solid 1.5px;
         `}
         ${hero && css`
             text-decoration: none;
