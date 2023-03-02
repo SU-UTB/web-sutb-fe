@@ -1,11 +1,15 @@
+import GlobalStyle from './styles/global';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Routes from './Routes';
 
 const App = (): JSX.Element => {
   return (
-    <Router>
-      <Routes />
-    </Router>
+    <>
+      <GlobalStyle />
+      <Router>
+        <Routes />
+      </Router>
+    </>
   )
 };
 export default App
