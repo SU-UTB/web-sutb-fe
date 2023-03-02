@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 export const Wrapper = styled.article<{
     primary?: boolean;
@@ -7,9 +7,18 @@ export const Wrapper = styled.article<{
         display: flex;
         flex-direction: column;
         ${primary && css`
-            margin: 0 20px;
+            margin: 1rem 2rem;
         `}
-        @media only screen and (min-width: 768px) {
-            margin: 0 12%;
+        
+        @media screen and (min-width: 768px) {
+            ${primary && css`
+                margin: 1rem 5rem;
+            `}
+        }
+
+        @media screen and (min-width: 1024px) {
+            ${primary && css`
+                margin: 1rem 15rem;
+            `}
         }
 `);

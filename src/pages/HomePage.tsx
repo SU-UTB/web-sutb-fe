@@ -1,9 +1,9 @@
 import Article from '../components/articles/Article';
-import BaseLink from '../components/shared/BaseLink';
 import BaseList from '../components/shared/BaseList';
 import BaseParagraph from '../components/shared/BaseParagraph';
 import Hero from '../components/articles/hero/Hero';
 import HeroRektoratImg from '../assets/images/hero/rektorat-img.jpg';
+import LinkTo from '../components/shared/LinkTo';
 import Section from '../components/articles/section/Section';
 import TImageLink from '../lib/types/TImageLinkTypes';
 import { partners } from '../data/Partners';
@@ -28,12 +28,12 @@ const HomePage = () => {
             </Article>
             <Article margin>
                 <Section title="Naši partneři" titleSize={2.5}>
-                    <BaseList row gap={2}>
+                    <BaseList row gap={2} marginInline={2}>
                         {partners?.map((item, index) => (
                             <li key={index}>
-                                <BaseLink href={item.linkTo} target="_blank" rel="noreferrer">
+                                <LinkTo href={item.linkTo} target="_blank" rel="noreferrer">
                                     <img src={item.imgSrc} alt={item.imgAlt} width="100%" height="70" />
-                                </BaseLink>
+                                </LinkTo>
                             </li>
                         ))}
                     </BaseList>

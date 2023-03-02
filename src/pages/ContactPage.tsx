@@ -1,9 +1,9 @@
 import { SU_ADDRESS, SU_CONTACTS } from '../lib/constants/ContactsSocials';
 
 import Article from '../components/articles/Article';
-import BaseLink from '../components/shared/BaseLink';
 import BaseList from '../components/shared/BaseList';
 import Leaders from '../sections/contacts/Leaders';
+import LinkTo from '../components/shared/LinkTo';
 import Managers from '../sections/contacts/Managers';
 import Section from '../components/articles/section/Section';
 
@@ -16,9 +16,9 @@ const ContactPage = () => {
                     <BaseList row gap={2} fontSize={.9}>
                         {SU_CONTACTS.map((item, index) => (
                             <li key={index}>
-                                <BaseLink underline href={item.linkTo} target="_blank" rel="noreferrer">
+                                <LinkTo underline href={item.linkTo} target="_blank" rel="noreferrer">
                                     {item.text}
-                                </BaseLink>
+                                </LinkTo>
                             </li>
                         ))}
                     </BaseList>

@@ -1,10 +1,11 @@
-import { Main, Wrapper } from './Layout.styled';
 import { useEffect, useState } from 'react';
 
 import { CookiesProvider } from '../../context/cookies/CookiesContext';
 import Footer from './footer/Footer';
 import Header from './header/Header';
+import { Main } from './Layout.styled';
 import { Outlet } from 'react-router-dom';
+import { Wrapper } from './wrapper/Wrapper.styled';
 
 const Layout = () => {
     const [title, setTitle] = useState('');

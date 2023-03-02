@@ -1,7 +1,7 @@
 import Article from '../../components/articles/Article';
-import BaseLink from '../../components/shared/BaseLink';
 import BaseList from '../../components/shared/BaseList';
 import BaseParagraph from '../../components/shared/BaseParagraph';
+import LinkTo from '../../components/shared/LinkTo';
 import Section from '../../components/articles/section/Section';
 import { rules } from '../../data/rules/Rules';
 
@@ -22,7 +22,7 @@ const Rules = () => {
                     <BaseParagraph>
                         Více o našich hodnotách si můžete přečíst v našich stanovách:
                     </BaseParagraph>
-                    <BaseLink underline href="/assets/stanovy-SU-UTB.pdf">Stanovy SU UTB (PDF)</BaseLink>
+                    <LinkTo underline href="/assets/stanovy-SU-UTB.pdf">Stanovy SU UTB (PDF)</LinkTo>
                 </Section>
             </Article>
         </>

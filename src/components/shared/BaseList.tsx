@@ -11,6 +11,7 @@ const BaseList = styled.ul<{
     ({ row, marginBlock, marginInline, fontSize, gap, decoration }) => css`
         list-style: none;
         display: flex;
+        flex-direction: column;
         
         ${fontSize && css`
             font-size: ${fontSize}em;
@@ -30,7 +31,7 @@ const BaseList = styled.ul<{
                 margin-left: ${marginInline * 4}rem;
                 margin-right: ${marginInline * 4}rem;
             }
-        `}        
+        `}
         ${row && css`
             flex-direction: row;
             flex-wrap: wrap;
@@ -39,7 +40,6 @@ const BaseList = styled.ul<{
             `}
         `}
         ${!row && css`
-            flex-direction: column;
             ${gap && css`
                 row-gap: ${gap}rem;
             `}
