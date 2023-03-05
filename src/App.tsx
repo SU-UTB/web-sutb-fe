@@ -1,15 +1,14 @@
 import GlobalStyle from './styles/global';
-import { BrowserRouter as Router } from 'react-router-dom';
 import Routes from './Routes';
+import Theme from './styles/theme';
+import { ThemeProvider } from 'styled-components';
 
 const App = (): JSX.Element => {
   return (
-    <>
+    <ThemeProvider theme={Theme}>
       <GlobalStyle />
-      <Router>
-        <Routes />
-      </Router>
-    </>
+      <Routes />
+    </ThemeProvider >
   )
 };
 export default App
