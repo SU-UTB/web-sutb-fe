@@ -12,7 +12,7 @@ const BaseButton = styled.p<{
 
         ${active && css`
             border-bottom: 0px solid #000;
-            color: var(--clr-primary);
+            color: ${({ theme }) => theme.colors.primary};
         `}
         
         ${style && css`
