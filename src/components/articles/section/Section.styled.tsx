@@ -6,5 +6,5 @@ export const Title = styled.h1<{
     ({ titleSize }) => css`
         font-size: ${titleSize}rem;
         font-weight: 700;
-        color: var(--clr-primary);
+        color: ${({ theme }) => theme.colors.primary};
 `);

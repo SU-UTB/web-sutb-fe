@@ -9,7 +9,7 @@ export const Wrapper = styled.article<{
         ${primary && css`
             margin: 0 20px;
         `}
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
             margin: 0 12%;
         }
 `);

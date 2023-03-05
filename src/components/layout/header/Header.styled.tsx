@@ -17,7 +17,7 @@ export const LogoText = styled.img<{
         width: ${size}px;
         height: auto;
         display: none;  
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
             display:block;
         }
 `);
@@ -28,25 +28,18 @@ export const LogoSVG = styled.img<{
         width: ${size}px;
         height: auto;
         border-radius: 50%;
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
             display: none;
         }
 `);
-export const Title = styled.h1<{
-    color?: string;
-}>(
-    ({ color }) => css`
+export const Title = styled.h1`
         font-size: 1.5em;
         font-weight: 400;
         color: #000;
-        
-        ${color && css`
-            color: ${color};
-        `}
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
             display: none;
         }
-`);
+`;
 export const MenuButton = styled.button`
     width: 40px;
     height: 40px;
@@ -55,7 +48,7 @@ export const MenuButton = styled.button`
     color: #000;
     font-size: 40px;
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
         display: none;
     }
 `;
