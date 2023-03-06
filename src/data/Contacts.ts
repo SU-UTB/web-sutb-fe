@@ -12,6 +12,7 @@ export const leadership: TContactTypes[] = [
         position: "Prezident",
         email: "gerza@sutb.cz",
         image: "",
+        phone: "+420 605 803 354",
     },
     {
         name: "Simona Hazuchová",

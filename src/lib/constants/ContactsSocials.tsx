@@ -23,8 +23,8 @@ export const CONTACTS_LINKS = {
         linkTo: "mailto:su@sutb.cz"
     },
     PHONE: {
-        text: "773 392 020",
-        linkTo: "tel:+420 773 392 020"
+        text: "605 803 354",
+        linkTo: "tel:+420 605 803 354"
     }
 };
 
