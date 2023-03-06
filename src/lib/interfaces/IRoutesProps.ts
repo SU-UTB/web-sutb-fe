@@ -1,4 +1,4 @@
-import TImageLinkTypes from "../types/TImageLinkTypes";
+import TImageLinkTypes from '../types/TImageLinkTypes';
 
 export default interface IRoutesProps {
     route: TImageLinkTypes;
