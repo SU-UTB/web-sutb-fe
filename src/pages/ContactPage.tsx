@@ -33,7 +33,7 @@ const ContactPage = () => {
                 </Section>
             </Article>
             <Leaders />
-            <Managers />
+            {/* <Managers /> */}
         </>
     );
 };

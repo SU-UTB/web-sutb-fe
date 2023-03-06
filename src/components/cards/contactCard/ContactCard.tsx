@@ -22,6 +22,10 @@ const ContactCard = ({ contact }: IContactProps) => {
                 <CardTitle title={contact.project} />
                 <BaseLink href={"mailto:" + contact.email} >
                     {contact.email}
+                </BaseLink> 
+                <br/>
+                <BaseLink href={"tel:" + contact.phone} >
+                    {contact.phone}
                 </BaseLink>
             </Body>
         </Wrapper>

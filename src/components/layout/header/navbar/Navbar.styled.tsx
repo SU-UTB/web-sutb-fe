@@ -24,7 +24,7 @@ export const Wrapper = styled(BaseList)<{
             border-bottom: 1px solid black;
             transition: all 0.5s ease;
         `}
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
             visibility: visible;
             display: flex;
             flex-direction: row;
@@ -40,6 +40,6 @@ export const NavLink = styled(BaseLink)<{
             text-decoration: underline;
         }
         ${active && css`
-            color: var(--clr-primary);
+            color: ${({ theme }) => theme.colors.primary};
         `}
 `);

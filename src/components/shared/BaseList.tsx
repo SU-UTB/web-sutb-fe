@@ -22,13 +22,9 @@ const BaseList = styled.ul<{
         ${marginInline && css`
             margin-left: ${marginInline}rem;
             margin-right: ${marginInline}rem;
-            @media screen and (min-width: 768px) {
+            @media screen and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
                 margin-left: ${marginInline * 3}rem;
                 margin-right: ${marginInline * 3}rem;
-            }
-            @media screen and (min-width: 1024px) {
-                margin-left: ${marginInline * 4}rem;
-                margin-right: ${marginInline * 4}rem;
             }
         `}        
         ${row && css`
