@@ -17,7 +17,7 @@ export const HeroImage = styled.div<{
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${src});
         `}   
 `);
-export const HeroText = styled.h1`
+export const HeroText = styled.h2`
     width:100%;
     height: 100%;
     display: flex;
