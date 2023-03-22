@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-const BaseButton = styled.p<{
+const BaseButton = styled.button<{
     active?: boolean,
     style?: boolean,
 }>(
