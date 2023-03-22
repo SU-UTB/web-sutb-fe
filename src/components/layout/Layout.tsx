@@ -18,7 +18,6 @@ const Layout = () => {
             case ROUTE_PATHS.HOME.linkTo:
                 setTitle('Domů');
                 break;
-
             case ROUTE_PATHS.ABOUT.linkTo:
                 setTitle('O nás');
                 break;

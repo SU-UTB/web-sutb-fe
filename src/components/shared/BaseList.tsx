@@ -11,7 +11,6 @@ const BaseList = styled.ul<{
     ({ row, marginBlock, marginInline, fontSize, gap, decoration }) => css`
         list-style: none;
         display: flex;
-        
         ${fontSize && css`
             font-size: ${fontSize}em;
         `}
