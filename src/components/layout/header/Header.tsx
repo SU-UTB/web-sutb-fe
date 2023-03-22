@@ -1,12 +1,12 @@
 import { IoClose, IoMenu } from 'react-icons/io5';
-import { LogoSVG, LogoText, MenuButton, Title, Wrapper } from './Header.styled';
+import { Logo, MenuButton, Title, Wrapper } from './Header.styled';
 
-import { useState } from 'react';
-import SULogoSVG from '../../../assets/images/suLogo.svg';
-import SULogoText from '../../../assets/images/SU_logo_sirka_04_RGB.png';
-import IHeaderProps from '../../../lib/interfaces/IHeaderProps';
 import BaseLink from '../../shared/BaseLink';
+import IHeaderProps from '../../../lib/interfaces/IHeaderProps';
 import Navbar from './navbar/Navbar';
+import SULogoSVG from '../../../assets/images/suLogo.svg';
+import SULogoText from '../../../assets/images/SU_logo_sirka_04_RGB.webp';
+import { useState } from 'react';
 
 const Header = ({ title }: IHeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,12 +15,12 @@ const Header = ({ title }: IHeaderProps) => {
   };
   return (
     <Wrapper>
-      <BaseLink href="/">
-        <LogoText src={SULogoText} alt="Logo s textem" size={200} />
-        <LogoSVG src={SULogoSVG} alt="Logo symbol" size={50} />
+      <BaseLink href="/" aria-label="Domů">
+        <Logo src={SULogoText} alt="Logo s textem" width={200} height={29} desktop={true} />
+        <Logo src={SULogoSVG} alt="Logo symbol" width={40} height={40} desktop={false} />
       </BaseLink>
       <Title>{title}</Title>
-      <MenuButton onClick={() => handleToggle()}>
+      <MenuButton onClick={() => handleToggle()} aria-label="Menu">
         {isOpen ? <IoClose /> : <IoMenu />}
       </MenuButton>
       <Navbar isOpen={isOpen} />
