@@ -9,10 +9,10 @@ const Footer = () => {
     return (
         <Wrapper>
             <Title>Kontakty</Title>
-            <BaseList>
+            <BaseList gap={.5}>
                 {SU_CONTACTS.map((item, index) => (
                     <li key={index}>
-                        <BaseLink underline href={item.linkTo}>
+                        <BaseLink underline href={item.linkTo} aria-label={item.text}>
                             {item.text}
                         </BaseLink>
                     </li>
@@ -21,7 +21,7 @@ const Footer = () => {
             <BaseList row gap={1.5}>
                 {SU_SOC.map((item, index) => (
                     <li key={index}>
-                        <BaseLink href={item.linkTo}>
+                        <BaseLink href={item.linkTo} aria-label={item.text}>
                             <BaseIcon size={2.5}>
                                 {item.imgIcon}
                             </BaseIcon>

@@ -6,13 +6,14 @@ import { useLocation } from 'react-router-dom';
 
 const Navbar = ({ isOpen }: INavbarProps) => {
     const location = useLocation();
-
     return (
         <Wrapper isOpen={isOpen}>
             {LINKS.map((link, index) => (
-                <NavLink href={link.linkTo} key={index} active={location.pathname === link.linkTo}>
-                    {link.text}
-                </NavLink>
+                <li key={index} >
+                    <NavLink href={link.linkTo} active={location.pathname === link.linkTo} aria-label={link.text}>
+                        {link.text}
+                    </NavLink>
+                </li>
             ))}
         </Wrapper>
     );
