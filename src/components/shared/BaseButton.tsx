@@ -5,16 +5,19 @@ const BaseButton = styled.button<{
     style?: boolean,
 }>(
     ({ active, style }) => css`
-        padding: 0.2rem 0;
-        border-bottom: 1px solid #000;
+        border: none;
         cursor: pointer;
-        font-weight: bold;
-
+        font-weight: 700;
+        font-size: 1em;
+        background: transparent;
         ${active && css`
-            border-bottom: 0px solid #000;
+            border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
             color: ${({ theme }) => theme.colors.primary};
         `}
-        
+        ${!active && css`
+            border-bottom: 1px solid #000;
+            color: #000;
+        `}
         ${style && css`
             border: 1px solid #000;
             padding: 0.5rem 1rem;

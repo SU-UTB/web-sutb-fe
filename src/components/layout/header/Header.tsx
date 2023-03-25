@@ -16,7 +16,7 @@ const Header = ({ title }: IHeaderProps) => {
   return (
     <Wrapper>
       <BaseLink href="/" aria-label="Domů">
-        <Logo src={SULogoText} alt="Logo s textem" width={200} height={29} desktop={true} />
+        <Logo src={SULogoText} alt="Logo s textem" width="auto" height={40} desktop={true} />
         <Logo src={SULogoSVG} alt="Logo symbol" width={40} height={40} desktop={false} />
       </BaseLink>
       <Title>{title}</Title>

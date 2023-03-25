@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import BaseButton from '../../shared/BaseButton';
+
 export const Wrapper = styled.header`
     width: 100%;
     height: 60px;
@@ -15,7 +17,8 @@ export const Logo = styled.img<{
 }>(
     ({ desktop }) => css`  
         ${!desktop && css`
-            aspect-ratio: 1/1;      
+            aspect-ratio: 1/1;    
+            display: block;  
             @media only screen and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
                 display: none;
             }
@@ -36,14 +39,11 @@ export const Title = styled.h1`
         display: none;
     }
 `;
-export const MenuButton = styled.button`
+export const MenuButton = styled(BaseButton)`
     width: 40px;
     height: 40px;
-    border: none;
-    background-color: transparent;
     color: #000;
     font-size: 40px;
-
     @media only screen and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
         display: none;
     }
