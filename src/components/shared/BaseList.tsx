@@ -31,6 +31,7 @@ const BaseList = styled.div<{
             flex-wrap: wrap;
             ${gap && css`
                 column-gap: ${gap}rem;
+                row-gap: ${gap * 0.5}rem;
             `}
         `}
         ${!row && css`

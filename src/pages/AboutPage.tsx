@@ -13,7 +13,7 @@ const AboutPage = () => {
         <>
             <BaseList row gap={1.5} marginInline={2} marginBlock={1} fontSize={1.1}>
                 {SECTIONS.map((section, index) => (
-                    <BaseButton key={index} onClick={() => { handleName(section.name) }} active={index === pos} >{section.name}</BaseButton>
+                    <BaseButton key={index} onClick={() => { handleName(section.name) }} active={index === pos} style>{section.name}</BaseButton>
                 ))}
             </BaseList>
             {SECTIONS[pos].content}
