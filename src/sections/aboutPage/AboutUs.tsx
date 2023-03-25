@@ -2,7 +2,7 @@ import Article from '../../components/articles/Article';
 import BaseList from '../../components/shared/BaseList';
 import BaseParagraph from '../../components/shared/BaseParagraph';
 import Hero from '../../components/articles/hero/Hero';
-import HeroUnieImg from '../../assets/images/hero/unie-img.jpg';
+import HeroUnieImg from '../../assets/images/hero/unie-img.webp';
 import Section from '../../components/articles/section/Section';
 
 const AboutUs = () => {

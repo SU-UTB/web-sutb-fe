@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-const BaseList = styled.ul<{
+const BaseList = styled.div<{
     row?: boolean;
     marginBlock?: number;
     marginInline?: number;
@@ -11,7 +11,6 @@ const BaseList = styled.ul<{
     ({ row, marginBlock, marginInline, fontSize, gap, decoration }) => css`
         list-style: none;
         display: flex;
-        
         ${fontSize && css`
             font-size: ${fontSize}em;
         `}
@@ -32,6 +31,7 @@ const BaseList = styled.ul<{
             flex-wrap: wrap;
             ${gap && css`
                 column-gap: ${gap}rem;
+                row-gap: ${gap * 0.5}rem;
             `}
         `}
         ${!row && css`
