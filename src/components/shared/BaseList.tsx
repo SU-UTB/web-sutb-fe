@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-const BaseList = styled.ul<{
+const BaseList = styled.div<{
     row?: boolean;
     marginBlock?: number;
     marginInline?: number;

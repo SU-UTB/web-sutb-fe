@@ -14,21 +14,15 @@ const Cookies = () => {
                 Tyto webové stránky používají k poskytování svých služeb soubory Cookies. Používáním těchto webových stránek souhlasíte s použitím souborů Cookies.
             </BaseParagraph>
             <BaseList row gap={2} marginBlock={.5}>
-                <li>
-                    <BaseLink underline href="https://www.cookie-lista.cz/co-je-cookies.html" aria-label="Více o cookies na cookie-lista.cz" target="_blank" rel="noreferrer">
-                        Více o cookies
-                    </BaseLink>
-                </li>
-                <li>
-                    <BaseButton style onClick={() => handleCookies("hide")} aria-label="Hide">
-                        Odmítnout
-                    </BaseButton>
-                </li>
-                <li>
-                    <BaseButton style onClick={() => handleCookies("accept")} aria-label="Accept">
-                        Souhlasím s cookies
-                    </BaseButton>
-                </li>
+                <BaseLink underline href="https://www.cookie-lista.cz/co-je-cookies.html" aria-label="Více o cookies na cookie-lista.cz" target="_blank" rel="noreferrer">
+                    Více o cookies
+                </BaseLink>
+                <BaseButton style onClick={() => handleCookies("hide")} aria-label="Hide">
+                    Odmítnout
+                </BaseButton>
+                <BaseButton style onClick={() => handleCookies("accept")} aria-label="Accept">
+                    Souhlasím s cookies
+                </BaseButton>
             </BaseList>
         </Wrapper>
     )
