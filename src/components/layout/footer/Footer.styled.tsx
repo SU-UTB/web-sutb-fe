@@ -9,7 +9,7 @@ export const Wrapper = styled.footer`
     border-top: 1px solid black;
     padding: 2rem 0;
 `;
-export const Title = styled.h1`
+export const Title = styled.h2`
     font-size: 1.6em;
     font-weight: 700;
     color: #000;

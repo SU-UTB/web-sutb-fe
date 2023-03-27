@@ -6,7 +6,7 @@ export const BaseLink = styled.a<{
 }>(
     ({ underline, hero }) => css`
         text-decoration: none;
-        font-weight: lighter;
+        font-weight: 400;
         font-size: 1.4em;
         color: #000;
         ${underline && css`
@@ -18,6 +18,5 @@ export const BaseLink = styled.a<{
             font-size: 1em;
             font-weight: normal;
         `}
-
 `);
 export default BaseLink;

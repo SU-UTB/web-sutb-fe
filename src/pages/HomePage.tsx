@@ -3,7 +3,7 @@ import BaseLink from '../components/shared/BaseLink';
 import BaseList from '../components/shared/BaseList';
 import BaseParagraph from '../components/shared/BaseParagraph';
 import Hero from '../components/articles/hero/Hero';
-import HeroRektoratImg from '../assets/images/hero/rektorat-img.jpg';
+import HeroRektoratImg from '../assets/images/hero/rektorat-img.webp';
 import Section from '../components/articles/section/Section';
 import TImageLink from '../lib/types/TImageLinkTypes';
 import { partners } from '../data/Partners';

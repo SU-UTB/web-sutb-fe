@@ -39,6 +39,7 @@ export const NavLink = styled(BaseLink)<{
         :hover {
             text-decoration: underline;
         }
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.20));
         ${active && css`
             color: ${({ theme }) => theme.colors.primary};
         `}
