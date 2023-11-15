@@ -1,0 +1,86 @@
+---
+import Layout from '../../components/Layout.astro';
+import { projects } from '../../data';
+
+const metaTags = {
+  title: 'Studentská unie UTB',
+  description: '',
+};
+---
+
+<Layout {...metaTags}>
+  <section class="pt-32">
+    <div class="bg-gradient-to-b from-white via-white to-stone-50">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8">
+        <nav class="bg-primary-600 text-primary-50 rounded-md w-fit flex items-center py-0.5 px-1">
+          <a
+            href="/"
+            class="px-3 py-1 block uppercase font-semibold text-sm tracking-wider hover:text-primary-600 hover:bg-white rounded-md transition duration-300"
+            >Studentská unie UTB</a
+          >
+          <span class="py-1 font-extrabold px-1.5">/</span>
+          <a
+            href="/projekty"
+            class="px-3 py-1 block uppercase font-semibold text-sm tracking-wider hover:text-primary-600 hover:bg-white rounded-md transition duration-300"
+            >Projekty</a
+          >
+        </nav>
+        <h1 class="text-7xl pt-12 font-extrabold tracking-wide">Projekty</h1>
+        <p class="text-xl pt-6 text-gray-700 tracking-wide leading-relaxed max-w-4xl">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam at arcu a est sollicitudin euismod. Aliquam
+          erat volutpat. Aenean vel massa quis mauris vehicula lacinia.
+        </p>
+        <p class="text-xl pt-3 text-gray-700 tracking-wide leading-relaxed max-w-4xl">
+          Vytváříme velké množství nejrůznějších aktivit. Ty dělíme do tří kategorií:
+        </p>
+        <ul role="list" class="list-disc text-xl text-gray-800 tracking-wide pl-5 pt-3 space-y-1.5 font-medium">
+          <li>Akce, mejdany a pařby</li>
+          <li>Kulturní a společenské události</li>
+          <li>Dlouhodobé projekty</li>
+        </ul>
+      </div>
+    </div>
+    <div class="bg-stone-50 py-24 px-4 md:px-6 xl:px-8">
+      <div class="max-w-7xl mx-auto grid grid-cols-2">
+        {
+          projects.map((project) => (
+            <article class="px-12 py-12 bg-stone-50 hover:bg-white transition duration-500 rounded-xl">
+              <a
+                href={`/projekty/${project.slug}`}
+                class="group overflow-hidden block rounded-lg border border-stone-800 shadow-inner"
+              >
+                <img src={project.image} alt="" class=" group-hover:scale-105 transition duration-300" />
+              </a>
+              <div class="px-2">
+                <h2 class="pt-6 text-3xl font-bold">{project.title}</h2>
+                <p class="pt-3 max-w-2xl mx-auto text-xl text-stone-800 leading-relaxed">{project.description}</p>
+                <div class="flex pt-6">
+                  <a
+                    href={`/projekty/${project.slug}`}
+                    class="text-primary-600 group font-bold text-xl tracking-wide flex gap-2 items-center hover:border-primary-600 border-b-2 border-transparent transition duration-300"
+                  >
+                    <span>Více informací</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      class="w-6 h-6 mr-1 group-hover:translate-x-1 transition duration-300"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Layout>
