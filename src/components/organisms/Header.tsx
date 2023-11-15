@@ -9,14 +9,8 @@ export const Header = () => {
           <span>Studentská unie UTB</span>
         </a>
         <div className="flex items-center gap-5 font-medium text-slate-700 text-lg tracking-wide">
-          <a className="px-2 py-1 -my-1" href="/projekty">
-            Projekty
-          </a>
-          <a className="px-2 py-1 -my-1" href="/aktuality">
-            Aktuality
-          </a>
-          <a className="px-2 py-1 -my-1" href="/o-unii">
-            O Unii
+          <a className="px-2 py-1 -my-1" href="/o-nas">
+            O nás
           </a>
           <a
             href="/kontakt"
