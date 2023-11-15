@@ -17,7 +17,13 @@ const socialImageURL = new URL(Astro.props.imageUrl ?? '/meta_image.png', Astro.
   <meta name="copyright" content={`©Studentská unie utb 2022 - ${new Date().getFullYear()}`} />
   <meta name="author" content="Studentská unie utb" />
 
-  <meta name="theme-color" content="#090F25" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ee7711" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ee7711" />
 
   <link rel="canonical" href={canonicalURL} data-baseprotocol="https:" />
   <link rel="sitemap" href="/sitemap-index.xml" />

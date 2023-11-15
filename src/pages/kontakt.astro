@@ -1,24 +1,127 @@
 ---
 import Layout from '../components/Layout.astro';
+import Breadcrumbs from '../components/organisms/Breadcrumbs.astro';
 
 const metaTags = {
   title: 'Studentská unie UTB',
   description: '',
 };
+
+const people = [
+  {
+    name: 'Dominik Gerža',
+    role: 'Prezident',
+    email: 'gerza@sutb.cz',
+    tel: '+420 605 803 354',
+    image: 'https://sutb.cz/assets/veronika_pavelkova.e3698590.jpg',
+  },
+  {
+    name: 'Dominik Gerža',
+    role: 'Prezident',
+    email: 'gerza@sutb.cz',
+    tel: '+420 605 803 354',
+    image: 'https://sutb.cz/assets/veronika_pavelkova.e3698590.jpg',
+  },
+  {
+    name: 'Dominik Gerža',
+    role: 'Prezident',
+    email: 'gerza@sutb.cz',
+    tel: '+420 605 803 354',
+    image: 'https://sutb.cz/assets/veronika_pavelkova.e3698590.jpg',
+  },
+  {
+    name: 'Dominik Gerža',
+    role: 'Prezident',
+    email: 'gerza@sutb.cz',
+    tel: '+420 605 803 354',
+    image: 'https://sutb.cz/assets/veronika_pavelkova.e3698590.jpg',
+  },
+];
 ---
 
 <Layout {...metaTags}>
-  <section class="py-12 min-h-screen bg-gradient-to-b from-white via-white to-stone-100">
+  <section class="pt-12 pb-16 bg-gradient-to-b from-white via-stone-100 to-stone-100">
     <div class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8">
-      <span class="italic">TODO: Breadcrumbs</span>
+      <Breadcrumbs
+        items={[
+          {
+            title: 'Kontakt',
+            href: '/kontakt',
+          },
+        ]}
+      />
       <h1 class="text-7xl pt-12 font-extrabold tracking-wide">Kontakt</h1>
       <p class="text-xl pt-6 text-gray-700 tracking-wide leading-relaxed max-w-3xl">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam at arcu a est sollicitudin euismod. Aliquam
-        erat volutpat. Aenean vel massa quis mauris vehicula lacinia.
+        Rádi byste navázali spolupráci? Něco byste změnili? Máte dotaz? <br />
+        <strong class="font-medium">Naši hvězdní manažeři jsou vám k dispozici, neváhejte se nám ozvat!</strong>
       </p>
-      <p class="text-xl pt-6 text-gray-700 tracking-wide leading-relaxed max-w-3xl">
-        Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
-        commodi consequatur?
+      <ul class="pt-28 grid grid-cols-3 gap-x-12 gap-y-24">
+        {
+          people.map((person) => (
+            <li class="bg-white px-6 pb-6 pt-12 rounded-md border border-stone-200 shadow-sm relative text-center">
+              <div class="absolute left-1/2 tranform -translate-x-1/2 w-24 top-0 -translate-y-1/2 rounded-full border shadow-sm overflow-hidden ">
+                <img src={person.image} alt="" />
+              </div>
+              <h2 class="text-2xl font-bold tracking-wide text-stone-800 pt-5">{person.name}</h2>
+              <p class="text-primary-600 font-medium uppercase tracking-wider pt-1">{person.role}</p>
+              <a
+                class="mt-4 text-lg  font-medium py-1 text-stone-600 flex justify-center items-center hover:text-primary-600 transition duration-300"
+                href={`mailto:${person.email}`}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  class="w-5 h-5 mr-2.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                  />
+                </svg>
+
+                <span>{person.email}</span>
+              </a>
+              {person.tel && (
+                <a
+                  class="mt-1 text-lg font-medium py-1 text-stone-600 flex justify-center items-center hover:text-primary-600 transition duration-300"
+                  href={`tel:${person.tel}`}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    class="w-5 h-5 mr-2.5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                    />
+                  </svg>
+
+                  <span>{person.tel}</span>
+                </a>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+  <section class="py-16 bg-stone-100">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8 text-center">
+      <h1 class="text-4xl font-extrabold tracking-wide">Adresa</h1>
+      <p class="text-center text-lg text-stone-700 leading-relaxed tracking-wide pt-4">
+        Studentská unie UTB, z.s. <br />
+         Růmy 4046, budova U3 UTB <br />
+         760 01 Zlín <br />
+         IČO: 26996286
       </p>
     </div>
   </section>
