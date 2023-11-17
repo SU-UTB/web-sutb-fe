@@ -12,6 +12,9 @@ export const Header = () => {
           <a className="px-2 py-1 -my-1" href="/o-nas">
             O nás
           </a>
+          <a className="px-2 py-1 -my-1" href="/pridej-se-k-nam">
+            Přidej se k nám
+          </a>
           <a
             href="/kontakt"
             className="py-2.5 px-6 rounded-lg -my-2.5 bg-primary-600 text-white shadow-lg shadow-primary-600/20 hover:bg-primary-500"
