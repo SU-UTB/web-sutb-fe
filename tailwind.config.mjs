@@ -12,7 +12,9 @@ export default {
           300: '#faca77',
           400: '#f7a840',
           500: '#f58e1a',
+          550: '#f28316',
           600: '#ee7711',
+          650: '#D66811',
           700: '#be5810',
           800: '#974415',
           900: '#7a3a14',
@@ -21,5 +23,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require('@headlessui/tailwindcss')],
 };

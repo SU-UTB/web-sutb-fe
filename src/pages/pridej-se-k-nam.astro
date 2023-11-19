@@ -1,18 +1,24 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../components/Layout.astro';
+import { Button } from '../components/atoms/Button';
+import Container from '../components/atoms/Container.astro';
+import H1 from '../components/atoms/H1.astro';
 import Breadcrumbs from '../components/organisms/Breadcrumbs.astro';
 import MajalesImage from '../images/pridej-se-k-nam/majales.jpg';
 import VitaniPrvakuImage from '../images/pridej-se-k-nam/vitani-prvaku.jpg';
 
 const metaTags = {
   title: 'Přidej se k nám | Studentská unie UTB',
-  description: '',
+  description:
+    'Proč se přidat ke Studentské unii? To je jednoduché. SU byla založena v roce 2005, takže už máme něco za sebou. U nás si můžeš vymyslet svůj vlastní projekt nebo třeba jednoho dne vést akci pro tisíce lidí - jako je Majáles, Reprezentační ples nebo Vítání prváků.',
+  image: '/meta-image-pridej-se-k-nam.jpg',
 };
 ---
 
 <Layout {...metaTags}>
   <section class="pt-12 pb-16 bg-gradient-to-b from-white via-stone-100 to-stone-100">
-    <div class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8">
+    <Container>
       <Breadcrumbs
         items={[
           {
@@ -21,26 +27,32 @@ const metaTags = {
           },
         ]}
       />
-      <h1 class="text-7xl pt-12 font-extrabold tracking-wide">Přidej se k nám</h1>
-      <p class="text-xl pt-6 text-gray-700 tracking-wide leading-relaxed">
+      <H1>Přidej se k nám</H1>
+      <p
+        class="sm:text-lg lg:text-xl pt-6 text-stone-700 tracking-wide leading-relaxed sm:leading-relaxed lg:leading-relaxed"
+      >
         Proč se přidat ke Studentské unii? To je jednoduché. SU byla založena v roce 2005, takže už máme něco za sebou.
         U nás si můžeš vymyslet svůj vlastní projekt nebo třeba jednoho dne vést akci pro tisíce lidí - jako je Majáles,
         Reprezentační ples nebo Vítání prváků.
       </p>
-      <p class="text-xl pt-6 text-gray-700 tracking-wide leading-relaxed">
+      <p
+        class="sm:text-lg lg:text-xl pt-6 text-stone-700 tracking-wide leading-relaxed sm:leading-relaxed lg:leading-relaxed"
+      >
         Je známým faktem, že firmy nechtějí zaměstnat “nepoužitelné” absolventy bez praxe, protože studium by ti kromě
         vzdělání mělo přinést získání kontaktů a praktických zkušeností. 95 % našich absolventů najde práci ještě před
         řádným ukončením školy a naši bývalí členové pracují na cool manažerských postech.
       </p>
-      <div class="grid grid-cols-2 gap-8 pt-32 pb-16 items-center">
-        <div class="pr-6 relative">
-          <img
-            src={MajalesImage.src}
+
+      <!-- Part 1 -->
+      <div class="grid md:grid-cols-2 gap-8 pb-12 pt-24 md:pb-16 md:pt-32 items-center">
+        <div class="md:pr-6 relative">
+          <Image
+            src={MajalesImage}
             class="mx-auto rounded-xl border border-stone-300 shadow-2xl shadow-stone-900/20 relative z-10"
             alt=""
           />
           <svg
-            class="h-64 w-64 sm:h-96 sm:w-96 absolute left-0 -translate-x-[66%] top-0 -translate-y-[33%] opacity-[0.075]"
+            class="h-64 w-64 sm:h-96 sm:w-96 absolute left-0 -translate-x-[33%] md:-translate-x-[66%] top-0 -translate-y-[50%] md:-translate-y-[33%] opacity-[0.075]"
             viewBox="0 0 33 30"
           >
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -57,7 +69,9 @@ const metaTags = {
             </g>
           </svg>
         </div>
-        <p class="text-xl pt-6 text-gray-700 leading-loose">
+        <p
+          class="sm:text-lg lg:text-xl text-stone-700 leading-loose sm:leading-loose lg:leading-loose tracking-wide px-2"
+        >
           <span class="font-bold text-2xl">V</span>e Studentské unii ti nabízíme možnost získání zkušeností, praxe,
           kontaktů a hlavně spousty kámošů. Můžeš se podílet na reálných projektech s rozpočtem až čtvrt milionu, můžeš
           vést 40ti členný tým a být zodpovědný za hladký průběh celé akce. Můžeš se tedy například rozvíjet v oblastech
@@ -66,17 +80,21 @@ const metaTags = {
           důležité je rozhodnutí, že NĚCO dělat chceš.
         </p>
       </div>
-      <div class="grid grid-cols-2 gap-8 py-16 items-center">
-        <p class="text-xl pt-6 text-gray-700 leading-loose">
+
+      <!-- Part 2 -->
+      <div class="grid md:grid-cols-2 gap-8 py-12 md:py-16 items-center">
+        <p
+          class="sm:text-lg lg:text-xl text-stone-700 leading-loose sm:leading-loose lg:leading-loose tracking-wide order-2 md:order-1 px-2"
+        >
           <span class="font-bold text-2xl">A</span>le to je moc pěkný povídání, o tom žádné, jenže řada z nás šla do SU
           potkat partu fajn lidí, s kterýma se bude pravidelně bavit, podnikat spoustu aktivit od polštářové bitvy, přes
           vánoční večírek naruby až po víceméně pravidelnou hospodskou schůzi. Nemluvě o teambuildingových aktivitách,
           víkendech na chatě atd. Navíc k tomu získáš kopu skvělých zkušeností a díky kámošům kolem tebe ti Zlín nikdy
           nebude cizí.
         </p>
-        <div class="pl-6 relative">
-          <img
-            src={VitaniPrvakuImage.src}
+        <div class="md:pl-6 relative order-1 md:order-2">
+          <Image
+            src={VitaniPrvakuImage}
             class="mx-auto rounded-xl border border-stone-300 shadow-2xl shadow-stone-900/20 relative z-10"
             alt=""
           />
@@ -99,14 +117,16 @@ const metaTags = {
           </svg>
         </div>
       </div>
-    </div>
+    </Container>
   </section>
-  <section class="pb-16 sm:pb-20 bg-stone-100">
-    <div class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8">
-      <h2 class="text-4xl pt-12 font-bold tracking-wide text-center">Naše základní hodnoty</h2>
-      <ol class="list-decimal w-fit mx-auto max-w-xl pt-6 space-y-3 text-stone-800 text-lg">
+  <section class="pb-12 sm:pb-16 bg-stone-100">
+    <Container>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl pt-12 font-bold tracking-wide text-center">Naše základní hodnoty</h2>
+      <ol
+        class="list-decimal w-fit mx-auto max-w-xl pt-6 space-y-3 text-stone-800 text-sm sm:text-base md:text-lg pl-5"
+      >
         <li>
-          Snažit se o neustálý rozvoj prostředí, života a vzdělání studentů Univerzity Tomáše Bati ve Zlíně(dále jen
+          Snažit se o neustálý rozvoj prostředí, života a vzdělání studentů Univerzity Tomáše Bati ve Zlíně (dále jen
           „UTB”).
         </li>
         <li>Zastupovat zájmy studentů UTB při jednání s vedením univerzity, fakult a dalšími organizacemi.</li>
@@ -121,18 +141,18 @@ const metaTags = {
         <li>Informovat studenty o dění na UTB a jejich fakultách.</li>
         <li>Podporovat zapojení zahraničních studentů do dění na UTB.</li>
       </ol>
-      <p class="max-w-xl mx-auto pt-12 text-center text-stone-700 text-sm">
+      <p class="max-w-xl mx-auto pt-12 text-center text-stone-700 text-xs md:text-sm">
         Více o našich hodnotách si můžete přečíst v našich stanovách
       </p>
       <a
         href="/files/stanovy-SU-UTB.pdf"
         target="_blank"
         rel="noopener noreferrer external"
-        class="mx-auto block w-fit mt-2 font-semibold underline decoration-2 underline-offset-4 hover:text-primary-600 transition duration-300"
+        class="mx-auto block w-fit mt-3 text-sm sm:text-base font-semibold underline decoration-2 underline-offset-4 hover:text-primary-600 transition duration-300"
       >
         Stanovy SU UTB (PDF)</a
       >
-    </div>
+    </Container>
   </section>
   <section class="py-16 sm:py-20 sm:px-6 lg:px-8 bg-stone-100">
     <div
@@ -142,17 +162,12 @@ const metaTags = {
         <span class="block">Takže se potkáme?</span>
       </h2>
       <p
-        class="pt-6 text-lg leading-relaxed font-medium text-primary-50 max-w-3xl mx-auto lg:text-xl lg:leading-relaxed"
+        class="pt-6 pb-8 sm:text-lg leading-relaxed font-medium text-primary-50 max-w-3xl mx-auto md:text-xl lg:leading-relaxed"
       >
         Stačí prostě jenom napsat na su@sutb.cz nebo na Facebook, tak jednoduché to je. <br />
          V SU se nic nepodepisuje, ani se neplatí žádný členský příspěvek.
       </p>
-      <a
-        href="/kontakt"
-        class="mt-8 w-full inline-flex items-center justify-center py-3 px-8 rounded-lg border border-transparent text-xl tracking-wide font-medium text-primary-600 bg-white hover:bg-primary-50 shadow hover:shadow-lg transition duration-300 sm:w-auto"
-      >
-        Kontaktuj nás
-      </a>
+      <Button type="link" href="kontakt" variant="white" size="lg" text="Kontaktuj nás" />
       <svg class="h-64 w-64 sm:h-96 sm:w-96 absolute -left-4 -bottom-8 opacity-[0.075]" viewBox="0 0 33 30">
         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g transform="translate(-32.000000, -26.000000)" fill="#fff" fill-rule="nonzero">

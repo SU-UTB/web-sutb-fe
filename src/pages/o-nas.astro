@@ -1,5 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../components/Layout.astro';
+import Container from '../components/atoms/Container.astro';
+import H1 from '../components/atoms/H1.astro';
 import Breadcrumbs from '../components/organisms/Breadcrumbs.astro';
 import DenBojeZaSvoboduImage from '../images/o-nas/den-boje-za-svobodu.jpg';
 import KazmaImage from '../images/o-nas/kazma.jpg';
@@ -8,13 +11,15 @@ import SudxImage from '../images/o-nas/sudx.jpg';
 
 const metaTags = {
   title: 'O nás | Studentská unie UTB',
-  description: '',
+  description:
+    'Studentská unie UTB je nestátní nezisková organizace. Fungujeme od roku 2005, jsme zcela nezávislí na univerzitě a všichni jsme dobrovolníci. Jak se můžete dočíst v našich stanovách, našim posláním je dělat život ve Zlíně o něco příjemnější - pro studenty, zaměstnance UTB i pro veřejnost. V praxi to znamená, že vytváříme velké množství nejrůznějších aktivit.',
+  image: '/meta-image-o-nas.jpg',
 };
 ---
 
 <Layout {...metaTags}>
   <section class="pt-8 sm:pt-10 lg:pt-12 pb-16 bg-gradient-to-b from-white via-stone-100 to-stone-100">
-    <div class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8">
+    <Container>
       <Breadcrumbs
         items={[
           {
@@ -23,9 +28,9 @@ const metaTags = {
           },
         ]}
       />
-      <h1 class="text-5xl sm:text-6xl lg:text-7xl pt-8 sm:pt-10 lg:pt-12 font-extrabold tracking-wide">O nás</h1>
+      <H1>O nás</H1>
       <p
-        class="sm:text-lg lg:text-xl pt-6 text-gray-700 tracking-wide leading-relaxed sm:leading-relaxed lg:leading-relaxed"
+        class="sm:text-lg lg:text-xl pt-6 text-stone-700 tracking-wide leading-relaxed sm:leading-relaxed lg:leading-relaxed"
       >
         Studentská unie UTB je nestátní nezisková organizace. Fungujeme od roku 2005, jsme zcela nezávislí na univerzitě
         a všichni jsme dobrovolníci. Jak se můžete dočíst v našich stanovách, našim posláním je dělat život ve Zlíně o
@@ -33,7 +38,7 @@ const metaTags = {
         množství nejrůznějších aktivit.
       </p>
       <p
-        class="sm:text-lg lg:text-xl pt-6 text-gray-700 tracking-wide leading-relaxed sm:leading-relaxed lg:leading-relaxed"
+        class="sm:text-lg lg:text-xl pt-6 text-stone-700 tracking-wide leading-relaxed sm:leading-relaxed lg:leading-relaxed"
       >
         Tímto širokým záběrem se odlišujeme od všech ostatních studentských organizací v České republice. Jsme skupina
         asi čtyřiceti studentů, dobrovolníků, jejichž posláním je dělat život ve Zlíně studentům, zaměstnancům UTB, ale
@@ -43,8 +48,8 @@ const metaTags = {
       <!-- Part 1 -->
       <div class="grid md:grid-cols-2 gap-8 pb-12 pt-24 md:pb-16 md:pt-32 items-center">
         <div class="md:pr-6 relative">
-          <img
-            src={SeznamovakImage.src}
+          <Image
+            src={SeznamovakImage}
             class="mx-auto rounded-xl border border-stone-300 shadow-2xl shadow-stone-900/20 relative z-10"
             alt=""
           />
@@ -67,7 +72,7 @@ const metaTags = {
           </svg>
         </div>
         <p
-          class="sm:text-lg lg:text-xl text-gray-700 leading-loose sm:leading-loose lg:leading-loose tracking-wide px-2"
+          class="sm:text-lg lg:text-xl text-stone-700 leading-loose sm:leading-loose lg:leading-loose tracking-wide px-2"
         >
           <span class="font-bold text-2xl">S</span>polečně připravujeme jedny z největších studentských akcí ve Zlíně -
           ať už je to monstrózní Vítání prváků nebo Majáles, ale také elegantní univerzitní Reprezentační ples konající
@@ -79,7 +84,7 @@ const metaTags = {
       <!-- Part 2 -->
       <div class="grid md:grid-cols-2 gap-8 py-12 md:py-16 items-center">
         <p
-          class="sm:text-lg lg:text-xl text-gray-700 leading-loose sm:leading-loose lg:leading-loose tracking-wide order-2 md:order-1 px-2"
+          class="sm:text-lg lg:text-xl text-stone-700 leading-loose sm:leading-loose lg:leading-loose tracking-wide order-2 md:order-1 px-2"
         >
           <span class="font-bold text-2xl">O</span>rganizujeme oslavy Mezinárodního dne studentstva, rozsvěcujeme
           univerzitní vánoční stromeček a také odměňujeme nejlepší studenty na Galavečeru. Pivní spirála je další z
@@ -87,8 +92,8 @@ const metaTags = {
           studenti už před dvaceti lety.
         </p>
         <div class="md:pl-6 relative order-1 md:order-2">
-          <img
-            src={DenBojeZaSvoboduImage.src}
+          <Image
+            src={DenBojeZaSvoboduImage}
             class="mx-auto rounded-xl border border-stone-300 shadow-2xl shadow-stone-900/20 relative z-10"
             alt=""
           />
@@ -115,8 +120,8 @@ const metaTags = {
       <!-- Part 3 -->
       <div class="grid md:grid-cols-2 gap-8 py-12 md:py-16 items-center">
         <div class="md:pr-6 relative">
-          <img
-            src={KazmaImage.src}
+          <Image
+            src={KazmaImage}
             class="mx-auto rounded-xl border border-stone-300 shadow-2xl shadow-stone-900/20 relative z-10"
             alt=""
           />
@@ -139,7 +144,7 @@ const metaTags = {
           </svg>
         </div>
         <p
-          class="sm:text-lg lg:text-xl text-gray-700 leading-loose sm:leading-loose lg:leading-loose tracking-wide px-2"
+          class="sm:text-lg lg:text-xl text-stone-700 leading-loose sm:leading-loose lg:leading-loose tracking-wide px-2"
         >
           <span class="font-bold text-2xl">P</span>řivádíme do Zlína zajímavé osobnosti - mohl sis například poslechnout
           přednášku moderátora Václava Moravce, legendárního Ladislava Špačka nebo Erika Taberyho - šéfredaktora
@@ -151,7 +156,7 @@ const metaTags = {
       <!-- Part 4 -->
       <div class="grid md:grid-cols-2 gap-8 py-12 md:py-16 items-center">
         <p
-          class="sm:text-lg lg:text-xl text-gray-700 leading-loose sm:leading-loose lg:leading-loose tracking-wide order-2 md:order-1 px-2"
+          class="sm:text-lg lg:text-xl text-stone-700 leading-loose sm:leading-loose lg:leading-loose tracking-wide order-2 md:order-1 px-2"
         >
           <span class="font-bold text-2xl">P</span>ráce na tolika reálných projektech je pro nás především obrovským
           zdrojem zkušeností. Kde jinde má člověk ještě během studia možnost zkusit vést tým lidí a nést plnou
@@ -160,8 +165,8 @@ const metaTags = {
           ostatních studentů, zaměstnanců a veřejnosti Zlína.
         </p>
         <div class="md:pl-6 relative order-1 md:order-2">
-          <img
-            src={SudxImage.src}
+          <Image
+            src={SudxImage}
             class="mx-auto rounded-xl border border-stone-300 shadow-2xl shadow-stone-900/20 relative z-10"
             alt=""
           />
@@ -184,17 +189,17 @@ const metaTags = {
           </svg>
         </div>
       </div>
-    </div>
+    </Container>
   </section>
 
   <section class="pt-6 md:pt-16 pb-32 bg-stone-100">
-    <div class="max-w-7xl mx-auto px-4 md:px-6 xl:px-8">
+    <Container>
       <a
         href="/pridej-se-k-nam"
         class="text-primary-600 border-b-2 border-primary-600 font-bold tracking-wider text-xl md:text-2xl w-fit mx-auto block hover:text-primary-500 hover:border-primary-500 transition-all duration-300 hover:px-4"
       >
         Máš zájem se k nám přidat ?</a
       >
-    </div>
+    </Container>
   </section>
 </Layout>
