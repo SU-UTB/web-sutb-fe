@@ -29,7 +29,7 @@ export const Header = () => {
           <a className="px-2 py-1 -my-1" href="/pridej-se-k-nam">
             Přidej se k nám
           </a>
-          <Button type="link" href="kontakt" variant="primary" size="sm" text="Kontakt" />
+          <Button type="link" href="/kontakt" variant="primary" size="sm" text="Kontakt" />
         </div>
         <Menu>
           {({ open, close }) => {
@@ -122,7 +122,7 @@ export const Header = () => {
                             </a>
                           </Menu.Item>
                           <Menu.Item>
-                            <Button type="link" href="kontakt" variant="primary" size="md" text="Kontakt" />
+                            <Button type="link" href="/kontakt" variant="primary" size="md" text="Kontakt" />
                           </Menu.Item>
                         </div>
                       </div>
