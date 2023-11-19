@@ -3,84 +3,117 @@ import { Icon } from '../atoms/Icon.tsx';
 import { SuLogo } from '../atoms/SuLogo';
 ---
 
-<footer class="bg-stone-50 border-t border-stone-200">
-  <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
-    <h2 class="flex justify-center items-center gap-4 uppercase font-bold tracking-wider text-stone-700">
-      <SuLogo className="h-8" />
-      <span>Studentská unie UTB</span>
-    </h2>
-    <nav
-      class="-mx-5 pt-6 flex flex-col sm:flex-row items-center gap-y-2 flex-wrap justify-center tracking-wide text-stone-600"
-      aria-label="Footer"
-    >
-      <div class="px-5 py-2">
-        <a href="/" class="text-base hover:text-primary-600 transition duration-300"> Domů</a>
-      </div>
+<footer class="bg-white border-t border-stone-200" aria-labelledby="footer-heading">
+  <h2 id="footer-heading" class="sr-only">Footer</h2>
+  <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+    <div class="xl:grid xl:grid-cols-3 xl:gap-12">
+      <div class="space-y-8 xl:col-span-1">
+        <h2 class="flex items-center gap-4 uppercase font-bold tracking-wider text-stone-600">
+          <SuLogo className="h-8" />
+          <span>Studentská unie UTB</span>
+        </h2>
+        <p class="text-stone-500 text-base leading-relaxed max-w-xl">
+          Studentská unie UTB je nestátní nezisková organizace. Fungujeme od roku 2005, jsme zcela nezávislí na
+          univerzitě a všichni jsme dobrovolníci.
+        </p>
+        <nav class="flex space-x-6 text-stone-400" aria-label="Sociální sítě">
+          <a
+            href="https://www.facebook.com/studentskaunieutb"
+            target="_blank"
+            rel="noopener noreferrer external"
+            class="hover:text-primary-600 transition duration-300"
+          >
+            <span class="text-stone-700 sr-only">Facebook</span>
+            <Icon name="facebook" className="h-6 w-6" />
+          </a>
 
-      <div class="px-5 py-2">
-        <a href="/o-nas" class="text-base hover:text-primary-600 transition duration-300"> O nás</a>
+          <a
+            href="https://www.instagram.com/studentskaunieutb/"
+            target="_blank"
+            rel="noopener noreferrer external"
+            class="hover:text-primary-600 transition duration-300"
+          >
+            <span class="text-stone-700 sr-only">Instagram</span>
+            <Icon name="instagram" className="h-6 w-6" />
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCUf0jyYFASsAgS08yIEXdmQ"
+            target="_blank"
+            rel="noopener noreferrer external"
+            class="hover:text-primary-600 transition duration-300"
+          >
+            <span class="text-stone-700 sr-only">Youtube</span>
+            <Icon name="youtube" className="h-6 w-6" />
+          </a>
+        </nav>
       </div>
-
-      <div class="px-5 py-2">
-        <a href="/pridej-se-k-nam" class="text-base hover:text-primary-600 transition duration-300"> Přidej se k nám</a>
+      <div class="mt-12 xl:mt-0 xl:col-span-2">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 md:gap-8">
+          <div class="hidden xl:block"></div>
+          <div class="mt-12 md:mt-0 order-4 xl:order-1">
+            <h3 id="footer-studentska-unie" class="text-sm font-semibold text-stone-500 tracking-wider uppercase">
+              Projekty
+            </h3>
+            <div class="mt-4 text-stone-600">Již brzy</div>
+          </div>
+          <div class="mt-12 md:mt-0 xl:order-2">
+            <h3 id="footer-studentska-unie" class="text-sm font-semibold text-stone-500 tracking-wider uppercase">
+              Studentská Unie
+            </h3>
+            <nav aria-labelledby="footer-studentska-unie" class="mt-4 space-y-4 text-stone-600 flex flex-col">
+              <a href="/o-nas" class="hover:text-primary-600 transition duration-300"> O nás</a>
+              <a href="/pridej-se-k-nam" class="hover:text-primary-600 transition duration-300">Přidej se k nám</a>
+              <a href="/kontakt" class="hover:text-primary-600 transition duration-300">Kontakt</a>
+              <a href="/files/stanovy-SU-UTB.pdf" class="hover:text-primary-600 transition duration-300">
+                Stanovy unie</a
+              >
+            </nav>
+          </div>
+          <div class="mt-12 md:mt-0 xl:order-3">
+            <h3 id="footer-uzitecne-odkazy" class="text-sm font-semibold text-stone-500 tracking-wider uppercase">
+              Užitečné odkazy
+            </h3>
+            <nav aria-labelledby="footer-uzitecne-odkazy" class="mt-4 space-y-4 text-stone-600 flex flex-col">
+              <a
+                href="https://www.dropbox.com/sh/51qauayq1k7igq6/AAAznMWvYwv5wxA6ZAW79DGra?dl=0"
+                class="hover:text-primary-600 transition duration-300"
+              >
+                Press kit</a
+              >
+              <a
+                href="https://pruvodcestudenta.utb.cz/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-primary-600 transition duration-300"
+              >
+                Průvodce studenta
+              </a>
+              <a href="/files/stanovy-SU-UTB.pdf" class="hover:text-primary-600 transition duration-300">
+                Stanovy unie</a
+              >
+              <a
+                href="https://mapa.utb.cz/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-primary-600 transition duration-300"
+              >
+                Mapa UTB
+              </a>
+              <a
+                href="https://utb.cz/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-primary-600 transition duration-300"
+              >
+                Univerzita
+              </a>
+            </nav>
+          </div>
+        </div>
       </div>
-
-      <div class="px-5 py-2">
-        <a href="/kontakt" class="text-base hover:text-primary-600 transition duration-300"> Kontakt</a>
-      </div>
-
-      <div class="px-5 py-2">
-        <a
-          href="https://www.dropbox.com/sh/51qauayq1k7igq6/AAAznMWvYwv5wxA6ZAW79DGra?dl=0"
-          target="_blank"
-          rel="noopener noreferrer external"
-          class="text-base hover:text-primary-600 transition duration-300"
-        >
-          Press Kit</a
-        >
-      </div>
-
-      <div class="px-5 py-2">
-        <a
-          href="/files/stanovy-SU-UTB.pdf"
-          target="_blank"
-          rel="noopener noreferrer external"
-          class="text-base hover:text-primary-600 transition duration-300"
-        >
-          Stanovy</a
-        >
-      </div>
-    </nav>
-    <div class="mt-8 flex justify-center space-x-6">
-      <a
-        href="https://www.facebook.com/studentskaunieutb"
-        target="_blank"
-        rel="noopener noreferrer external"
-        class="text-stone-500 hover:text-primary-600 transition duration-300"
-      >
-        <span class="sr-only">Facebook</span>
-        <Icon name="facebook" className="h-6 w-6" />
-      </a>
-
-      <a
-        href="https://www.instagram.com/studentskaunieutb/"
-        target="_blank"
-        rel="noopener noreferrer external"
-        class="text-stone-500 hover:text-primary-600 transition duration-300"
-      >
-        <span class="sr-only">Instagram</span>
-        <Icon name="instagram" className="h-6 w-6" />
-      </a>
-      <a
-        href="https://www.youtube.com/channel/UCUf0jyYFASsAgS08yIEXdmQ"
-        target="_blank"
-        rel="noopener noreferrer external"
-        class="text-stone-500 hover:text-primary-600 transition duration-300"
-      >
-        <span class="sr-only">Youtube</span>
-        <Icon name="youtube" className="h-6 w-6" />
-      </a>
     </div>
-    <p class="mt-8 text-center text-base text-black/40">&copy; 2023 Studentská unie UTB, všechna práva vyhrazena.</p>
+    <div class="mt-12 border-t border-stone-200 pt-8">
+      <p class="text-base text-stone-400 xl:text-center">&copy; 2023 Studentská unie UTB, všechna práva vyhrazena.</p>
+    </div>
   </div>
 </footer>
