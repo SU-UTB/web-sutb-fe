@@ -1,0 +1,50 @@
+---
+import { Icon } from '../atoms/Icon.tsx';
+
+interface Props {
+  items: {
+    title: string;
+    href: string;
+  }[];
+}
+
+const schemaJson = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: Astro.props.items.map((item: any, index: number) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    item: {
+      '@id': item.href,
+      name: item.title,
+    },
+  })),
+});
+---
+
+<nav class="flex" aria-label="Drobečková navigace">
+  <ol role="list" class="flex items-center space-x-2 sm:space-x-4">
+    <li>
+      <a href="/" class="text-stone-400 hover:text-primary-600 transition duration-300">
+        <Icon name="home" className="flex-shrink-0 h-5 w-5" />
+        <span class="sr-only">Domů</span>
+      </a>
+    </li>
+
+    {
+      Astro.props.items.map((item: any, index: number) => (
+        <li class="flex items-center">
+          <Icon name="slash" className="flex-shrink-0 h-5 w-5 text-stone-300" />
+          <a
+            href={item.href}
+            aria-current={index === Astro.props.items.length - 1 ? 'page' : 'false'}
+            class="ml-4 font-medium text-stone-400 hover:text-primary-600 transition duration-300"
+          >
+            {item.title}
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+</nav>
+<script type="application/ld+json" set:html={schemaJson} />

@@ -1,0 +1,106 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../../components/Layout.astro';
+import { Button } from '../../components/atoms/Button';
+import Container from '../../components/atoms/Container.astro';
+import H1 from '../../components/atoms/H1.astro';
+import Breadcrumbs from '../../components/organisms/Breadcrumbs.astro';
+import ProjectImage2 from '../../images/projekty/majales-music-kviz.png';
+import ProjectImage from '../../images/projekty/majales.png';
+
+export function getStaticPaths() {
+  return [{ params: { project: 'majales' } }];
+}
+
+const metaTags = {
+  title: 'Majáles | Projekty | Studentská unie UTB',
+  description: 'TODO',
+  image: '/meta-image-projekty.jpg',
+};
+---
+
+<Layout {...metaTags}>
+  <section class="pt-8 sm:pt-10 lg:pt-12 pb-16 bg-gradient-to-b from-white via-stone-100 to-stone-100">
+    <Container>
+      <Breadcrumbs
+        items={[
+          {
+            title: 'Projekty',
+            href: '/projekty',
+          },
+          {
+            title: 'Majáles',
+            href: '/projekty/majales',
+          },
+        ]}
+      />
+      <Image class="pt-12 w-full shadow-lg relative" src={ProjectImage} alt="" />
+      <H1>Majáles UTB 2022</H1>
+      <p
+        class="sm:text-lg lg:text-xl pt-6 text-stone-700 tracking-wide leading-relaxed sm:leading-relaxed lg:leading-relaxed"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum
+      </p>
+      <p
+        class="sm:text-lg lg:text-xl pt-6 text-stone-700 tracking-wide leading-relaxed sm:leading-relaxed lg:leading-relaxed"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum
+      </p>
+    </Container>
+  </section>
+  <section class="py-16 bg-stone-100">
+    <Container>
+      <h2 class="text-4xl font-bold tracking-wider leading-snug">Doprovodný program</h2>
+      <p
+        class="sm:text-lg lg:text-xl pt-6 text-stone-700 tracking-wide leading-relaxed sm:leading-relaxed lg:leading-relaxed max-w-3xl"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.
+      </p>
+      <div class="grid grid-cols-2 pt-12 gap-16">
+        <Image class="w-full object-cover shadow rounded-xl" src={ProjectImage2} alt="" />
+        <Image class="w-full object-cover shadow rounded-xl" src={ProjectImage2} alt="" />
+      </div>
+    </Container>
+  </section>
+  <section class="py-16 bg-stone-100">
+    <Container>
+      <h2 class="text-4xl font-bold tracking-wider leading-snug">Fotogalerie</h2>
+      <p
+        class="sm:text-lg lg:text-xl pt-6 text-stone-700 tracking-wide leading-relaxed sm:leading-relaxed lg:leading-relaxed max-w-3xl"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.
+      </p>
+    </Container>
+  </section>
+  <section class="py-16 bg-stone-100">
+    <Container>
+      <h2 class="text-4xl font-bold tracking-wider leading-snug">Partneři projektu</h2>
+      <p
+        class="sm:text-lg lg:text-xl pt-6 text-stone-700 tracking-wide leading-relaxed sm:leading-relaxed lg:leading-relaxed max-w-3xl"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.
+      </p>
+    </Container>
+  </section>
+  <section class="pt-16 pb-32 bg-stone-100">
+    <Container>
+      <div class="flex justify-center">
+        <Button type="link" href="/projekty" size="lg" variant="primary" text="Zpět na seznam projektů" />
+      </div>
+    </Container>
+  </section>
+</Layout>

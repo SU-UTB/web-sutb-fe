@@ -1,0 +1,45 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  imageUrl?: string;
+}
+
+import Footer from './organisms/Footer.astro';
+import Head from './organisms/Head.astro';
+import { Header } from './organisms/Header';
+---
+
+<html lang="cs">
+  <Head {...Astro.props} />
+  <body>
+    <Header client:load />
+
+    <main class="overflow-x-hidden">
+      <slot />
+    </main>
+
+    <aside>
+      <!-- TODO Notifications maybe -->
+    </aside>
+
+    <Footer />
+    <style>
+      @font-face {
+        font-family: 'CabinetGrotesk';
+        src:
+          url('/fonts/CabinetGrotesk-Variable.woff2') format('woff2'),
+          url('/fonts/CabinetGrotesk-Variable.woff') format('woff'),
+          url('/fonts/CabinetGrotesk-Variable.ttf') format('truetype');
+        font-weight: 100 900;
+        font-display: swap;
+        font-style: normal;
+      }
+
+      html,
+      body {
+        font-family: 'CabinetGrotesk', sans-serif;
+      }
+    </style>
+  </body>
+</html>
