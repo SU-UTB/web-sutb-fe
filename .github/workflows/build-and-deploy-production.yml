@@ -2,7 +2,7 @@ name: Deploy main to sutb.cz
 
 on:
   push:
-    branches: ["main"]
+    branches: ['main']
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -14,18 +14,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "19.8"
+          node-version: '19.8'
 
       - name: Install dependcies
         run: npm install
 
       - name: Build project
         run: npm run build
-        
+
       - name: Deploy to server
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
@@ -33,5 +33,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: dist/
-          server-dir: /
-
+          server-dir: www/
