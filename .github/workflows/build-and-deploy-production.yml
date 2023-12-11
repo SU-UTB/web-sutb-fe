@@ -1,4 +1,4 @@
-name: Deploy main to sutb.cz
+name: Build and deploy to production
 
 on:
   push:
