@@ -7,6 +7,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://sutb.cz/',
+  site: 'https://su.utb.cz/',
   integrations: [tailwind(), react(), robotsTxt(), sitemap()],
 });
