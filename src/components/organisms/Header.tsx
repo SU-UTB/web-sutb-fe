@@ -10,8 +10,10 @@ export const Header = () => {
   useEffect(() => {
     if (isMenuOpen) {
       document.body.classList.add('overflow-hidden');
+      document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#1b1917');
     } else {
       document.body.classList.remove('overflow-hidden');
+      document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#fff');
     }
   }, [isMenuOpen]);
 
@@ -82,7 +84,7 @@ export const Header = () => {
                     </Transition.Child>
                     <Transition.Child
                       as={React.Fragment}
-                      enter="transition duration-300 delay-200 ease-in-out"
+                      enter="transition duration-300 ease-in-out"
                       enterFrom="opacity-0"
                       enterTo="opacity-100"
                       leave="transition duration-300 ease-in-out"
