@@ -99,11 +99,11 @@ export const Header = () => {
                     <Transition.Child
                       as={React.Fragment}
                       enter="transition duration-300 ease-in-out"
-                      enterFrom="translate-x-full"
+                      enterFrom="-translate-y-full"
                       enterTo="opacity-100"
                       leave="transition duration-300 ease-in-out"
                       leaveFrom="opacity-100"
-                      leaveTo="translate-x-full"
+                      leaveTo="-translate-y-full"
                     >
                       <div className="bg-stone-900 w-full h-full pb-5 pt-[calc(52px+1.25rem)] sm:py-6 px-4 sm:px-6 text-stone-100 relative z-10">
                         <div className="flex flex-col h-full space-y-8 items-center justify-center">
