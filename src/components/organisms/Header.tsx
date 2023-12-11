@@ -13,7 +13,9 @@ export const Header = () => {
       document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#1b1917');
     } else {
       document.body.classList.remove('overflow-hidden');
-      document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#fff');
+      setTimeout(() => {
+        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#fff');
+      }, 300);
     }
   }, [isMenuOpen]);
 
