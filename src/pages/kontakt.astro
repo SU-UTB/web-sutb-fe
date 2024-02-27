@@ -5,12 +5,13 @@ import Container from '../components/atoms/Container.astro';
 import H1 from '../components/atoms/H1.astro';
 import { Icon } from '../components/atoms/Icon.tsx';
 import Breadcrumbs from '../components/organisms/Breadcrumbs.astro';
-import BuresImage from '../images/kontakt/bures.jpg';
-import HazuchovaImage from '../images/kontakt/hazuchova.jpg';
-import HozzovaImage from '../images/kontakt/hozzova.jpg';
-import KratochvilImage from '../images/kontakt/kratochvil.jpg';
-import PavelkovaImage from '../images/kontakt/pavelkova.jpg';
-import SedlacikovaImage from '../images/kontakt/sedlacikova.jpg';
+
+import bystronovaImage from '../images/kontakt/bystronova.webp';
+import hruskovaImage from '../images/kontakt/hruskova.webp';
+import kratochvilImage from '../images/kontakt/kratochvil.webp';
+import kubickovaImage from '../images/kontakt/kubickova.webp';
+import matulikovaImage from '../images/kontakt/matulikova.webp';
+import sedlacikovaImage from '../images/kontakt/sedlacikova.webp';
 
 const metaTags = {
   title: 'Studentská unie UTB',
@@ -21,42 +22,42 @@ const metaTags = {
 
 const people = [
   {
-    name: 'Karel Kratochvil',
+    name: 'Bc. Karel Kratochvil',
     role: 'Prezident',
     email: 'kratochvil@sutb.cz',
     tel: '+420 725 979 411',
-    image: KratochvilImage,
+    image: kratochvilImage,
   },
   {
-    name: 'Simona Hazuchová',
+    name: 'Ema Kubíčková',
     role: 'Viceprezidentka',
-    email: 'hazuchova@sutb.cz',
-    image: HazuchovaImage,
+    email: 'kubickova@sutb.cz',
+    image: kubickovaImage,
   },
   {
-    name: 'Veronika Pavelková',
+    name: 'Alžběta Hrušková',
     role: 'Viceprezidentka',
-    email: 'pavelkova@sutb.cz',
-    image: PavelkovaImage,
+    email: 'hruskova@sutb.cz',
+    image: hruskovaImage,
   },
   {
     name: 'Kateřina Sedlačiková',
     role: 'Tajemnice',
     email: 'sedlacikova@sutb.cz',
-    image: SedlacikovaImage,
+    image: sedlacikovaImage,
   },
   {
-    name: 'Michelle Hozzová',
+    name: 'Martina Matulíková',
     role: 'HR',
-    email: 'hozzova@sutb.cz',
+    email: 'matulikova@sutb.cz',
 
-    image: HozzovaImage,
+    image: matulikovaImage,
   },
   {
-    name: 'Jan Bureš',
+    name: 'Antonie Bystroňová',
     role: 'HR',
-    email: 'bures@sutb.cz',
-    image: BuresImage,
+    email: 'bystronova@sutb.cz',
+    image: bystronovaImage,
   },
 ];
 ---
@@ -130,9 +131,9 @@ const people = [
       <h2 class="text-2xl sm:text-3xl md:text-4xl pt-12 font-bold tracking-wide text-center">Adresa</h2>
       <p class="text-center text-sm sm:text-base md:text-lg text-stone-700 leading-relaxed tracking-wider pt-4">
         Studentská unie UTB, z.s. <br />
-        Růmy 4046, budova U3 UTB <br />
-        760 01 Zlín <br />
-        IČO: 26996286
+         Růmy 4046, budova U3 UTB <br />
+         760 01 Zlín <br />
+         IČO: 26996286
       </p>
     </Container>
   </section>
