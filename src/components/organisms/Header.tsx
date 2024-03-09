@@ -27,6 +27,9 @@ export const Header = () => {
           <span>Studentská unie UTB</span>
         </a>
         <div className="hidden md:flex items-center gap-8 font-medium text-slate-700 text-lg tracking-wide">
+          <a className="px-2 py-1 -my-1" href="/projekty">
+            Projekty
+          </a>
           <a className="px-2 py-1 -my-1" href="/o-nas">
             O nás
           </a>
@@ -109,6 +112,14 @@ export const Header = () => {
                     >
                       <div className="bg-stone-900 w-full h-full pb-5 pt-[calc(52px+1.25rem)] sm:py-6 px-4 sm:px-6 text-stone-100 relative z-10">
                         <div className="flex flex-col h-full space-y-8 items-center justify-center">
+                          <Menu.Item>
+                            <a
+                              className="ui-active:text-primary-600 block w-full py-2 text-lg font-medium text-center duration-300"
+                              href="/projekty"
+                            >
+                              Projekty
+                            </a>
+                          </Menu.Item>
                           <Menu.Item>
                             <a
                               className="ui-active:text-primary-600 block w-full py-2 text-lg font-medium text-center duration-300"

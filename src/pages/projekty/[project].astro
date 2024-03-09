@@ -5,6 +5,7 @@ import { Button } from '../../components/atoms/Button';
 import Container from '../../components/atoms/Container.astro';
 import H1 from '../../components/atoms/H1.astro';
 import Breadcrumbs from '../../components/organisms/Breadcrumbs.astro';
+import ProjectImage3 from '../../images/projekty/jager.png';
 import ProjectImage2 from '../../images/projekty/majales-music-kviz.png';
 import ProjectImage from '../../images/projekty/majales.png';
 
@@ -34,7 +35,9 @@ const metaTags = {
           },
         ]}
       />
-      <Image class="pt-12 w-full shadow-lg relative" src={ProjectImage} alt="" />
+      <div class="pt-12">
+        <Image class="w-full shadow-lg relative" src={ProjectImage} alt="" />
+      </div>
       <H1>Majáles UTB 2022</H1>
       <p
         class="sm:text-lg lg:text-xl pt-6 text-stone-700 tracking-wide leading-relaxed sm:leading-relaxed lg:leading-relaxed"
@@ -54,21 +57,37 @@ const metaTags = {
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
         laborum
       </p>
+      <nav class="flex gap-4 pt-6">
+        <Button variant="primary" size="md" text="Webové stránky projektu" href="https://majales.cz" type="link" />
+        <Button variant="gray" size="md" text="Facebooková událost" href="https://majales.cz" type="link" />
+      </nav>
     </Container>
   </section>
   <section class="py-16 bg-stone-100">
     <Container>
-      <h2 class="text-4xl font-bold tracking-wider leading-snug">Doprovodný program</h2>
+      <h2 class="text-2xl lg:text-4xl font-bold tracking-wider leading-snug">Doprovodný program</h2>
       <p
-        class="sm:text-lg lg:text-xl pt-6 text-stone-700 tracking-wide leading-relaxed sm:leading-relaxed lg:leading-relaxed max-w-3xl"
+        class="sm:text-lg lg:text-xl pt-4 lg:pt-6 text-stone-700 tracking-wide leading-relaxed sm:leading-relaxed lg:leading-relaxed max-w-3xl"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat.
       </p>
-      <div class="grid grid-cols-2 pt-12 gap-16">
-        <Image class="w-full object-cover shadow rounded-xl" src={ProjectImage2} alt="" />
-        <Image class="w-full object-cover shadow rounded-xl" src={ProjectImage2} alt="" />
+      <div class="grid md:grid-cols-2 pt-8 lg:pt-12 gap-6 sm:gap-8 md:gap-12">
+        <div class="bg-white border border-stone-300 shadow-sm rounded-xl overflow-hidden">
+          <Image class="w-full object-cover" src={ProjectImage2} alt="" />
+          <div class="grid grid-cols-2 divide-x divide-stone-300">
+            <a class="px-6 py-3 flex-grow text-center" href="">Více informací</a>
+            <a class="px-6 py-3 flex-grow text-center" href="">Koupit lístky</a>
+          </div>
+        </div>
+        <div class="bg-white border border-stone-300 shadow-sm rounded-xl overflow-hidden">
+          <Image class="w-full object-cover" src={ProjectImage2} alt="" />
+          <div class="grid grid-cols-2 divide-x divide-stone-300">
+            <a class="px-6 py-3 flex-grow text-center" href="">Více informací</a>
+            <a class="px-6 py-3 flex-grow text-center" href="">Koupit lístky</a>
+          </div>
+        </div>
       </div>
     </Container>
   </section>
@@ -82,6 +101,61 @@ const metaTags = {
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat.
       </p>
+      <div class="grid grid-cols-2 pt-8 lg:pt-12 gap-3 lg:gap-4 md:grid-cols-5">
+        <Image
+          class="w-full object-cover aspect-square rounded-lg lg:rounded-xl shadow-sm"
+          src={ProjectImage2}
+          alt=""
+        />
+        <Image
+          class="w-full object-cover aspect-square rounded-lg lg:rounded-xl shadow-sm"
+          src={ProjectImage2}
+          alt=""
+        />
+        <Image
+          class="w-full object-cover aspect-square rounded-lg lg:rounded-xl shadow-sm"
+          src={ProjectImage2}
+          alt=""
+        />
+        <Image
+          class="w-full object-cover aspect-square rounded-lg lg:rounded-xl shadow-sm"
+          src={ProjectImage2}
+          alt=""
+        />
+        <Image
+          class="w-full object-cover aspect-square rounded-lg lg:rounded-xl shadow-sm"
+          src={ProjectImage2}
+          alt=""
+        />
+        <Image
+          class="w-full object-cover aspect-square rounded-lg lg:rounded-xl shadow-sm"
+          src={ProjectImage2}
+          alt=""
+        />
+        <Image
+          class="w-full object-cover aspect-square rounded-lg lg:rounded-xl shadow-sm"
+          src={ProjectImage2}
+          alt=""
+        />
+        <Image
+          class="w-full object-cover aspect-square rounded-lg lg:rounded-xl shadow-sm"
+          src={ProjectImage2}
+          alt=""
+        />
+        <Image
+          class="w-full object-cover aspect-square rounded-lg lg:rounded-xl shadow-sm"
+          src={ProjectImage2}
+          alt=""
+        />
+        <Image
+          class="w-full object-cover aspect-square rounded-lg lg:rounded-xl shadow-sm"
+          src={ProjectImage2}
+          alt=""
+        />
+      </div>
+      <div class="flex justify-center pt-4">
+        <Button type="link" href="/projekty" size="md" variant="gray" text="Zobrazit další fotky" />
+      </div>
     </Container>
   </section>
   <section class="py-16 bg-stone-100">
@@ -94,12 +168,19 @@ const metaTags = {
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat.
       </p>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 pt-8 lg:pt-12 gap-12">
+        <Image class="w-full object-coverrounded-xl" src={ProjectImage3} alt="" />
+        <Image class="w-full object-coverrounded-xl" src={ProjectImage3} alt="" />
+        <Image class="w-full object-coverrounded-xl" src={ProjectImage3} alt="" />
+        <Image class="w-full object-coverrounded-xl" src={ProjectImage3} alt="" />
+        <Image class="w-full object-coverrounded-xl" src={ProjectImage3} alt="" />
+      </div>
     </Container>
   </section>
   <section class="pt-16 pb-32 bg-stone-100">
     <Container>
       <div class="flex justify-center">
-        <Button type="link" href="/projekty" size="lg" variant="primary" text="Zpět na seznam projektů" />
+        <Button type="link" href="/projekty" size="lg" variant="gray" text="Zpět na seznam projektů" />
       </div>
     </Container>
   </section>
