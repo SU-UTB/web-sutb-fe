@@ -28,4 +28,4 @@ jobs:
       - name: Lighthouse
         uses: foo-software/lighthouse-check-action@master
         with:
-          urls: ${{ fromJson(needs.job1.outputs.urls)[0] }}
+          urls: ${{ fromJson(needs.build_and_preview.outputs.urls)[0] }}
