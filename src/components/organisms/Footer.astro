@@ -51,8 +51,15 @@ import { SuLogo } from '../atoms/SuLogo';
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 md:gap-8">
           <div class="hidden xl:block"></div>
           <div class="mt-12 md:mt-0 order-4 xl:order-1">
-            <h3 id="footer-projekty" class="text-sm font-semibold text-stone-500 tracking-wider uppercase">Projekty</h3>
-            <div class="mt-4 text-stone-600">Již brzy</div>
+            <h3 id="footer-projekty" class="text-sm font-semibold text-stone-500 tracking-wider uppercase">
+              Projekty
+            </h3>
+            <nav aria-labelledby="footer-projekty" class="mt-4 space-y-4 text-stone-600 flex flex-col">
+              <a href="/projekty/majales" class="hover:text-primary-600 transition duration-300"> Majáles</a>
+              <a href="/projekty/seznamovák" class="hover:text-primary-600 transition duration-300">Seznamovák</a>
+              <a href="/projekty/busfest" class="hover:text-primary-600 transition duration-300">Busfest</a>
+              <a href="/projekty" class="hover:text-primary-600 transition duration-300"> Další projekty</a>
+            </nav>
           </div>
           <div class="mt-12 md:mt-0 xl:order-2">
             <h3 id="footer-studentska-unie" class="text-sm font-semibold text-stone-500 tracking-wider uppercase">

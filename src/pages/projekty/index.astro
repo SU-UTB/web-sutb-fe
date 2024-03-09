@@ -3,12 +3,22 @@ import Layout from '../../components/Layout.astro';
 import Container from '../../components/atoms/Container.astro';
 import H1 from '../../components/atoms/H1.astro';
 import Breadcrumbs from '../../components/organisms/Breadcrumbs.astro';
+import MajalesImage from '../../images/projekty/majales.png';
 
 const metaTags = {
   title: 'Projekty | Studentská unie UTB',
   description: 'TODO',
   image: '/meta-image-projekty.jpg',
 };
+
+const majales = {
+  image: MajalesImage.src,
+  title: 'Majáles UTB',
+  description:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et doloremagna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+};
+
+const items = Array.from(Array(10).keys()).map((_) => majales);
 ---
 
 <Layout {...metaTags}>
@@ -24,23 +34,78 @@ const metaTags = {
       />
       <H1>Projekty</H1>
       <p
-        class="sm:text-lg lg:text-xl pt-6 text-stone-700 tracking-wide leading-relaxed sm:leading-relaxed lg:leading-relaxed"
+        class="sm:text-lg lg:text-xl pt-6 text-stone-700 tracking-wide leading-relaxed sm:leading-relaxed lg:leading-relaxed max-w-3xl"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum
+        consequat.
       </p>
-      <p
-        class="sm:text-lg lg:text-xl pt-6 text-stone-700 tracking-wide leading-relaxed sm:leading-relaxed lg:leading-relaxed"
+      <div
+        class="grid grid-cols-1 -mx-2 sm:mx-auto lg:grid-cols-2 gap-x-6 gap-y-4 sm:gap-y-6 lg:gap-y-8 mt-12 max-w-xl lg:max-w-none relative"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum
-      </p>
+        {
+          items.map((item) => (
+            <div class="bg-white rounded-xl overflow-hidden transition duration-500 shadow-sm relative group hover:shadow-xl hover:shadow-black/30">
+              <img
+                src={item.image}
+                class="w-full object-cover aspect-[2/1] relative group-hover:scale-105 transition duration-500 rounded-xl"
+                alt=""
+              />
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-500 " />
+              <div class="absolute inset-0 text-white/0 flex items-center justify-center group-hover:text-white/100 z-10 transition duration-500 pointer-events-none">
+                <span class="text-lg uppercase tracking-widest font-bold">Klikněte pro více informací</span>
+              </div>
+              <a
+                href="/projekty/majales"
+                class="absolute inset-0 bg-gradient-to-b from-black/0 via-black/50 sm:via-black/30 sm:to-black/100 to-black/100 flex flex-col justify-end p-3 sm:p-4 md:p-5"
+              >
+                <h2 class="text-stone-50 text-xl sm:text-2xl font-semibold group-hover:text-white transition duration-300 tracking-wide">
+                  {item.title}
+                </h2>
+                <p class="text-stone-300 group-hover:text-stone-200 transition duration-300 line-clamp-2 text-xs sm:text-sm leading-normal sm:leading-normal max-w-md">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat.
+                </p>
+              </a>
+            </div>
+          ))
+        }
+        <svg
+          class="h-64 w-64 sm:h-96 sm:w-96 absolute left-0 -translate-x-[33%] md:-translate-x-[66%] top-0 -translate-y-[50%] md:-translate-y-[33%] opacity-[0.075]"
+          viewBox="0 0 33 30"
+        >
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g transform="translate(-32.000000, -26.000000)" fill="#EE7711" fill-rule="nonzero">
+              <g id="logo_su" transform="translate(32.000000, 26.000000)">
+                <path
+                  d="M31.6614303,10.9753671 L31.6461172,10.9505143 C28.8773266,6.2163807 22.7691518,4.59562752 17.9868785,7.32614936 L17.9618208,7.33995646 L9.04127437,12.473438 C8.0265194,13.1068432 7.69938129,14.4232963 8.30113749,15.4518604 C8.90289369,16.4804245 10.2175909,16.851977 11.2755873,16.2924831 L20.1849969,11.1659051 L20.2086626,11.152098 C22.8620499,9.63553612 26.2521881,10.5287253 27.7969738,13.1513668 C27.8001368,13.1585474 27.8038604,13.165472 27.8081106,13.1720774 C29.337647,15.806544 28.432962,19.1716762 25.7840041,20.7010916 L16.8745944,25.8345731 C16.1497693,26.2117051 15.691893,26.9527486 15.6821275,27.7645048 C15.6723619,28.576261 16.1122806,29.3279293 16.8278268,29.7221069 C17.5433729,30.1162845 18.4192485,30.0894565 19.1089073,29.6522375 L28.018317,24.518756 C32.7856053,21.7694586 34.4143331,15.7146116 31.6614303,10.9753671 Z"
+                ></path>
+                <path
+                  d="M23.9964494,17.5130924 C24.9832918,16.8676761 25.2916668,15.570913 24.6996489,14.5560335 C24.1076309,13.541154 22.8205805,13.1602018 21.7647383,13.6873335 L12.8420783,18.817863 L12.8169715,18.8316994 C10.1587035,20.3505405 6.76297093,19.4555673 5.21520557,16.8281917 C5.21268278,16.8207029 5.20891087,16.8136873 5.20404701,16.8074371 C3.67647267,14.1703254 4.58030354,10.8045773 7.22793003,9.27076114 L7.23629894,9.27076114 L16.1631434,4.13054613 C17.2296756,3.51692392 17.5928119,2.16182059 16.9742308,1.10383812 C16.3556498,0.0458556532 14.9895956,-0.31436954 13.9230634,0.299252629 L4.99621892,5.44361855 C0.216743751,8.19689743 -1.41789664,14.2660588 1.34039716,19.0171069 C1.34452252,19.0256871 1.34918088,19.0340049 1.35434535,19.0420124 C4.13157149,23.7822715 10.2480371,25.4054893 15.0403137,22.674062 L15.0640257,22.658842 L23.9964494,17.5130924 Z"
+                ></path>
+              </g>
+            </g>
+          </g>
+        </svg>
+        <svg
+          class="h-64 w-64 sm:h-96 sm:w-96 absolute right-0 translate-x-[66%] bottom-[20%] -translate-y-[33%] opacity-[0.075]"
+          viewBox="0 0 33 30"
+        >
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g transform="translate(-32.000000, -26.000000)" fill="#EE7711" fill-rule="nonzero">
+              <g id="logo_su" transform="translate(32.000000, 26.000000)">
+                <path
+                  d="M31.6614303,10.9753671 L31.6461172,10.9505143 C28.8773266,6.2163807 22.7691518,4.59562752 17.9868785,7.32614936 L17.9618208,7.33995646 L9.04127437,12.473438 C8.0265194,13.1068432 7.69938129,14.4232963 8.30113749,15.4518604 C8.90289369,16.4804245 10.2175909,16.851977 11.2755873,16.2924831 L20.1849969,11.1659051 L20.2086626,11.152098 C22.8620499,9.63553612 26.2521881,10.5287253 27.7969738,13.1513668 C27.8001368,13.1585474 27.8038604,13.165472 27.8081106,13.1720774 C29.337647,15.806544 28.432962,19.1716762 25.7840041,20.7010916 L16.8745944,25.8345731 C16.1497693,26.2117051 15.691893,26.9527486 15.6821275,27.7645048 C15.6723619,28.576261 16.1122806,29.3279293 16.8278268,29.7221069 C17.5433729,30.1162845 18.4192485,30.0894565 19.1089073,29.6522375 L28.018317,24.518756 C32.7856053,21.7694586 34.4143331,15.7146116 31.6614303,10.9753671 Z"
+                ></path>
+                <path
+                  d="M23.9964494,17.5130924 C24.9832918,16.8676761 25.2916668,15.570913 24.6996489,14.5560335 C24.1076309,13.541154 22.8205805,13.1602018 21.7647383,13.6873335 L12.8420783,18.817863 L12.8169715,18.8316994 C10.1587035,20.3505405 6.76297093,19.4555673 5.21520557,16.8281917 C5.21268278,16.8207029 5.20891087,16.8136873 5.20404701,16.8074371 C3.67647267,14.1703254 4.58030354,10.8045773 7.22793003,9.27076114 L7.23629894,9.27076114 L16.1631434,4.13054613 C17.2296756,3.51692392 17.5928119,2.16182059 16.9742308,1.10383812 C16.3556498,0.0458556532 14.9895956,-0.31436954 13.9230634,0.299252629 L4.99621892,5.44361855 C0.216743751,8.19689743 -1.41789664,14.2660588 1.34039716,19.0171069 C1.34452252,19.0256871 1.34918088,19.0340049 1.35434535,19.0420124 C4.13157149,23.7822715 10.2480371,25.4054893 15.0403137,22.674062 L15.0640257,22.658842 L23.9964494,17.5130924 Z"
+                ></path>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
     </Container>
   </section>
 </Layout>
