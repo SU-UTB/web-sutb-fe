@@ -30,3 +30,4 @@ jobs:
         with:
           urls: ${{ fromJson(needs.build_and_preview.outputs.urls)[0] }}
           gitHubAccessToken: '${{ secrets.GITHUB_TOKEN }}'
+          prCommentEnabled: true
