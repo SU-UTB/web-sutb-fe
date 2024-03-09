@@ -25,6 +25,7 @@ jobs:
     needs: build_and_preview
     steps:
       - uses: actions/checkout@master
+      - run: mkdir -p ${{ github.workspace }}/tmp/artifacts
       - name: Lighthouse
         uses: foo-software/lighthouse-check-action@master
         with:
