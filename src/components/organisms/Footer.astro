@@ -50,7 +50,7 @@ import { SuLogo } from '../atoms/SuLogo';
       <div class="mt-12 xl:mt-0 xl:col-span-2">
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 md:gap-8">
           <div class="hidden xl:block"></div>
-          <div class="mt-12 md:mt-0 order-4 xl:order-1">
+          {/* <div class="mt-12 md:mt-0 order-4 xl:order-1">
             <h3 id="footer-projekty" class="text-sm font-semibold text-stone-500 tracking-wider uppercase">Projekty</h3>
             <nav aria-labelledby="footer-projekty" class="mt-4 space-y-4 text-stone-600 flex flex-col">
               <a
@@ -84,7 +84,7 @@ import { SuLogo } from '../atoms/SuLogo';
                 ...a mnoho dalších
               </a>
             </nav>
-          </div>
+          </div> */}
           <div class="mt-12 md:mt-0 xl:order-2">
             <h3 id="footer-studentska-unie" class="text-sm font-semibold text-stone-500 tracking-wider uppercase">
               Studentská Unie
@@ -138,9 +138,9 @@ import { SuLogo } from '../atoms/SuLogo';
       </div>
     </div>
   </div>
-  <div class="mt-12 border-t border-stone-200 pt-8">
-    <p class="text-base text-black/50 tracking-wide xl:text-center">
-      &copy; 2022 - {new Date().getFullYear()} Studentská unie UTB, všechna práva vyhrazena.
+  <div class="my-12 border-t border-stone-200 pt-8 text-center">
+    <p class="text-base text-black/50 tracking-wide">
+      &copy; <span>{new Date().getFullYear()}</span> Studentská unie UTB, všechna práva vyhrazena.
     </p>
-  </div>
+</div>
 </footer>

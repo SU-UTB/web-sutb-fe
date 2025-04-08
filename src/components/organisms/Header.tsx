@@ -33,9 +33,9 @@ export const Header = () => {
           <a className="px-2 py-1 -my-1" href="/pridej-se-k-nam">
             Přidej se k nám
           </a>
-          <a className="px-2 py-1 -my-1" href="/projekty">
+          {/* <a className="px-2 py-1 -my-1" href="/projekty">
             Projekty
-          </a>
+          </a> */}
           <Button type="link" href="/kontakt" variant="primary" size="sm" text="Kontakt" />
         </div>
         <Menu>
