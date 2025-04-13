@@ -1,0 +1,105 @@
+---
+import Layout from '../components/Layout.astro';
+import Container from '../components/atoms/Container.astro';
+import H1 from '../components/atoms/H1.astro';
+import Breadcrumbs from '../components/organisms/Breadcrumbs.astro';
+import ProjectSection from '../components/organisms/ProjectSection.astro';
+
+import SeznamovakImage from '../images/o-nas/seznamovak.jpg';
+import DenBojeZaSvoboduImage from '../images/o-nas/den-boje-za-svobodu.jpg';
+
+const metaTags = {
+  title: 'Projekty | Studentská unie UTB',
+  description: 'TODO',
+  image: '/meta-image-projekty.jpg',
+};
+---
+
+<Layout {...metaTags}>
+  <section class="pt-8 sm:pt-10 lg:pt-12 pb-16 bg-gradient-to-b from-white via-stone-100 to-stone-100">
+    <Container>
+      <Breadcrumbs
+        items={[
+          {
+            title: 'Projekty',
+            href: '/projekty',
+          },
+        ]}
+      />
+      <H1>Projekty</H1>
+      <p class="sm:text-lg lg:text-xl pt-6 text-stone-700 tracking-wide leading-relaxed sm:leading-relaxed lg:leading-relaxed">
+        Organizujeme spoustu projektů, které bla bla bla...
+      </p>
+
+      <ProjectSection 
+        title="Seznamovák" 
+        description="Společně připravujeme jedny z největších studentských akcí ve Zlíně - ať už je to monstrózní Vítání prváků nebo Majáles, ale také elegantní univerzitní Reprezentační ples konající se v krásném prostoru Kongresového centra. Paradoxně připravujeme i ples pro pravé punkery - Antiples, který je znám především díky své legendární tradici převleků." 
+        image={SeznamovakImage} 
+        swap={false} 
+      />
+
+      <ProjectSection 
+        title="Vítání prváků" 
+        description="Organizujeme oslavy Mezinárodního dne studentstva, rozsvěcujeme univerzitní vánoční stromeček a také odměňujeme nejlepší studenty na Galavečeru. Pivní spirála je další z akcí, které unie pořádá - tato legendární akce je jak stvořená pro nadšence pivního moku a poprvé ji pořádali studenti už před dvaceti lety." 
+        image={DenBojeZaSvoboduImage} 
+        swap={true} 
+      />
+
+      <ProjectSection 
+        title="Halloween" 
+        description="Organizujeme oslavy Mezinárodního dne studentstva, rozsvěcujeme univerzitní vánoční stromeček a také odměňujeme nejlepší studenty na Galavečeru. Pivní spirála je další z akcí, které unie pořádá - tato legendární akce je jak stvořená pro nadšence pivního moku a poprvé ji pořádali studenti už před dvaceti lety." 
+        image={DenBojeZaSvoboduImage} 
+        swap={false} 
+      />
+
+      <ProjectSection 
+        title="Mezinárodní den studenstva" 
+        description="Organizujeme oslavy Mezinárodního dne studentstva, rozsvěcujeme univerzitní vánoční stromeček a také odměňujeme nejlepší studenty na Galavečeru. Pivní spirála je další z akcí, které unie pořádá - tato legendární akce je jak stvořená pro nadšence pivního moku a poprvé ji pořádali studenti už před dvaceti lety." 
+        image={DenBojeZaSvoboduImage} 
+        swap={true} 
+      />
+
+      <ProjectSection 
+        title="Galavečer" 
+        description="Organizujeme oslavy Mezinárodního dne studentstva, rozsvěcujeme univerzitní vánoční stromeček a také odměňujeme nejlepší studenty na Galavečeru. Pivní spirála je další z akcí, které unie pořádá - tato legendární akce je jak stvořená pro nadšence pivního moku a poprvé ji pořádali studenti už před dvaceti lety." 
+        image={DenBojeZaSvoboduImage} 
+        swap={false} 
+      />
+
+      <ProjectSection 
+        title="Rozsvícení vánočního stromečku" 
+        description="Organizujeme oslavy Mezinárodního dne studentstva, rozsvěcujeme univerzitní vánoční stromeček a také odměňujeme nejlepší studenty na Galavečeru. Pivní spirála je další z akcí, které unie pořádá - tato legendární akce je jak stvořená pro nadšence pivního moku a poprvé ji pořádali studenti už před dvaceti lety." 
+        image={DenBojeZaSvoboduImage} 
+        swap={true} 
+      />
+
+      <ProjectSection 
+        title="Reprezentační ples" 
+        description="Organizujeme oslavy Mezinárodního dne studentstva, rozsvěcujeme univerzitní vánoční stromeček a také odměňujeme nejlepší studenty na Galavečeru. Pivní spirála je další z akcí, které unie pořádá - tato legendární akce je jak stvořená pro nadšence pivního moku a poprvé ji pořádali studenti už před dvaceti lety." 
+        image={DenBojeZaSvoboduImage} 
+        swap={false} 
+      />
+
+      <ProjectSection 
+        title="Antiples" 
+        description="Organizujeme oslavy Mezinárodního dne studentstva, rozsvěcujeme univerzitní vánoční stromeček a také odměňujeme nejlepší studenty na Galavečeru. Pivní spirála je další z akcí, které unie pořádá - tato legendární akce je jak stvořená pro nadšence pivního moku a poprvé ji pořádali studenti už před dvaceti lety." 
+        image={DenBojeZaSvoboduImage} 
+        swap={true} 
+      />
+
+      <ProjectSection 
+        title="Pivní spirála" 
+        description="Organizujeme oslavy Mezinárodního dne studentstva, rozsvěcujeme univerzitní vánoční stromeček a také odměňujeme nejlepší studenty na Galavečeru. Pivní spirála je další z akcí, které unie pořádá - tato legendární akce je jak stvořená pro nadšence pivního moku a poprvé ji pořádali studenti už před dvaceti lety." 
+        image={DenBojeZaSvoboduImage} 
+        swap={false} 
+      />
+
+      <ProjectSection 
+        title="Majáles" 
+        description="Organizujeme oslavy Mezinárodního dne studentstva, rozsvěcujeme univerzitní vánoční stromeček a také odměňujeme nejlepší studenty na Galavečeru. Pivní spirála je další z akcí, které unie pořádá - tato legendární akce je jak stvořená pro nadšence pivního moku a poprvé ji pořádali studenti už před dvaceti lety." 
+        image={DenBojeZaSvoboduImage} 
+        swap={true} 
+      />
+    </Container>
+  </section>
+</Layout>
