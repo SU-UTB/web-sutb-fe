@@ -128,14 +128,14 @@ export const Header = () => {
                               Přidej se k nám
                             </a>
                           </Menu.Item>
-                          <Menu.Item>
+                          {/* <Menu.Item>
                             <a
                               className="ui-active:text-primary-600 block w-full py-2 text-lg font-medium text-center transition duration-300"
                               href="/projekty"
                             >
                               Projekty
                             </a>
-                          </Menu.Item>
+                          </Menu.Item> */}
                           <Menu.Item>
                             <Button type="link" href="/kontakt" variant="primary" size="md" text="Kontakt" />
                           </Menu.Item>

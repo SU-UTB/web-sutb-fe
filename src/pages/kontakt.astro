@@ -24,20 +24,20 @@ const metaTags = {
 
 const people = [
   {
-    name: 'Bc. Karel Kratochvil',
+    name: 'Ing. Karel Kratochvil',
     role: 'Prezident',
     email: 'kratochvil@sutb.cz',
     tel: '+420 725 979 411',
     image: kratochvilImage,
   },
   {
-    name: 'Ema Kubíčková',
+    name: 'Bc. Ema Kubíčková',
     role: 'Viceprezidentka',
     email: 'kubickova@sutb.cz',
     image: kubickovaImage,
   },
   {
-    name: 'Alžběta Hrušková',
+    name: 'Bc. Alžběta Hrušková',
     role: 'Viceprezidentka',
     email: 'hruskova@sutb.cz',
     image: hruskovaImage,
@@ -81,6 +81,34 @@ const people = [
         Rádi byste navázali spolupráci? Něco byste změnili? Máte dotaz? <br />
         <strong class="font-medium">Naši hvězdní manažeři jsou vám k dispozici, neváhejte se nám ozvat!</strong>
       </p>
+
+      <div class="flex flex-col items-center md:flex-row md:justify-start gap-4 pt-8">
+        <a
+          href="https://majales.utb.cz/kontakty/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#e7548a] hover:bg-[#e93e7d] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+        >
+          Majáles UTB
+        </a>
+        <a
+          href="https://ples.utb.cz/#kontakty"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#ad1c45] hover:bg-[#b4103e] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+        >
+          Reprezentační ples UTB
+        </a>
+        <a
+          href="https://www.seznamovak.utb.cz/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#311d66] hover:bg-[#281167] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+        >
+          Seznamovák UTB
+        </a>
+      </div>
+
       <ul class="pt-16 md:pt-24 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 max-w-sm sm:max-w-none mx-auto">
         {
           people.map((person) => (
