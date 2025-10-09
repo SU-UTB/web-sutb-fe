@@ -20,12 +20,28 @@ jobs:
         with:
           node-version: '19.8'
 
-      - name: Install dependcies
+      - name: Install dependencies
         run: npm install
 
       - name: Build project
         run: npm run build
 
+      # --- Connect to VPN ---
+      - name: Connect to VPN
+        run: |
+          echo "${{ secrets.VPN_PASSWORD }}" > vpn-pass.txt
+          sudo apt-get update -y
+          sudo apt-get install -y openconnect
+          sudo openconnect --user=${{ secrets.VPN_USERNAME }} \
+            --passwd-on-stdin \
+            ${{ secrets.VPN_URL }} < vpn-pass.txt &
+          sleep 10
+        env:
+          VPN_USERNAME: ${{ secrets.VPN_USERNAME }}
+          VPN_PASSWORD: ${{ secrets.VPN_PASSWORD }}
+          VPN_URL: ${{ secrets.VPN_URL }}
+
+      # --- Deploy via SFTP (through VPN) ---
       - name: SFTP uploader
         uses: wangyucode/sftp-upload-action@v2.0.2
         with:
@@ -35,3 +51,8 @@ jobs:
           compress: false
           localDir: dist/
           remoteDir: www/
+
+      # --- Disconnect VPN ---
+      - name: Disconnect VPN
+        if: always()
+        run: sudo killall openconnect || true
