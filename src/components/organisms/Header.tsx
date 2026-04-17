@@ -36,6 +36,9 @@ export const Header = () => {
           <a className="px-2 py-1 -my-1" href="/projekty">
             Projekty
           </a>
+          <a className="px-2 py-1 -my-1" href="/fotky">
+            Galerie
+          </a>
           <Button type="link" href="/kontakt" variant="primary" size="sm" text="Kontakt" />
         </div>
         <Menu>
@@ -134,6 +137,14 @@ export const Header = () => {
                               href="/projekty"
                             >
                               Projekty
+                            </a>
+                          </Menu.Item>
+                          <Menu.Item>
+                            <a
+                              className="ui-active:text-primary-600 block w-full py-2 text-lg font-medium text-center transition duration-300"
+                              href="/fotky"
+                            >
+                              Galerie
                             </a>
                           </Menu.Item>
                           <Menu.Item>
