@@ -1,0 +1,653 @@
+---
+import Layout from '../components/Layout.astro';
+import Container from '../components/atoms/Container.astro';
+import H1 from '../components/atoms/H1.astro';
+import Breadcrumbs from '../components/organisms/Breadcrumbs.astro';
+
+// 1. Změna na '**/*.webp' zajistí, že Astro prohledá i podložky (2024, 2023 atd.)
+const images = import.meta.glob('../images/fotky_nahledy/**/*.webp', { eager: true });
+
+const getImage = (fileName: string | any) => {
+  if (typeof fileName !== 'string') return fileName;
+
+  // Najdeme cestu, kde se název souboru přesně shoduje s koncem cesty (včetně lomítka)
+  const imagePath = Object.keys(images).find((path) => 
+    path === `../images/fotky_nahledy/${fileName}` || path.endsWith(`/${fileName}`)
+  );
+
+  if (!imagePath) {
+    console.warn(`Obrázek ${fileName} nebyl nalezen ve složce fotky_nahledy.`);
+    return fileName;
+  }
+
+  return images[imagePath].default;
+};
+
+// 2. Přidána funkce pro skloňování slova album
+const getAlbumWord = (count: number) => {
+  if (count === 1) return 'album';
+  if (count >= 2 && count <= 4) return 'alba';
+  return 'alb';
+};
+
+const galleryData = [
+  {
+    year: "2026",
+    projects: [
+      {
+        id: "ples-2026",
+        name: "XXIII. Reprezentační ples UTB",
+        albums: [
+          { title: "", image: 'ples2026.webp', link: "https://photos.app.goo.gl/k4842EBeWpmvYoRD7" },
+        ]
+      },
+      {
+        id: "antiples-2026",
+        name: "Antiples",
+        albums: [
+          { title: "", image: 'antiples2026.webp', link: "https://photos.app.goo.gl/j9KsY6tMC4kPHN6s5" },
+        ]
+      },
+      {
+        id: "spirala-2026",
+        name: "Pivní spirála",
+        albums: [
+          { title: "", image: 'spirala2026.webp', link: "https://photos.app.goo.gl/8jNThtVbRdjs6yVq8" },
+        ]
+      },
+      {
+        id: "majales-2026",
+        name: "Majáles",
+        albums: [
+          /* { title: "Majáles", image: 'majales2026.webp', link: "" }, */
+          /* { title: "Prvomájový průvod", image: 'majales2026_pruvod.webp', link: "" }, */
+          { title: "Karaoke", image: 'majales2026_karaoke.webp', link: "https://photos.app.goo.gl/XvJqCjz3PweVFpGE9" },
+        ]
+      },/* 
+      {
+        id: "seznamovak-2026",
+        name: "Seznamovák",
+        albums: [
+          { title: "1. turnus", image: 'seznamovak2026_1.webp', link: "" },
+          { title: "2. turnus", image: 'seznamovak2026_2.webp', link: "" },
+        ]
+      },
+      {
+        id: "vitani-2026",
+        name: "Vítání prváků",
+        albums: [
+          { title: "Vítání prváků", image: 'vitani2026.webp', link: "" },
+          { title: "Doprogram", image: 'vitani2026_doprogram.webp', link: "" },
+        ]
+      },
+      {
+        id: "halloween-2026",
+        name: "Halloween Party",
+        albums: [
+          { title: "", image: 'halloween2026.webp', link: "" },
+        ]
+      },
+      {
+        id: "mds-2026",
+        name: "Mezinárodní den studenstva",
+        albums: [
+          { title: "", image: 'mds2026.webp', link: "" },
+        ]
+      },
+      {
+        id: "stromecek-2026",
+        name: "Rozsvícení vánočního stromečku",
+        albums: [
+          { title: "", image: 'stromecek2026.webp', link: "" },
+        ]
+      }, */
+    ]
+  },
+  {
+    year: "2025",
+    projects: [
+      {
+        id: "ples-2025",
+        name: "XXIII. Reprezentační ples UTB",
+        albums: [
+          { title: "", image: 'ples2025.webp', link: "https://photos.app.goo.gl/tEj3Yny1s1LXiFBKA" },
+        ]
+      },
+      {
+        id: "antiples-2025",
+        name: "Antiples",
+        albums: [
+          { title: "", image: 'antiples2025.webp', link: "https://photos.app.goo.gl/EREpomsjZ5n3qDuo9" },
+        ]
+      },
+      {
+        id: "spirala-2025",
+        name: "Pivní spirála",
+        albums: [
+          { title: "Pivní spirála", image: 'spirala2025.webp', link: "https://photos.app.goo.gl/U7BbZ2L3iJfqLxNn6" },
+          { title: "Kvíz", image: 'spirala2025_kviz.webp', link: "https://photos.app.goo.gl/jm4J88jzc2KscuV78" },
+        ]
+      },
+      {
+        id: "majales-2025",
+        name: "Majáles",
+        albums: [
+          { title: "Majáles", image: 'majales2025.webp', link: "https://photos.app.goo.gl/M5yvrWGgvn1Ka8Lf7" },
+          { title: "Prvomájový průvod", image: 'majales2025_pruvod.webp', link: "https://photos.app.goo.gl/i4sBfsYWq14VXUsp9" },
+          { title: "Doprogramy", image: 'majales2025_doprogram.webp', link: "https://photos.app.goo.gl/ZS1JY5mUeL6JG8RUA" },
+        ]
+      },
+      {
+        id: "seznamovak-2025",
+        name: "Seznamovák",
+        albums: [
+          { title: "1. turnus", image: 'seznamovak2025_1.webp', link: "https://photos.app.goo.gl/uUFkoahSmWNW1nAF6" },
+          { title: "2. turnus", image: 'seznamovak2025_2.webp', link: "https://photos.app.goo.gl/v1fGocogcbC7pB1u6" },
+        ]
+      },
+      {
+        id: "vitani-2025",
+        name: "Vítání prváků",
+        albums: [
+          { title: "Vítání prváků", image: 'vitani2025.webp', link: "https://photos.app.goo.gl/AhvgardbvXuimsQR7" },
+          { title: "Doprogram", image: 'vitani2025_doprogram.webp', link: "https://photos.app.goo.gl/5YH8ZUurxeB72irM7" },
+        ]
+      },
+      {
+        id: "halloween-2025",
+        name: "Halloween Party",
+        albums: [
+          { title: "", image: 'halloween2025.webp', link: "https://photos.app.goo.gl/ihsw8crg2sUkbTv18" },
+        ]
+      },
+      {
+        id: "mds-2025",
+        name: "Mezinárodní den studenstva",
+        albums: [
+          { title: "", image: 'mds2025.webp', link: "https://photos.app.goo.gl/Vf9nMpD1SE12N7SM6" },
+        ]
+      },
+      {
+        id: "stromecek-2025",
+        name: "Rozsvícení vánočního stromečku",
+        albums: [
+          { title: "", image: 'stromecek2025.webp', link: "https://photos.app.goo.gl/KSdPGDuowFdfdNQD9" },
+        ]
+      },
+    ]
+  },
+  {
+    year: "2024",
+    projects: [
+      {
+        id: "ples-2024",
+        name: "XXII. Reprezentační ples UTB",
+        albums: [
+          { title: "", image: 'ples2024.webp', link: "https://photos.app.goo.gl/du4ZAt27S6n5jhsC8" },
+        ]
+      },
+      {
+        id: "antiples-2024",
+        name: "Antiples",
+        albums: [
+          { title: "Antiples", image: 'antiples2024.webp', link: "https://photos.app.goo.gl/1qLiH8eVvsMvhMpy9" },
+          { title: "Kvíz", image: 'antiples2024_kviz.webp', link: "https://photos.app.goo.gl/6bERWSGGeNMW8RwK7" },
+        ]
+      },
+      {
+        id: "prednesu-2024",
+        name: "PředneSU",
+        albums: [
+          { title: "", image: 'prednesu2024.webp', link: "https://photos.app.goo.gl/khqxz9wS4teSWvdQA" },
+        ]
+      },
+      {
+        id: "spirala-2024",
+        name: "Pivní spirála",
+        albums: [
+          { title: "", image: 'spirala2024.webp', link: "https://photos.app.goo.gl/1qLiH8eVvsMvhMpy9" },
+        ]
+      },
+      {
+        id: "bytva-2024",
+        name: "Polštářová bytva",
+        albums: [
+          { title: "", image: 'bytva2024.webp', link: "https://photos.app.goo.gl/LPPcZweaJrFRfdKx6" },
+        ]
+      },
+      {
+        id: "majales-2024",
+        name: "Majáles",
+        albums: [
+          { title: "Majáles", image: 'majales2024.webp', link: "https://photos.app.goo.gl/gdGT5ruWPWyCiQML8" },
+          { title: "Prvomájový průvod", image: 'majales2024_pruvod.webp', link: "https://photos.app.goo.gl/Sqzpqor1rZZvGkJRA" },
+          { title: "Silent Disco", image: 'majales2024_disco.webp', link: "https://photos.app.goo.gl/rvWnTeML5Wf529kt6" },
+          { title: "UniBand Contest", image: 'majales2024_ubc.webp', link: "https://photos.app.goo.gl/nWd3fEbvhjnwtHKr9" },
+        ]
+      },
+      {
+        id: "seznamovak-2024",
+        name: "Seznamovák",
+        albums: [
+          { title: "1. turnus", image: 'seznamovak2024_1.webp', link: "https://photos.app.goo.gl/nAHZX9H2h9A4wVVu5" },
+          { title: "2. turnus", image: 'seznamovak2024_2.webp', link: "https://photos.app.goo.gl/DVo6cMq7n2TMut4u5" },
+        ]
+      },
+      {
+        id: "vitani-2024",
+        name: "Vítání prváků",
+        albums: [
+          { title: "", image: 'vitani2024.webp', link: "https://photos.app.goo.gl/Mif12kYypjpi6owE6" },
+        ]
+      },
+      {
+        id: "galavecer-mds-2024",
+        name: "Galavečer a Mezinárodní den studenstva",
+        albums: [
+          { title: "", image: 'galavecer2024.webp', link: "https://photos.app.goo.gl/MsAGtdVbEFHx26Fr6" },
+        ]
+      },
+      {
+        id: "halloween-2024",
+        name: "Halloween Party",
+        albums: [
+          { title: "", image: 'halloween2024.webp', link: "https://photos.app.goo.gl/jyWK3RrrNHyqyVmE7" },
+        ]
+      },
+      {
+        id: "stromecek-2024",
+        name: "Rozsvícení vánočního stromečku",
+        albums: [
+          { title: "", image: 'stromecek2024.webp', link: "https://photos.app.goo.gl/2CrLYuMYaeayuRwu7" },
+        ]
+      },
+    ]
+  },
+  {
+    year: "2023",
+    projects: [
+      {
+        id: "ples-2023",
+        name: "XXI. Reprezentační ples UTB",
+        albums: [
+          { title: "", image: 'ples2023.webp', link: "https://photos.app.goo.gl/NNDYsxtSC8vpJkj17" },
+        ]
+      },
+      {
+        id: "antiples-2023",
+        name: "Antiples",
+        albums: [
+          { title: "", image: 'antiples2023.webp', link: "https://photos.app.goo.gl/aagNDLg76P99MGng7" },
+        ]
+      },
+      {
+        id: "galavecer-2023",
+        name: "Galavečer",
+        albums: [
+          { title: "", image: 'galavecer2023.webp', link: "https://photos.app.goo.gl/9xWUREWonFmEbHUAA" }
+        ]
+      },
+      {
+        id: "prednesu-2023",
+        name: "PředneSU",
+        albums: [
+          { title: "", image: 'prednesu2023.webp', link: "https://photos.app.goo.gl/fUE1HnTbvYcPBt2r9" },
+        ]
+      },
+      {
+        id: "majales-2023",
+        name: "Majáles",
+        albums: [
+          { title: "", image: 'majales2023.webp', link: "https://photos.app.goo.gl/cxKf631ytKAC1FATA" },
+        ]
+      },
+      {
+        id: "seznamovak-2023",
+        name: "Seznamovák",
+        albums: [
+          { title: "1. turnus", image: 'seznamovak2023_1.webp', link: "https://photos.app.goo.gl/3puAnSHLZpgGVMSG8" },
+          { title: "2. turnus", image: 'seznamovak2023_2.webp', link: "https://photos.app.goo.gl/iHuQNQfPvMufR1PQ7" },
+        ]
+      },
+      {
+        id: "vitani-2023",
+        name: "Vítání prváků",
+        albums: [
+          { title: "", image: 'vitani2023.webp', link: "https://photos.app.goo.gl/Mif12kYypjpi6owE6" },
+        ]
+      },
+      {
+        id: "spirala-2023",
+        name: "Pivní spirála",
+        albums: [
+          { title: "", image: 'spirala2023.webp', link: "https://photos.app.goo.gl/8CwrVAFqKcrTBmSk6" },
+        ]
+      },
+      {
+        id: "mds-2023",
+        name: "Mezinárodní den studenstva",
+        albums: [
+          { title: "", image: 'mds2023.webp', link: "https://photos.app.goo.gl/QenQ3j1rAcVdByqP9" },
+        ]
+      },
+      {
+        id: "stromecek-2023",
+        name: "Rozsvícení vánočního stromečku",
+        albums: [
+          { title: "", image: 'stromecek2023.webp', link: "https://photos.app.goo.gl/2bWFnxczyXffZm9Q7" },
+        ]
+      },
+    ]
+  },
+];
+
+const metaTags = {
+  title: 'Galerie | Studentská unie UTB',
+  description: 'Prohlédněte si fotogalerie z našich uplynulých projektů a akcí.',
+  image: '/meta-image-galerie.jpg',
+};
+---
+
+<Layout {...metaTags}>
+  <section class="pt-8 sm:pt-10 lg:pt-12 pb-16 bg-gradient-to-b from-white via-stone-100 to-stone-100 min-h-screen">
+    <Container>
+      <Breadcrumbs
+        items={[
+          {
+            title: 'Galerie',
+            href: '/galerie',
+          },
+        ]}
+      />
+      <H1>Galerie</H1>
+      <p class="sm:text-lg lg:text-xl pt-6 pb-10 text-stone-700 tracking-wide leading-relaxed sm:leading-relaxed lg:leading-relaxed max-w-3xl">
+        Zavzpomínej s námi na uplynulé ročníky našich projektů. Vyber si rok, klikni na složku projektu a prohlédni si všechna alba plná vzpomínek.
+      </p>
+
+      <!-- Výpis let (Dropdowny) -->
+      <div class="space-y-6">
+        {galleryData.map((yearGroup, index) => (
+          <details class="group bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden" open={index === 0}>
+            <summary class="flex justify-between items-center cursor-pointer p-6 sm:p-8 font-semibold text-2xl text-stone-800 hover:bg-stone-50 transition-colors list-none">
+              <span>Rok {yearGroup.year}</span>
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                class="h-6 w-6 text-stone-400 group-open:-rotate-180 transition-transform duration-300" 
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            
+            <div class="p-6 sm:p-8 pt-0 bg-white">
+              <!-- Grid složek / samostatných alb projektů -->
+              <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
+                {yearGroup.projects.map((project) => {
+                  const isSingleAlbum = project.albums.length === 1;
+
+                  // SINGLE ALBUM
+                  if (isSingleAlbum) {
+                    const album = project.albums[0];
+                    return (
+                      <a 
+                        href={album.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="flex flex-col items-center group/album text-left w-full focus:outline-none"
+                        aria-label={`Otevřít album ${project.name}`}
+                      >
+                        <div class="w-full relative transition-transform duration-300 group-hover/album:-translate-y-2 group-hover/album:drop-shadow-lg">
+                          <!-- Spacer zajišťující vizuální zarovnání s hlavičkami (oušky) složek -->
+                          <div class="w-full h-4"></div>
+                          <!-- Tělo - Single karta -->
+                          <div class="w-full aspect-square bg-stone-100 rounded-2xl p-2 shadow-md overflow-hidden relative border border-stone-200/60">
+                            <div class="w-full h-full rounded-lg overflow-hidden relative">
+                              <img 
+                                src={getImage(album.image)?.src || getImage(album.image)} 
+                                alt={album.title} 
+                                class="w-full h-full object-cover group-hover/album:scale-105 transition-all duration-500"
+                                loading="lazy"
+                              />
+                              <div class="absolute inset-0 bg-gradient-to-tr from-black/5 to-transparent pointer-events-none"></div>
+                              <!-- Ikonka odskoku -->
+                              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur text-stone-800 p-1.5 rounded-full opacity-0 group-hover/album:opacity-100 transition-opacity shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <span class="mt-3 font-semibold text-stone-800 text-center w-full truncate px-1 group-hover/album:text-orange-600 transition-colors">
+                          {project.name}
+                        </span>
+                        <span class="text-sm text-stone-500">{project.albums.length}&nbsp;{getAlbumWord(project.albums.length)}</span>
+                      </a>
+                    );
+                  }
+
+                  // FOLDER MULTIPLE ALBUMS - Vždy 4 okénka (2x2)
+                  return (
+                    <button 
+                      class="folder-btn flex flex-col items-center group/folder text-left w-full focus:outline-none"
+                      data-modal-target={`modal-${project.id}`}
+                      aria-label={`Otevřít galerii projektu ${project.name}`}
+                    >
+                      <!-- Tvar složky -->
+                      <div class="w-full relative transition-transform duration-300 group-hover/folder:-translate-y-2 group-hover/folder:drop-shadow-lg">
+                        <!-- Ouško složky -->
+                        <div class="w-1/3 h-4 bg-orange-400 rounded-t-lg ml-3 shadow-inner"></div>
+                        <!-- Tělo složky s pevným 2x2 gridem -->
+                        <div class="w-full aspect-square bg-orange-300 rounded-2xl rounded-tl-none p-2 grid grid-cols-2 grid-rows-2 gap-2 shadow-md overflow-hidden relative border-t border-white/20">
+                          
+                          {/* Zobrazíme až 4 obrázky jako náhledy */}
+                          {project.albums.slice(0, 4).map((album) => (
+                            <div class="w-full h-full bg-orange-200 rounded-lg overflow-hidden">
+                              <img 
+                                src={getImage(album.image)?.src || getImage(album.image)} 
+                                alt={`Náhled ${album.title}`} 
+                                class="w-full h-full object-cover transition-opacity"
+                                loading="lazy"
+                              />
+                            </div>
+                          ))}
+                          
+                          {/* Doplnění prázdných míst do počtu 4, pokud je alb méně */}
+                          {Array.from({ length: Math.max(0, 4 - project.albums.length) }).map(() => (
+                            <div class="w-full h-full bg-orange-200/50 rounded-lg"></div>
+                          ))}
+                          
+                          <!-- Odlesk složky pro 3D efekt -->
+                          <div class="absolute inset-0 bg-gradient-to-tr from-black/5 to-white/20 pointer-events-none"></div>
+                        </div>
+                      </div>
+                      <span class="mt-3 font-semibold text-stone-800 text-center w-full truncate px-1 group-hover/folder:text-orange-600 transition-colors">
+                        {project.name}
+                      </span>
+                      <span class="text-sm text-stone-500">{project.albums.length}&nbsp;{getAlbumWord(project.albums.length)}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          </details>
+        ))}
+      </div>
+    </Container>
+  </section>
+
+  <!-- Vygenerování všech pop-up oken na konci dokumentu (pouze pro projekty s >1 albem) -->
+  {galleryData.map((yearGroup) => 
+    yearGroup.projects
+      .filter((project) => project.albums.length > 1) 
+      .map((project) => (
+        <div 
+          id={`modal-${project.id}`} 
+          class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 opacity-0 pointer-events-none transition-opacity duration-300 ease-out"
+          role="dialog"
+          aria-modal="true"
+        >
+          <!-- Tmavé pozadí (Backdrop) -->
+          <div class="absolute inset-0 bg-stone-900/60 backdrop-blur-sm modal-backdrop transition-opacity"></div>
+          
+          <!-- Samotné okno -->
+          <!-- Přidána kontrola max-height a overflow, aby se okno správně zobrazilo vždy uprostřed a šlo scrollovat -->
+          <div class="relative bg-white rounded-3xl w-full max-w-5xl max-h-[90vh] flex flex-col shadow-2xl transform scale-95 transition-transform duration-300 ease-out modal-content">
+            
+            <!-- Hlavička modálu (Zůstává pevně nahoře) -->
+            <div class="flex justify-between items-center p-6 sm:px-8 border-b border-stone-100 shrink-0">
+              <div>
+                <p class="text-sm font-semibold tracking-wider text-orange-500 uppercase mb-1">Rok {yearGroup.year}</p>
+                <h2 class="text-2xl sm:text-3xl font-bold text-stone-800">{project.name}</h2>
+              </div>
+              <button class="modal-close p-2 text-stone-400 hover:text-stone-800 hover:bg-stone-100 rounded-full transition-colors focus:outline-none" aria-label="Zavřít galerii">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            
+            <!-- Obsah - Grid alb (Scrollovatelná část) -->
+            <div class="p-6 sm:p-8 overflow-y-auto custom-scrollbar">
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                {project.albums.map((album) => (
+                  <a 
+                    href={album.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="group/modal flex flex-col bg-stone-50 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 border border-stone-100 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-orange-300"
+                  >
+                    <div class="aspect-[4/3] w-full overflow-hidden relative">
+                      <img 
+                        src={getImage(album.image)?.src || getImage(album.image)} 
+                        alt={album.title} 
+                        class="w-full h-full object-cover group-hover/modal:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                      <!-- Ikonka odskoku -->
+                      <div class="absolute top-3 right-3 bg-white/90 backdrop-blur text-stone-800 p-1.5 rounded-full opacity-0 group-hover/modal:opacity-100 transition-opacity shadow-sm">
+                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="p-4 bg-white flex-1 flex items-center justify-center">
+                      <h3 class="font-bold text-stone-800 text-center line-clamp-2">{album.title}</h3>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))
+  )}
+</Layout>
+
+<script>
+  // Astro podpora pro View Transitions (pokud je používáš)
+  document.addEventListener('astro:page-load', initModals);
+  // Základní event pro případ, že View Transitions vypnuté
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initModals);
+  } else {
+    initModals();
+  }
+
+  function initModals() {
+    const folderButtons = document.querySelectorAll('.folder-btn');
+    const closeButtons = document.querySelectorAll('.modal-close');
+    const backdrops = document.querySelectorAll('.modal-backdrop');
+    
+    let activeModal: HTMLElement | null = null;
+
+    // Funkce pro otevření okna
+    function openModal(modalId: string) {
+      const modal = document.getElementById(modalId);
+      if (!modal) return;
+      
+      // Zobrazení a uzamčení scrollování stránky
+      // Přidáme .flex místo .hidden, aby začalo fungovat centrování (items-center justify-center)
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      
+      document.body.style.overflow = 'hidden';
+      activeModal = modal;
+      
+      // Malé zpoždění pro plynulý průběh CSS transition
+      requestAnimationFrame(() => {
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        const content = modal.querySelector('.modal-content');
+        if (content) {
+          content.classList.remove('scale-95');
+          content.classList.add('scale-100');
+        }
+      });
+    }
+
+    // Funkce pro zavření okna
+    function closeModal() {
+      if (!activeModal) return;
+      
+      activeModal.classList.add('opacity-0', 'pointer-events-none');
+      const content = activeModal.querySelector('.modal-content');
+      if (content) {
+        content.classList.remove('scale-100');
+        content.classList.add('scale-95');
+      }
+      
+      // Po skončení animace skryjeme úplně (přepneme zpět flex -> hidden)
+      setTimeout(() => {
+        if(activeModal) {
+          activeModal.classList.remove('flex');
+          activeModal.classList.add('hidden');
+        }
+        document.body.style.overflow = '';
+        activeModal = null;
+      }, 300);
+    }
+
+    // Navázání eventů
+    folderButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-modal-target');
+        if (!targetId) return;
+        openModal(targetId);
+      });
+    });
+
+    closeButtons.forEach(btn => {
+      btn.addEventListener('click', closeModal);
+    });
+
+    backdrops.forEach(backdrop => {
+      backdrop.addEventListener('click', closeModal);
+    });
+
+    // Zavření pomocí ESCAPE
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && activeModal) {
+        closeModal();
+      }
+    });
+  }
+</script>
+
+<style>
+  /* Fix pro to, aby se defaultní šipka u tagu details neukazovala (nahradili jsme vlastní) */
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  /* Upravený scrollbar pro lepší vzhled uvnitř modálu */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #e7e5e4; /* tailwind stone-200 */
+    border-radius: 20px;
+    border: 3px solid white;
+  }
+</style>
