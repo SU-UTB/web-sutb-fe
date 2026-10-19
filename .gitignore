@@ -20,5 +20,6 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-# gallery JSON file
+# gallery JSON file and photos folder
 public/gallery.json
+public/gallery_previews/
