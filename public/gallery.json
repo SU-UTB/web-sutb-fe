@@ -1,0 +1,488 @@
+[
+  {
+    "year": "2026",
+    "projects": [
+      {
+        "id": "ples-2026",
+        "name": "XXIV. Reprezentační ples UTB",
+        "albums": [
+          {
+            "title": "",
+            "image": "ples2026.webp",
+            "link": "https://photos.app.goo.gl/k4842EBeWpmvYoRD7"
+          }
+        ]
+      },
+      {
+        "id": "antiples-2026",
+        "name": "Antiples",
+        "albums": [
+          {
+            "title": "",
+            "image": "antiples2026.webp",
+            "link": "https://photos.app.goo.gl/j9KsY6tMC4kPHN6s5"
+          }
+        ]
+      },
+      {
+        "id": "spirala-2026",
+        "name": "Pivní spirála",
+        "albums": [
+          {
+            "title": "",
+            "image": "spirala2026.webp",
+            "link": "https://photos.app.goo.gl/8jNThtVbRdjs6yVq8"
+          }
+        ]
+      },
+      {
+        "id": "majales-2026",
+        "name": "Majáles",
+        "albums": [
+          {
+            "title": "Karaoke",
+            "image": "majales2026_karaoke.webp",
+            "link": "https://photos.app.goo.gl/XvJqCjz3PweVFpGE9"
+          },
+          {
+            "title": "Majáles",
+            "image": "majales2026.webp",
+            "link": "https://photos.app.goo.gl/iN1B3J8vhYrzcGjY6"
+          }
+        ]
+      },
+      {
+        "id": "seznamovak-2026",
+        "name": "Seznamovák",
+        "albums": [
+          {
+            "title": "1. turnus",
+            "image": "seznamovak2026_1.webp",
+            "link": "https://karelkratochvil.com/gallery/seznamovak-2026-1/"
+          },
+          {
+            "title": "2. turnus",
+            "image": "seznamovak2026_2.webp",
+            "link": "https://photos.app.goo.gl/qNvoECiHWQETcMEY7"
+          }
+        ]
+      },
+      {
+        "id": "vitani-2026",
+        "name": "Vítání prváků",
+        "albums": [
+          {
+            "title": "Doprogram",
+            "image": "vitani2026_doprogram.webp",
+            "link": "https://photos.app.goo.gl/Ht2JjgUy6ZVgCMxh9"
+          },
+          {
+            "title": "Vítání prváků",
+            "image": "vitani2026.webp",
+            "link": "https://photos.app.goo.gl/czEd8LBp5Hwmrpvs9"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "year": "2025",
+    "projects": [
+      {
+        "id": "ples-2025",
+        "name": "XXIII. Reprezentační ples UTB",
+        "albums": [
+          {
+            "title": "",
+            "image": "ples2025.webp",
+            "link": "https://photos.app.goo.gl/tEj3Yny1s1LXiFBKA"
+          }
+        ]
+      },
+      {
+        "id": "antiples-2025",
+        "name": "Antiples",
+        "albums": [
+          {
+            "title": "",
+            "image": "antiples2025.webp",
+            "link": "https://photos.app.goo.gl/EREpomsjZ5n3qDuo9"
+          }
+        ]
+      },
+      {
+        "id": "spirala-2025",
+        "name": "Pivní spirála",
+        "albums": [
+          {
+            "title": "Pivní spirála",
+            "image": "spirala2025.webp",
+            "link": "https://photos.app.goo.gl/U7BbZ2L3iJfqLxNn6"
+          },
+          {
+            "title": "Kvíz",
+            "image": "spirala2025_kviz.webp",
+            "link": "https://photos.app.goo.gl/jm4J88jzc2KscuV78"
+          }
+        ]
+      },
+      {
+        "id": "majales-2025",
+        "name": "Majáles",
+        "albums": [
+          {
+            "title": "Majáles",
+            "image": "majales2025.webp",
+            "link": "https://photos.app.goo.gl/M5yvrWGgvn1Ka8Lf7"
+          },
+          {
+            "title": "Prvomájový průvod",
+            "image": "majales2025_pruvod.webp",
+            "link": "https://photos.app.goo.gl/i4sBfsYWq14VXUsp9"
+          },
+          {
+            "title": "Doprogramy",
+            "image": "majales2025_doprogram.webp",
+            "link": "https://photos.app.goo.gl/ZS1JY5mUeL6JG8RUA"
+          }
+        ]
+      },
+      {
+        "id": "seznamovak-2025",
+        "name": "Seznamovák",
+        "albums": [
+          {
+            "title": "1. turnus",
+            "image": "seznamovak2025_1.webp",
+            "link": "https://photos.app.goo.gl/uUFkoahSmWNW1nAF6"
+          },
+          {
+            "title": "2. turnus",
+            "image": "seznamovak2025_2.webp",
+            "link": "https://photos.app.goo.gl/v1fGocogcbC7pB1u6"
+          }
+        ]
+      },
+      {
+        "id": "vitani-2025",
+        "name": "Vítání prváků",
+        "albums": [
+          {
+            "title": "Vítání prváků",
+            "image": "vitani2025.webp",
+            "link": "https://photos.app.goo.gl/AhvgardbvXuimsQR7"
+          },
+          {
+            "title": "Doprogram",
+            "image": "vitani2025_doprogram.webp",
+            "link": "https://photos.app.goo.gl/5YH8ZUurxeB72irM7"
+          }
+        ]
+      },
+      {
+        "id": "halloween-2025",
+        "name": "Halloween Party",
+        "albums": [
+          {
+            "title": "",
+            "image": "halloween2025.webp",
+            "link": "https://photos.app.goo.gl/ihsw8crg2sUkbTv18"
+          }
+        ]
+      },
+      {
+        "id": "mds-2025",
+        "name": "Mezinárodní den studenstva",
+        "albums": [
+          {
+            "title": "",
+            "image": "mds2025.webp",
+            "link": "https://photos.app.goo.gl/Vf9nMpD1SE12N7SM6"
+          }
+        ]
+      },
+      {
+        "id": "stromecek-2025",
+        "name": "Rozsvícení vánočního stromečku",
+        "albums": [
+          {
+            "title": "",
+            "image": "stromecek2025.webp",
+            "link": "https://photos.app.goo.gl/KSdPGDuowFdfdNQD9"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "year": "2024",
+    "projects": [
+      {
+        "id": "ples-2024",
+        "name": "XXII. Reprezentační ples UTB",
+        "albums": [
+          {
+            "title": "",
+            "image": "ples2024.webp",
+            "link": "https://photos.app.goo.gl/du4ZAt27S6n5jhsC8"
+          }
+        ]
+      },
+      {
+        "id": "antiples-2024",
+        "name": "Antiples",
+        "albums": [
+          {
+            "title": "Antiples",
+            "image": "antiples2024.webp",
+            "link": "https://photos.app.goo.gl/1qLiH8eVvsMvhMpy9"
+          },
+          {
+            "title": "Kvíz",
+            "image": "antiples2024_kviz.webp",
+            "link": "https://photos.app.goo.gl/6bERWSGGeNMW8RwK7"
+          }
+        ]
+      },
+      {
+        "id": "prednesu-2024",
+        "name": "PředneSU",
+        "albums": [
+          {
+            "title": "",
+            "image": "prednesu2024.webp",
+            "link": "https://photos.app.goo.gl/khqxz9wS4teSWvdQA"
+          }
+        ]
+      },
+      {
+        "id": "spirala-2024",
+        "name": "Pivní spirála",
+        "albums": [
+          {
+            "title": "",
+            "image": "spirala2024.webp",
+            "link": "https://photos.app.goo.gl/1qLiH8eVvsMvhMpy9"
+          }
+        ]
+      },
+      {
+        "id": "bytva-2024",
+        "name": "Polštářová bytva",
+        "albums": [
+          {
+            "title": "",
+            "image": "bytva2024.webp",
+            "link": "https://photos.app.goo.gl/LPPcZweaJrFRfdKx6"
+          }
+        ]
+      },
+      {
+        "id": "majales-2024",
+        "name": "Majáles",
+        "albums": [
+          {
+            "title": "Majáles",
+            "image": "majales2024.webp",
+            "link": "https://photos.app.goo.gl/gdGT5ruWPWyCiQML8"
+          },
+          {
+            "title": "Prvomájový průvod",
+            "image": "majales2024_pruvod.webp",
+            "link": "https://photos.app.goo.gl/Sqzpqor1rZZvGkJRA"
+          },
+          {
+            "title": "Silent Disco",
+            "image": "majales2024_disco.webp",
+            "link": "https://photos.app.goo.gl/rvWnTeML5Wf529kt6"
+          },
+          {
+            "title": "UniBand Contest",
+            "image": "majales2024_ubc.webp",
+            "link": "https://photos.app.goo.gl/nWd3fEbvhjnwtHKr9"
+          }
+        ]
+      },
+      {
+        "id": "seznamovak-2024",
+        "name": "Seznamovák",
+        "albums": [
+          {
+            "title": "1. turnus",
+            "image": "seznamovak2024_1.webp",
+            "link": "https://photos.app.goo.gl/nAHZX9H2h9A4wVVu5"
+          },
+          {
+            "title": "2. turnus",
+            "image": "seznamovak2024_2.webp",
+            "link": "https://photos.app.goo.gl/DVo6cMq7n2TMut4u5"
+          }
+        ]
+      },
+      {
+        "id": "vitani-2024",
+        "name": "Vítání prváků",
+        "albums": [
+          {
+            "title": "",
+            "image": "vitani2024.webp",
+            "link": "https://photos.app.goo.gl/Mif12kYypjpi6owE6"
+          }
+        ]
+      },
+      {
+        "id": "galavecer-mds-2024",
+        "name": "Galavečer a Mezinárodní den studenstva",
+        "albums": [
+          {
+            "title": "",
+            "image": "galavecer2024.webp",
+            "link": "https://photos.app.goo.gl/MsAGtdVbEFHx26Fr6"
+          }
+        ]
+      },
+      {
+        "id": "halloween-2024",
+        "name": "Halloween Party",
+        "albums": [
+          {
+            "title": "",
+            "image": "halloween2024.webp",
+            "link": "https://photos.app.goo.gl/jyWK3RrrNHyqyVmE7"
+          }
+        ]
+      },
+      {
+        "id": "stromecek-2024",
+        "name": "Rozsvícení vánočního stromečku",
+        "albums": [
+          {
+            "title": "",
+            "image": "stromecek2024.webp",
+            "link": "https://photos.app.goo.gl/2CrLYuMYaeayuRwu7"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "year": "2023",
+    "projects": [
+      {
+        "id": "ples-2023",
+        "name": "XXI. Reprezentační ples UTB",
+        "albums": [
+          {
+            "title": "",
+            "image": "ples2023.webp",
+            "link": "https://photos.app.goo.gl/NNDYsxtSC8vpJkj17"
+          }
+        ]
+      },
+      {
+        "id": "antiples-2023",
+        "name": "Antiples",
+        "albums": [
+          {
+            "title": "",
+            "image": "antiples2023.webp",
+            "link": "https://photos.app.goo.gl/aagNDLg76P99MGng7"
+          }
+        ]
+      },
+      {
+        "id": "galavecer-2023",
+        "name": "Galavečer",
+        "albums": [
+          {
+            "title": "",
+            "image": "galavecer2023.webp",
+            "link": "https://photos.app.goo.gl/9xWUREWonFmEbHUAA"
+          }
+        ]
+      },
+      {
+        "id": "prednesu-2023",
+        "name": "PředneSU",
+        "albums": [
+          {
+            "title": "",
+            "image": "prednesu2023.webp",
+            "link": "https://photos.app.goo.gl/fUE1HnTbvYcPBt2r9"
+          }
+        ]
+      },
+      {
+        "id": "majales-2023",
+        "name": "Majáles",
+        "albums": [
+          {
+            "title": "",
+            "image": "majales2023.webp",
+            "link": "https://photos.app.goo.gl/cxKf631ytKAC1FATA"
+          }
+        ]
+      },
+      {
+        "id": "seznamovak-2023",
+        "name": "Seznamovák",
+        "albums": [
+          {
+            "title": "1. turnus",
+            "image": "seznamovak2023_1.webp",
+            "link": "https://photos.app.goo.gl/3puAnSHLZpgGVMSG8"
+          },
+          {
+            "title": "2. turnus",
+            "image": "seznamovak2023_2.webp",
+            "link": "https://photos.app.goo.gl/iHuQNQfPvMufR1PQ7"
+          }
+        ]
+      },
+      {
+        "id": "vitani-2023",
+        "name": "Vítání prváků",
+        "albums": [
+          {
+            "title": "",
+            "image": "vitani2023.webp",
+            "link": "https://photos.app.goo.gl/Mif12kYypjpi6owE6"
+          }
+        ]
+      },
+      {
+        "id": "spirala-2023",
+        "name": "Pivní spirála",
+        "albums": [
+          {
+            "title": "",
+            "image": "spirala2023.webp",
+            "link": "https://photos.app.goo.gl/8CwrVAFqKcrTBmSk6"
+          }
+        ]
+      },
+      {
+        "id": "mds-2023",
+        "name": "Mezinárodní den studenstva",
+        "albums": [
+          {
+            "title": "",
+            "image": "mds2023.webp",
+            "link": "https://photos.app.goo.gl/QenQ3j1rAcVdByqP9"
+          }
+        ]
+      },
+      {
+        "id": "stromecek-2023",
+        "name": "Rozsvícení vánočního stromečku",
+        "albums": [
+          {
+            "title": "",
+            "image": "stromecek2023.webp",
+            "link": "https://photos.app.goo.gl/2bWFnxczyXffZm9Q7"
+          }
+        ]
+      }
+    ]
+  }
+]
